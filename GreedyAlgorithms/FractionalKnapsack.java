@@ -1,7 +1,7 @@
 package GreedyAlgorithms;
 import java.util.Scanner;
 
-public class Knapsack {
+public class FractionalKnapsack {
     private static int capacity, items, weight[], gain[];
     private static float ratio[];
 
