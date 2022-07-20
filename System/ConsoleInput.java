@@ -1,4 +1,5 @@
-package System;
+package system;
+
 import java.io.Console;
 
 public class ConsoleInput {
@@ -7,6 +8,7 @@ public class ConsoleInput {
 
         System.out.print("Enter username: ");
         String username = console.readLine();
+        
         System.out.print("Enter password: ");
         String password = String.valueOf(console.readPassword());
 

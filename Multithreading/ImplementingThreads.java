@@ -1,10 +1,10 @@
-package Multithreading;
+package multithreading;
 
 public class ImplementingThreads {
     public static void main(String args[]) {
         ExampleThread childThread = new ExampleThread("Child Thread");
-        childThread.thread.start();
         try {
+            childThread.thread.start();
             for(int iterator = 0; iterator <= 5; iterator ++) {
                 System.out.println(iterator);
                 Thread.sleep(1000);

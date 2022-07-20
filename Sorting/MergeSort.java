@@ -35,6 +35,7 @@ public class MergeSort {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
+        
         System.out.print("Enter input size: ");
         int size = scan.nextInt();
         int arr[] = new int[size];

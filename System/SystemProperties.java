@@ -1,4 +1,4 @@
-package System;
+package system;
 
 public class SystemProperties {
     public static void main(String args[]) {

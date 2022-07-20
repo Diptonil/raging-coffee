@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class BubbleSort {
-    static void bubbleSort(int arr[]) {
+    private static void bubbleSort(int arr[]) {
         int inner_iterator, outer_iterator, size = arr.length, copy;
         for(outer_iterator = 0; outer_iterator < size; outer_iterator ++) {
             for(inner_iterator = 1; inner_iterator < (size - outer_iterator); inner_iterator ++) {
@@ -19,6 +19,7 @@ public class BubbleSort {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
+        
         System.out.print("Enter input size: ");
         int size = scan.nextInt();
         int arr[] = new int[size];

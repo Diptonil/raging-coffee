@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class InsertionSort {
-    static void insertionSort(int arr[]) {
+    private static void insertionSort(int arr[]) {
         
     }
 

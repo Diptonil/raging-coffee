@@ -1,4 +1,4 @@
-package Multithreading;
+package multithreading;
 
 public class InheritingThreads {
     public static void main(String args[]) {

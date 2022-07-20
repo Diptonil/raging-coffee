@@ -1,12 +1,17 @@
-package System;
+package system;
+
 import java.util.Random;
 
 public class CopyingArray {
-    private static final int SIZE = 10, BOUND = 100;
+    private static final int SIZE = 10;
+    private static final int BOUND = 100;
 
     public static void main(String args[]) {
         Random random = new Random();
-        int arr1[] = new int[SIZE], arr2[] = new int[SIZE], iterator;
+        int arr1[] = new int[SIZE];
+        int arr2[] = new int[SIZE]; 
+        int iterator;
+
         for(iterator = 0; iterator < SIZE; iterator ++) {
             arr1[iterator] = random.nextInt(BOUND);
             arr2[iterator] = random.nextInt(BOUND);
@@ -35,6 +40,5 @@ public class CopyingArray {
         for(iterator = 0; iterator < SIZE; iterator ++) {
             System.out.print(arr2[iterator] + "\t");
         }
-
     }
 }

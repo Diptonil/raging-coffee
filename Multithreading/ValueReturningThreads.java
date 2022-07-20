@@ -1,11 +1,12 @@
-package Multithreading;
+package multithreading;
+
 import java.util.Random;
 
 public class ValueReturningThreads {
     public static void main(String args[]) {
+        Generator thread1 = new Generator();
         try {
             for(int iterator = 0; iterator < 5; iterator ++) {
-                Generator thread1 = new Generator();
                 thread1.thread.start();
                 int number = thread1.getValue();
                 Square thread2 = new Square(number);

@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class SelectionSort {
-    static void selectionSort(int arr[]) {
+    private static void selectionSort(int arr[]) {
         int inner_iterator, outer_iterator, minimum_index, copy;
         for (outer_iterator = 0; outer_iterator < arr.length - 1; outer_iterator ++) {
             minimum_index = outer_iterator;

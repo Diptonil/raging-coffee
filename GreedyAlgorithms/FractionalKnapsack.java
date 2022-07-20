@@ -1,8 +1,12 @@
-package GreedyAlgorithms;
+package greedyalgorithms;
+
 import java.util.Scanner;
 
 public class FractionalKnapsack {
-    private static int capacity, items, weight[], gain[];
+    private static int capacity;
+    private static int items;
+    private static int weight[];
+    private static int gain[];
     private static float ratio[];
 
     public static void main(String args[]) {
@@ -42,18 +46,18 @@ public class FractionalKnapsack {
     }
 
     public static void displayValues() {
-        int iterator;
-        for(iterator = 0; iterator < items; iterator ++) {
+        for(int iterator = 0; iterator < items; iterator ++) {
             System.out.println("Item\tWeight\tGain\tRatio of gain to weight");
             System.out.println(iterator + 1 + "\t" + weight[iterator] + gain[iterator] + ratio[iterator]);
         }
     }
 
     public static void sort() {
-        int outer_iterator, inner_iterator, copy;
+        int copy;
         float copy_ratio;
-        for(outer_iterator = 0; outer_iterator < items; outer_iterator ++) {
-            for(inner_iterator = 1; inner_iterator < (items - outer_iterator); inner_iterator ++) {
+
+        for(int outer_iterator = 0; outer_iterator < items; outer_iterator ++) {
+            for(int inner_iterator = 1; inner_iterator < (items - outer_iterator); inner_iterator ++) {
                 if (ratio[inner_iterator - 1] < ratio[inner_iterator]) {
                     copy_ratio = ratio[inner_iterator - 1];
                     ratio[inner_iterator - 1] = ratio[inner_iterator];
@@ -70,8 +74,10 @@ public class FractionalKnapsack {
     }
 
     public static float profit() {
-        int space = capacity, iterator = 0;
+        int space = capacity;
+        int iterator = 0;
         float profit = 0;
+        
         while (space > 0 && iterator < items) {
             if(weight[iterator] < space) {
                 space -= weight[iterator];
