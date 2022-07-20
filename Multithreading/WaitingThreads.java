@@ -6,33 +6,32 @@ public class WaitingThreads {
         ExampleThread thread2 = new ExampleThread("Thread Two");
         ExampleThread thread3 = new ExampleThread("Thread Three");
 
+        thread1.thread.start();
+        thread2.thread.start();
+        thread3.thread.start();
+
+        System.out.println("Thread One status:" + thread1.thread.isAlive());
+        System.out.println("Thread Two status:" + thread2.thread.isAlive());
+        System.out.println("Thread Three status:" + thread3.thread.isAlive());
+        
         try {
-            thread1.thread.start();
-            thread2.thread.start();
-            thread3.thread.start();
-
-            System.out.println("Thread One status:" + thread1.thread.isAlive());
-            System.out.println("Thread Two status:" + thread2.thread.isAlive());
-            System.out.println("Thread Three status:" + thread3.thread.isAlive());
-
             thread1.thread.join();
             thread2.thread.join();
             thread3.thread.join();
-
-            System.out.println("Thread One status:" + thread1.thread.isAlive());
-            System.out.println("Thread Two status:" + thread2.thread.isAlive());
-            System.out.println("Thread Three status:" + thread3.thread.isAlive());
         } catch(InterruptedException exception) {
             System.out.println("Main thread interrupted.");
         } finally {
+            System.out.println("Thread One status:" + thread1.thread.isAlive());
+            System.out.println("Thread Two status:" + thread2.thread.isAlive());
+            System.out.println("Thread Three status:" + thread3.thread.isAlive());
             System.out.println("Main thread exiting.");
         }
     }
 }
 
 class ExampleThread implements Runnable {
-    Thread thread;
-    String threadName;
+    public Thread thread;
+    private String threadName;
 
     ExampleThread(String threadName) {
         this.threadName = threadName;

@@ -3,26 +3,26 @@ package multithreading;
 import java.util.Random;
 
 public class ValueReturningThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Generator thread1 = new Generator();
-        try {
-            for(int iterator = 0; iterator < 5; iterator ++) {
-                thread1.thread.start();
-                int number = thread1.getValue();
-                Square thread2 = new Square(number);
-                Cube thread3 = new Cube(number);
-                thread2.thread.start();
-                thread3.thread.start();
+        for(int iterator = 0; iterator < 5; iterator ++) {
+            thread1.thread.start();
+            int number = thread1.getValue();
+            Square thread2 = new Square(number);
+            Cube thread3 = new Cube(number);
+            thread2.thread.start();
+            thread3.thread.start();
+            try {
                 Thread.sleep(1000);
+            } catch (Exception exception) {
+                System.out.print(exception.getMessage());
             }
-        } catch (Exception exception) {
-            System.out.print(exception.getMessage());
         }
     }
 }
 
 class Square implements Runnable {
-    Thread thread;
+    public Thread thread;
     private int number;
 
     Square(int number) {
@@ -36,7 +36,7 @@ class Square implements Runnable {
 }
 
 class Cube implements Runnable {
-    Thread thread;
+    public Thread thread;
     private int number;
 
     Cube(int number) {
@@ -50,7 +50,7 @@ class Cube implements Runnable {
 }
 
 class Generator implements Runnable {
-    Thread thread;
+    public Thread thread;
     private int number;
 
     Generator() {

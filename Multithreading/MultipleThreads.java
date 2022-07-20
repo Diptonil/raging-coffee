@@ -1,15 +1,16 @@
 package multithreading;
 
 public class MultipleThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ExampleThread childThread1 = new ExampleThread("First Thread");
         ExampleThread childThread2 = new ExampleThread("Second Thread");
         ExampleThread childThread3 = new ExampleThread("Third Thread");
 
+        childThread1.thread.start();
+        childThread2.thread.start();
+        childThread3.thread.start();
+
         try {
-            childThread1.thread.start();
-            childThread2.thread.start();
-            childThread3.thread.start();
             Thread.sleep(6000);
         } catch(InterruptedException exception) {
             System.out.print("Main thread interrupted.");
@@ -20,8 +21,8 @@ public class MultipleThreads {
 }
 
 class ExampleThread implements Runnable {
-    Thread thread;
-    String threadName;
+    public Thread thread;
+    private String threadName;
 
     ExampleThread(String threadName) {
         this.threadName = threadName;

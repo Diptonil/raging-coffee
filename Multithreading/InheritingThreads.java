@@ -1,7 +1,7 @@
 package multithreading;
 
 public class InheritingThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ExampleThread childThread = new ExampleThread("Child Thread");
         childThread.start();
         try {
