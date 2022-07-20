@@ -1,0 +1,43 @@
+package multithreading;
+
+public class SynchronizedMethodThreads {
+    public static void main(String[] args) {
+        ThreadContent threadContent = new ThreadContent();
+        ExampleThread thread1 = new ExampleThread(threadContent, "Thread One");
+        ExampleThread thread2 = new ExampleThread(threadContent, "Thread Two");
+        ExampleThread thread3 = new ExampleThread(threadContent, "Thread Three");
+
+        thread1.thread.start();
+        thread2.thread.start();
+        thread3.thread.start();
+    }
+}
+
+class ExampleThread implements Runnable {
+    public Thread thread;
+    private String threadName;
+    private ThreadContent threadContent;
+
+    ExampleThread(ThreadContent threadContent, String threadName) {
+        this.threadContent = threadContent;
+        thread = new Thread(this, threadName);
+        this.threadName = threadName;
+    }
+
+    public void run() {
+        threadContent.call(threadName + " is running now. Only this thread can access the shared resource (code) that runs.");
+    }
+}
+
+class ThreadContent {
+    synchronized public void call(String message) {
+        System.out.print("[" + message);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException exception) {
+            System.out.print("Thread has been interrupted.");
+        } finally {
+            System.out.println("]");
+        }
+    }
+}
