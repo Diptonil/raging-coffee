@@ -1,6 +1,6 @@
 package multithreading;
 
-public class WaitingThreads {
+public class JoiningThreads {
     public static void main(String args[]) {
         ExampleThread thread1 = new ExampleThread("Thread One");
         ExampleThread thread2 = new ExampleThread("Thread Two");
