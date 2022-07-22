@@ -44,6 +44,8 @@ public class DutchNationalFlag {
                 rightPointer --;
             }
         }
+
+        return array;
     }
 
     public static void displayArray(int[] array) {

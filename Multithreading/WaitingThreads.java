@@ -46,7 +46,7 @@ class ConsumerThread implements Runnable {
     }
 
     public void run() {
-        for (int iterator = 0; ; iterator ++) {
+        for (int iterator = 0; iterator < 10; iterator ++) {
             threadContent.consume();
             try {
                 Thread.sleep(1000);

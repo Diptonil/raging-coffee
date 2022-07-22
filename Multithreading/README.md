@@ -1,7 +1,9 @@
 ## Multithreading
 
-This section covers the Java architecture of Multithreading in detail and explains all the cases involving the use of various methods, used conventions, etc.
-Multithreading utilizes the principles of concurrency within systems to make efficient use of system's resources without taking up more time and making the system perform synchronously. Threads are lightweight processes sharing code, files and CPU time among themselves.
+- This section covers the Java architecture of Multithreading in detail and explains all the cases involving the use of various methods, used conventions, etc.
+- Multithreading utilizes the principles of concurrency within systems to make efficient use of system's resources without taking up more time and making the system perform synchronously. Threads are lightweight processes sharing code, files and CPU time among themselves.
+- The Join/ Fork architecture is used these days over traditional multithreading using Runnable and Thread as desxcribed in java.lang.
+- Multithreading is a concurrency technique that must be used minimally. In some cases when the use of threads is unreasonably extensive, it makes performance poor since there is an overhead in suspending, changing and resuming threads. It must be used minimally and wisely.
 
 
 ## Techniques
@@ -18,7 +20,7 @@ We catch InterruptedExceptions in case Thread is involved.
 
 The main thread is the thread running the main method in every program. It is an implied thread.
 The main thread is expected to exit after all the other threads have finished running.
-Best practices may dictate that all the other threads should be first joined before the main thread is allowed to end.
+Best practices may dictate that all the other threads should be first joined before the main thread is allowed to end. This is expected to be done in every multithreading program.
 
 
 ## Synchronization
@@ -28,14 +30,36 @@ For two/ more threads seeking the same shared CPU resource, there needs to be a 
 - Synchronized statements
 
 
+## Uses
+
+-
+
 
 ## Thread Class Methods
 
-- start(): Starts a thread
+- start(): Starts a thread.
 - join(): Makes the currently running thread wait for the completion of the thread that calls this method.
 - isAlive(): Returns true if a certain thread is active and running.
 - getPriority(): Returns the priority of the thread. Higher it is, the more is its preference of execution with respect to the CPU.
 - setPriority(): Allows us to give a priority to a thread from 1 to 10.
+- wait(): Locks entry and makes further threads wait and is useful in making suspend operations.
+- notify(): Releases locks and is useful in making resume operations.
+- notifyAll(): Releases all locks.
+- getState(): Returns an enum constant stating the estimated thread state.
+- resume(): Used to resume a thread (**DEPRECIATED**).
+- suspend(): Used to pause a thread (**DEPRECIATED**).
+- stop(): Used to permanently stop a thread (**DEPRECIATED**). These three operations can be done by applying wait() and notify() in a more standard way as described in `SuspendAndResumeThreads.java`.
+
+
+## The State Enumeration
+
+Within the Thread class, there is the State enumeration that has certain constants that give information about the supposed state of the thread on which the method getState() is called:
+- Thread.State.BLOCKED: Thread that has suspended execution because it is waiting to acquire a lock.
+- Thread.State.NEW: Thread just created and not started.
+- Thread.State.RUNNABLE: Thread that is currently executing/ will execute upon gaining access to CPU.
+- Thread.State.TERMINATED: Thread that has completed execution.
+- Thread.State.WAITING: Thread waiting for an action to occur because of a call to wait() or join().
+It is worth knowing that the way we program a thread with an intent might be perceived differently by the system. Therefore, this enumeration is never used for exact reports on thread state. It can be used as a benchmarking or a profiling tool instead of a solid condition.
 
 
 ## Runnable Interface Methods

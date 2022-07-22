@@ -1,5 +1,3 @@
-package system;
-
 import java.io.Console;
 
 public class ConsoleInput {
