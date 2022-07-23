@@ -52,7 +52,7 @@
 
 ## Identifiers
 
-- Variables/ methods use camelCase. Class/ interfaces use PascalCase. Constant names are LIKE_THIS.
+- Variables/ methods use camelCase. Class/ interfaces use PascalCase. Public constant names are LIKE_THIS while private final variables may be likeThis.
 - A test class name always ends with a Test. Example: `HashtableIdealityTest`.
 - Package names use only lowercase letters and digits. Not even underscores.
 - Multiple variable declarations per line is prohibited (except a for loop header).

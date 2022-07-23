@@ -1,3 +1,5 @@
+package system;
+
 public class SystemProperties {
     public static void main(String args[]) {
         String alreadyKnownProperty = System.getProperty("user.home", "Property value not found.");

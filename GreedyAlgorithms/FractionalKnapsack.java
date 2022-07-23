@@ -1,3 +1,5 @@
+package greedyalgorithms;
+
 import java.util.Scanner;
 
 public class FractionalKnapsack {

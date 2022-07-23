@@ -1,3 +1,5 @@
+package system;
+
 import java.util.Random;
 
 public class CopyingArray {

@@ -1,4 +1,5 @@
 # Refactor on the basis on keyword and brackets separation
 # Refactor on the basis of array [] convention
-# Remove package keyword.
+# Order imports.
 # Apply join() for every multithreading program.
+# Uses of multithreading.

@@ -1,4 +1,4 @@
-## Multithreading
+# Multithreading
 
 - This section covers the Java architecture of Multithreading in detail and explains all the cases involving the use of various methods, used conventions, etc.
 - Multithreading utilizes the principles of concurrency within systems to make efficient use of system's resources without taking up more time and making the system perform synchronously. Threads are lightweight processes sharing code, files and CPU time among themselves.
@@ -66,3 +66,16 @@ It is worth knowing that the way we program a thread with an intent might be per
 
 - run(): Describe the activity of the thread.
 - getValue(): Make the thread return a certain value particular to its own execution.
+
+
+## Programs
+
+1. `ImplementingThreads.java`: We implement the Runnable interface to run a simple thread. This is the preferred standard.
+1. `InheritingThreads.java`: We inherit the Thread interface to run a simple thread. This *isn't* the preferred standard.
+1. `JoiningThreads.java`: We accomplish proper closure of the main thread by joining the other threads with it to signal their end. this allows the main method to end properly.
+1. `MultipleThreads.java`: We concurrently run multiple threads.
+1. `SuspendAndResumeThreads.java`: We include pause and resume functionality in threads the standard way (using wait() and notify()) instead of the depreciated ways.
+1. `SynchronizedMethodThreads.java`: We use a synchronized method to sync threads.
+1. `SynchronizedStatementThreads.java`: We use a synchronized keyword to sync threads.
+1. `ValueReturningThreads.java`: We use a thread to return a value on which other threads are dependent.
+1. `WaitingThreads.java`: We use the wait() function to achieve concurrent synchronization correctly.
