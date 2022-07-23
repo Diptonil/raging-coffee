@@ -1,6 +1,6 @@
 package multithreading;
 
-public class MultipleThreads {
+public final class MultipleThreads {
     public static void main(String[] args) {
         ExampleThread childThread1 = new ExampleThread("First Thread");
         ExampleThread childThread2 = new ExampleThread("Second Thread");
@@ -20,7 +20,7 @@ public class MultipleThreads {
     }
 }
 
-class ExampleThread implements Runnable {
+final class ExampleThread implements Runnable {
     public Thread thread;
     private String threadName;
 

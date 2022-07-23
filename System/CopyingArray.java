@@ -2,7 +2,7 @@ package system;
 
 import java.util.Random;
 
-public class CopyingArray {
+public final class CopyingArray {
     private static final int SIZE = 10;
     private static final int BOUND = 100;
 

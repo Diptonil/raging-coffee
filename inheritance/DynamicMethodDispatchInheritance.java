@@ -1,6 +1,6 @@
 package inheritance;
 
-public class DynamicMethodDispatchInheritance {
+public final class DynamicMethodDispatchInheritance {
     static final int DIMENSION1 = 12;
     static final int DIMENSION2 = 13;
 

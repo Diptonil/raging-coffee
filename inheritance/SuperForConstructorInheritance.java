@@ -1,6 +1,6 @@
 package inheritance;
 
-public class SuperForConstructorInheritance {
+public final class SuperForConstructorInheritance {
     static final int SIDE = 9;
     static final int LENGTH = 3;
     static final int BREADTH = 4;

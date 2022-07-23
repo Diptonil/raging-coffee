@@ -1,6 +1,6 @@
 package inheritance;
 
-public class SuperclassSubclassReferenceInheritance {
+public final class SuperclassSubclassReferenceInheritance {
     static final int LENGTH = 3;
     static final int BREADTH = 4;
     static final int HEIGHT = 5;

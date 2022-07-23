@@ -1,6 +1,6 @@
 package multithreading;
 
-public class ImplementingThreads {
+public final class ImplementingThreads {
     public static void main(String[] args) {
         ExampleThread childThread = new ExampleThread("Child Thread");
         childThread.thread.start();
@@ -17,7 +17,7 @@ public class ImplementingThreads {
     }
 }
 
-class ExampleThread implements Runnable {
+final class ExampleThread implements Runnable {
     public Thread thread;
 
     ExampleThread(String threadName) {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
-public class InBuiltSort {
+public final class InBuiltSort {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();

@@ -1,6 +1,6 @@
 package inheritance;
 
-public class AbstractInheritance {
+public final class AbstractInheritance {
     static final int DIMENSION1 = 12;
     static final int DIMENSION2 = 13;
 

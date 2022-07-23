@@ -3,7 +3,7 @@ package sorting;
 import java.util.Scanner;
 import java.util.Random;
 
-public class InsertionSort {
+public final class InsertionSort {
     private static void insertionSort(int arr[]) {
         
     }

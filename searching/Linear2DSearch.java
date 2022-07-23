@@ -2,7 +2,7 @@ package searching;
 
 import java.util.Random;
 
-public class Linear2DSearch {
+public final class Linear2DSearch {
     private static final int SIZE = 10;
     private static Random random = new Random();
 

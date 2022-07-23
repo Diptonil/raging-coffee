@@ -2,7 +2,7 @@ package general;
 
 import java.util.Scanner;
 
-public class CountDigits {
+public final class CountDigits {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter number whose digits are to be found: ");

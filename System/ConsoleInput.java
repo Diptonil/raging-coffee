@@ -2,7 +2,7 @@ package system;
 
 import java.io.Console;
 
-public class ConsoleInput {
+public final class ConsoleInput {
     public static void main(String args[]) {
         Console console = System.console();
 

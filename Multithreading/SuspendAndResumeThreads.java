@@ -1,6 +1,6 @@
 package multithreading;
 
-public class SuspendAndResumeThreads {
+public final class SuspendAndResumeThreads {
     public static void main(String[] args) {
         ExampleThread thread1 = new ExampleThread("Thread One");
         ExampleThread thread2 = new ExampleThread("Thread Two");
@@ -32,7 +32,7 @@ public class SuspendAndResumeThreads {
     }
 }
 
-class ExampleThread implements Runnable {
+final class ExampleThread implements Runnable {
     public Thread thread;
     private String threadName;
     private boolean isSuspended;

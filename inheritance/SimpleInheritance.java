@@ -22,7 +22,7 @@ class Subclass extends Superclass {
     }
 }
 
-public class SimpleInheritance {
+public final class SimpleInheritance {
     public static void main(String[] args) {
         Subclass subclassObject = new Subclass();
 

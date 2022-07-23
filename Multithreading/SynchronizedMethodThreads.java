@@ -1,6 +1,6 @@
 package multithreading;
 
-public class SynchronizedMethodThreads {
+public final class SynchronizedMethodThreads {
     public static void main(String[] args) {
         ThreadContent threadContent = new ThreadContent();
         ExampleThread thread1 = new ExampleThread(threadContent, "Thread One");
@@ -13,7 +13,7 @@ public class SynchronizedMethodThreads {
     }
 }
 
-class ExampleThread implements Runnable {
+final class ExampleThread implements Runnable {
     public Thread thread;
     private String threadName;
     private ThreadContent threadContent;
@@ -29,7 +29,7 @@ class ExampleThread implements Runnable {
     }
 }
 
-class ThreadContent {
+final class ThreadContent {
     synchronized public void call(String message) {
         System.out.print("[" + message);
         try {

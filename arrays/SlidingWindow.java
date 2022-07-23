@@ -3,7 +3,7 @@ package arrays;
 import java.util.Scanner;
 import java.util.Random;
 
-public class SlidingWindow {
+public final class SlidingWindow {
     private static final int BOUND = 100;
 
     public static void main(String[] args) {
