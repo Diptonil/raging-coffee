@@ -9,8 +9,8 @@
 ## Techniques
 
 The traditional multithreading process in Java can be employed using two methods:
-- Extend the thread class
-- Implement the Runnable interface.
+- **Extend the thread class.**
+- **Implement the Runnable interface.**
 The latter is always recommended since *programmatically* we only extend/ override if we are to make any enhancements to an existing solution, not plainly use it. Moreover, we can extend only one class in Java and implement many. So implementing makes the class available for further use.
 The class implementing or extending is said to represent the independent, asynchronous thread.
 We catch InterruptedExceptions in case Thread is involved.

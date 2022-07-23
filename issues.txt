@@ -3,3 +3,4 @@
 # Order imports.
 # Apply join() for every multithreading program.
 # Uses of multithreading.
+# Use final on every public class.
