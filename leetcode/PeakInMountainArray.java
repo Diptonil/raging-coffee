@@ -1,11 +1,8 @@
-package searching;
+package leetcode;
 
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
 public final class PeakInMountainArray {
-    public static void main(String[] args) {
-        
-    }
-    
-    private int peakIndexInMountainArray(int[] arr) {
+    public int peakIndexInMountainArray(int[] arr) {
         int leftPointer = 0;
         int rightPointer = arr.length - 1;
         int midPointer;
