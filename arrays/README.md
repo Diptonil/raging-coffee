@@ -64,3 +64,10 @@ for (int iterator = 0; iterator < 5; iterator ++) {
 - ABSTRACT: Performs a segregation/ classification in an array in-place. Done by setting three pointers and swapping elements along.
 - PROBLEMS: Sort an array of 0s, 1s and 2s.
 - ADVANTAGES: Sorting operations provide O(n) time complexity instead of any higher sorting algorithm time.
+
+
+## Ceil & Floor
+
+- ABSTRACT: Searches for an element in a sorted arry which is less that the target element for floor and greater than the target element for ceil.
+- PROBLEMS: Find floor and ceil and make it wrap for any values towards the end of the array (basically use a `pointer % size`)
+- ADVANTAGES: Instead of O(n), we have O(log(n)).

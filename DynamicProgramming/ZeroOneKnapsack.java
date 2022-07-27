@@ -50,7 +50,7 @@ public final class ZeroOneKnapsack {
                 if (item == 0 || current_capacity == 0) {
                     matrix[item][current_capacity] = 0;
                 } else if (current_capacity >= weight[item - 1]) {
-                    matrix[item][current_capacity] = max(matrix[item - 1][current_capacity],
+                    matrix[item][current_capacity] = Math.max(matrix[item - 1][current_capacity],
                             gain[item - 1] + matrix[item - 1][current_capacity - weight[item - 1]]);
                 } else {
                     matrix[item][current_capacity] = matrix[item - 1][current_capacity];
@@ -59,9 +59,5 @@ public final class ZeroOneKnapsack {
             }
         }
         return matrix[items][capacity];
-    }
-
-    public static int max(int num1, int num2) {
-        return (num1 > num2) ? num1 : num2;
     }
 }
