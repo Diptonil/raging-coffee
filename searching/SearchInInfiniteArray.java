@@ -3,7 +3,7 @@ package searching;
 import java.util.Random;
 import java.util.Arrays;
 
-public class SearchInInfiniteArray {
+public final class SearchInInfiniteArray {
     // For practical purposes, we assume SIZE to be 100 but restrict ourselves from using the length parameter.
     private static final int SIZE = 100;
     private static Random random = new Random();
@@ -44,8 +44,8 @@ public class SearchInInfiniteArray {
         int midPointer;
 
         while(searchElement > array[rightPointer]) {
-            leftPointer = rightPointer + 1;
             rightPointer *= 2;
+            leftPointer = rightPointer + 1;
         }
 
         while(leftPointer <= rightPointer) {
