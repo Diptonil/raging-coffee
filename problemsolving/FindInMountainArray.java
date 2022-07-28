@@ -1,4 +1,4 @@
-package leetcode;
+package problemsolving;
 
 // https://leetcode.com/problems/find-in-mountain-array/
 public final class FindInMountainArray {

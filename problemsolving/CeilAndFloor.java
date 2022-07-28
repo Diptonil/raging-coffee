@@ -1,8 +1,9 @@
-package searching;
+package problemsolving;
 
 import java.util.Random;
 import java.util.Arrays;
 
+// Complementary Binary Search technique 
 public final class CeilAndFloor {
     private static final int SIZE = 10;
     private static Random random = new Random();

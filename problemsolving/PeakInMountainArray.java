@@ -1,4 +1,4 @@
-package leetcode;
+package problemsolving;
 
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 public final class PeakInMountainArray {

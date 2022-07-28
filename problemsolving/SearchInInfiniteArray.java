@@ -1,8 +1,9 @@
-package searching;
+package problemsolving;
 
 import java.util.Random;
 import java.util.Arrays;
 
+// from GeeksForGeeks
 public final class SearchInInfiniteArray {
     // For practical purposes, we assume SIZE to be 100 but restrict ourselves from using the length parameter.
     private static final int SIZE = 100;
