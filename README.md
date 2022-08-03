@@ -1,5 +1,7 @@
 # I Had Too Much of Java
-(this is for laters...!)
+
+This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, I would make this repository public.
+This also deals with certain general problem solving and algorithmic programs that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.
 
 
 ## Running the Programs
@@ -11,6 +13,8 @@ To run the programs:
   `javac fileName.java`
 - From the root directory:
   `java packageName.fileName`
+
+Very soon I shall provide specifications for other IDEs as well. I do realise that the current project structure is not standard at all. The focus is more towards the programs and concepts now rather than the overall structure.
 
 
 ## Topics
@@ -36,3 +40,9 @@ To run the programs:
 
 - [x] Java Access Modifiers
 - [x] Java Conventions
+
+
+## Contributions
+
+- In case any anomalies are found either in the wording of the README.md files or in any logic of any of the programs that might prompt missing of edge-cases, reports in form of issues would be greatly appreciated.
+- Comments in the programs are sparingly used because, as Uncle Robert would say, comments are just an excuse to pass on poorly-written code. Sufficiently comprehensive variable names have been taken in most cases and thus comments should never be an issue.

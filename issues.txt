@@ -4,3 +4,4 @@
 # Apply join() for every multithreading program.
 # Uses of multithreading.
 # Folder renaming.
+# Document everything.

@@ -12,7 +12,7 @@ Here we describe various different algorithms or methods that may be employed to
 ## The Arrays Class
 
 It is found in java.util package. It is an abstract class. It has certain helpful methods that operate on the standard Java array like:
-- toString(array): Provides better formatting and printing out of arrays with ease.
+- toString(array): Provides better formatting and printing out of arrays with ease. Overrides the `toString()` method.
 - sort(array): Dual-Pivot Quicksort is used to sort.
 - 
 
