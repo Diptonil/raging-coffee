@@ -16,6 +16,7 @@ To run the programs:
 ## Topics
 
 - [ ] Well-known array algorithms and problem-solving techniques.
+- [ ] The Collections Framework
 - [ ] Divide and Conquer Technique
 - [ ] Dynamic Programming Technique
 - [ ] File Operations

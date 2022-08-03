@@ -55,4 +55,19 @@ public final class BinarySearch {
 
         return false;
     }
+
+    private static boolean binarySearch(int[] array, int searchElement, int leftPointer, int rightPointer) {
+        if (leftPointer > rightPointer) {
+            return false;
+        }
+
+        int midPointer = leftPointer + (rightPointer - leftPointer) / 2;
+        if (array[midPointer] == searchElement) {
+            return true;
+        } else if (array[midPointer] > searchElement) {
+            return binarySearch(array, searchElement, leftPointer, midPointer - 1);
+        } else {
+            return binarySearch(array, searchElement, midPointer + 1, rightPointer);
+        }
+    }
 }
