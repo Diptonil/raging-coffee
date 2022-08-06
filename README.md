@@ -27,7 +27,7 @@ Very soon I shall provide specifications for other IDEs as well. I do realise th
 - [ ] General problems with multiple approaches
 - [ ] Greedy Algorithms
 - [x] Inheritance
-- [ ] Interfaces
+- [x] Interfaces
 - [x] Multithreading
 - [ ] Problem Solving
 - [ ] Searching Techniques
@@ -40,9 +40,21 @@ Very soon I shall provide specifications for other IDEs as well. I do realise th
 
 - [x] Java Access Modifiers
 - [x] Java Conventions
+- [ ] Java Keywords with Multiple Uses
+
+
+## Known Issues
+
+- Refactor on the basis on keyword and brackets separation.
+- Refactor on the basis of Java array [] convention.
+- Order imports.
+- Apply join() for every multithreading program.
+- Folder renaming.
+- Document everything.
+- Correct grammar of *its* and *it's*.
 
 
 ## Contributions
 
-- In case any anomalies are found either in the wording of the README.md files or in any logic of any of the programs that might prompt missing of edge-cases, reports in form of issues would be greatly appreciated.
+- In case any anomalies are found either in the wording or grammar of the README.md files or in any logic of any of the programs that might prompt missing of edge-cases, reports in form of issues would be greatly appreciated.
 - Comments in the programs are sparingly used because, as Uncle Robert would say, comments are just an excuse to pass on poorly-written code. Sufficiently comprehensive variable names have been taken in most cases and thus comments should never be an issue.

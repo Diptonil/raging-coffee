@@ -50,6 +50,16 @@ It is convention that if an interface is containing certain variables, those are
 - Default methods need method bodies and not semicolons (like static interface methods).
 
 
+## Private Interface Methods
+
+- This is a feature that is utterly useless on its own. This only finds use to complement Extension Methods in Java.
+- The idea is to have a method with code specification (like a default method) such that its use case is only limited to only calls by other default interface methods.
+- It is `default` by default (it is implied that it contains code).
+- Being private, such interfaces can obviously never externally used by any implementing class.
+- This is a very trivial topic with respect to classical interfacing. However, it is helpful if certain advantages are to be availed that the current features of interfaces provides.
+- This is a powerful feature only if we have some moderate logic in default methods that get reused in multiple default methods. Or it can be used to decrease the lines of code in a particular default method (as recommended by Robert C. Martin in his Clean Code).
+
+
 ## Programs
 
 1. `SimpleInterfacingApplication.java`: The use of simple interfaces is shown here in which there are 2 interface methods - one static and one non-static.
