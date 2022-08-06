@@ -7,11 +7,11 @@ interface SimpleInterface {
     void simpleTaskTwo(int parameter);
 }
 
-public class SimpleInterfacing implements SimpleInterface{
+public final class SimpleInterfacingApplication implements SimpleInterface{
     private static final int BOUND = 100;
 
     public static void main(String[] args) {
-        SimpleInterfacing simpleInterfacing = new SimpleInterfacing();
+        SimpleInterfacingApplication simpleInterfacing = new SimpleInterfacingApplication();
         Random random = new Random();
 
         int parameter = random.nextInt(BOUND);
@@ -24,6 +24,6 @@ public class SimpleInterfacing implements SimpleInterface{
     }
 
     public void simpleTaskTwo(int parameter) {
-        System.out.println("Task one is to print the value of parameter's square: " + parameter * parameter);
+        System.out.println("Task two is to print the value of parameter's square: " + parameter * parameter);
     }
 }

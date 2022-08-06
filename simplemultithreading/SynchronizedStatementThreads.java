@@ -1,4 +1,4 @@
-package multithreading;
+package simplemultithreading;
 
 public final class SynchronizedStatementThreads {
     public static void main(String[] args) {

@@ -44,3 +44,6 @@ Even though both have the same value, the two objects would differ. These object
     float number = 1.2345;
     System.out.printf("Value is %.2f", number);
     ```
+
+
+## The StringBuilder Class

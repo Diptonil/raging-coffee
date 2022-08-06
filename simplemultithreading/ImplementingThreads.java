@@ -1,9 +1,9 @@
-package multithreading;
+package simplemultithreading;
 
-public final class InheritingThreads {
+public final class ImplementingThreads {
     public static void main(String[] args) {
         ExampleThread childThread = new ExampleThread("Child Thread");
-        childThread.start();
+        childThread.thread.start();
         try {
             for(int iterator = 0; iterator <= 5; iterator ++) {
                 System.out.println(iterator);
@@ -17,13 +17,14 @@ public final class InheritingThreads {
     }
 }
 
-final class ExampleThread extends Thread {
+final class ExampleThread implements Runnable {
+    public Thread thread;
 
     ExampleThread(String threadName) {
-        super(threadName);
+        thread = new Thread(this, threadName);
         System.out.println(threadName + " thread has been created!");
     }
-
+    
     public void run() {
         try {
             for(int iterator = 0; iterator <= 5; iterator ++) {

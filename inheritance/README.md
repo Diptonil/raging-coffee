@@ -78,12 +78,6 @@ There is only one superior, special class - Object. This is the class that *ever
 - int hashCode(): returns the hashcode of the invoking object.
 
 
-## Uses
-
-- Runtime polymorphism by method overriding.
-- Code reusability.
-
-
 ## Programs
 
 1. `SimpleInheritance.java`: This shows basic inheritance and how the subclasss has access to *every* public or default methods and members of the superclass.

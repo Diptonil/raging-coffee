@@ -1,4 +1,4 @@
-package multithreading;
+package simplemultithreading;
 
 public final class SuspendAndResumeThreads {
     public static void main(String[] args) {
