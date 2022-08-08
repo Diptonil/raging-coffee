@@ -103,3 +103,41 @@ Here are some methods that would come in handy very frequently. The lesser usefu
 - `String strip()`: Removes all leading or trailing *Java* whitespaces from invoking String. Such whitespaces are the ones that are carriage returns, line feeds, regular whitespaces, tabs, etc. We also have `String stripTrailing()` and `String stripLeading()`.
 - `String toUpperCase()` AND `String toLowerCase()`: This does case conversions. This also has some `Locale` support that shall be dealth with later and is irrelevant to the discussion of Strings.
 - `static String join(CharSequence delimeter, CharSequence ...strings)`: This concatenates two or more `CharSequences` (`String`s, `StringBuffer`s and `StringBuilder`s) as parameterized with `strings` and separates them with the `delimeter`.
+
+
+## The StringBuffer Class
+
+- Unlike Strings, `StringBuffer`s support modifiable strings. They are mutable and unfixed. They automatically grow to make room for more characters. They have more characters preallocated than required. They may have characters or substrings inserted in between or appended anywhere else.
+- The supported constructors:
+  - `StringBuffer()`: Makes room for 16 characters without reallocation.
+  - `StringBuffer(int size)`: Explicitly sets size of buffer.
+  - `StringBuffer(String string)`: Reserves space for the given `string` and reserves extra 16 characters without reallocation.
+  - `StringBuffer(CharSequence sequence)`: Same as the previous thing with the `CharSequence`s.
+- The very common `length()` finds the current length (for any `CharSequence`). But `capacity()` finds the actual space allocated.
+- It cannot be created the way Strings are made. The object needs to be classically instantiated.
+
+
+## The StringBuilder Class
+
+Similar to `StringBuffer` with one key difference - it's not thread-safe or synchronized. The pro is faster performance. Apparently, this should be the go-to option in cases where multithreading is not being used. The methods seem to be similar as well. For immediate problem solving that does not pertain to any huge projects, use this.
+
+
+## The StringBuffer Class Methods
+
+- The `substring()`, `getChars()` and `charAt()` works the same.
+- `StringBuffer replace(int startIndex, int endPosition, String string)`: The given limit of substring gets replaced by the parameterized String. This is significantly different from the one of String class since that just could replace characters.
+- `void deleteCharAt(int index)`: Deleted the character at given `index`.
+- `void delete(int startIndex, int endPosition)`: Deleted the substring thus mentioned.
+- `StringBuffer reverse()`: Reverses the invoking StringBuffer.
+- `StringBuffer insert(int index, String string)` OR `StringBuffer insert(int index, char character)`: Inserts at the given position a string or a character without deleting any contents.
+- `void setCharAt(int index, char character)`: Like the `replace()` from String class.
+- `StringBuffer append(String string)` OR `StringBuffer append(int number)`: Like `concat()` from String class.
+- `void ensureCapacity(int minCapacity)`: It is useful to allocate space for the StringBuffer for efficiency purposes, if we happen to know the size. This sets the size of the buffer by preallocating space *after* the StringBuffer has been constructed.
+- `void setLength(int length)`: This ets the length of the string inside the object. If the length set is less than the current length, characters are lost. If it is more, null characters are added to the end. This has nothing to do with capacity but length.
+
+
+## Programs
+
+As such this section serves as a primer for the 3 classes as mentioned. However, most of the uses appear in the Problem Solving section. The use cases of the methods can be succintly inferred from the discussion.
+- `StringBufferCapacity.java`: Distinguish between length and capacity.
+- `StringSplit.java`: Split and rejoin a String.
