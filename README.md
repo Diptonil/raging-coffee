@@ -53,6 +53,8 @@ The current project structure is not standard at all. The focus is more towards 
 - Folder renaming.
 - Document everything.
 - Correct grammar of *its* and *it's*.
+- Apply backticks for every Java proper noun.
+- Change *calling* to *invoking*.
 
 
 ## Contributions
