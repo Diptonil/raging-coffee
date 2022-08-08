@@ -9,6 +9,28 @@
     ```
 This does not create two different objects. The String Pool will only have one "string" while in the program stack there exists two different references for the same value - s1 and s2. This is true for this type of implementation in which we are not explicitly telling the compiler to create new objects.
 - Strings are immutable. Reassignments may feel like object can be *changed*, but in reality a new object is being created and reassigned to the reference. The old object stays until garbage collection.
+- For such cases where a modifiable string is desired, usually **StringBuilder** or **StringBuffer** is the way to go. All these three classes are declared final and reside in java.lang package and implement the **CharSequence** interface.
+
+
+## The String Constructors
+
+- There is the classic empty constructor.
+  `String string = new String();`
+- There is one that accepts a character array and makes it into a String:
+  `String string = new String(char[] array);`
+- There is one that accepts a character array with start index and number of characters to include and makes it into a String:
+  `String string = new String(char[] array, int startIndex, int charNums);`
+- There is one that accepts a String literal and makes it into a String object:
+  `String string = new String(String str);`
+- The known format of Strings uses char datatypes that hold 2 bytes of data to represent the basic Unicode character set. However, a well-known format over the internet uses 1 byte arrays as Strings. The bytes represent the Unicode values. The datatype is used as well:
+  `String string = new String(byte[] array);`
+  OR
+  `String string = new String(byte[] array, int startIndex, int charNums);`
+- A point to note is that if we change the arrays after they have been made to Strings, the String object shall remain unchanged.
+- There is one that can take StringBuilder or StringBuffer objects as well:
+  `String string = new String(StringBuffer str);`
+  AND
+  `String string = new String(StringBuilder str);`
 
 
 ## Different String Objects of Same Value
