@@ -31,6 +31,7 @@ The current project structure is not standard at all. The focus is more towards 
 - [x] Interfaces
 - [x] Multithreading
 - [ ] Problem Solving
+- [ ] Recursion
 - [ ] Searching Techniques
 - [ ] Sorting Techniques
 - [ ] String Operations
@@ -55,7 +56,6 @@ The current project structure is not standard at all. The focus is more towards 
 - Correct grammar of *its* and *it's*.
 - Apply backticks for every Java proper noun.
 - Change *calling* to *invoking*.
-- Clarify StringBuilder.
 
 
 ## Contributions
