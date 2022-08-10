@@ -80,11 +80,11 @@ Even though both have the same value, the two objects would differ. These object
 
 ## The String Class Methods
 
-Here are some methods that would come in handy very frequently. The lesser useful methods are left out for brevity.
+Here are some methods that would come in handy very frequently. The lesser used methods are left out for brevity.
 - `char charAt(int index)`: Returns the character at the parameterized index.
 - `void getChars(int startIndex, int endPosition, char[] targetArray, int targetArrayStartIndex)`: Extracts a set of characters from a string into a character array as per the parameters.
 - `byte[] getBytes()`: Similar to the previous method but for bytes.
-- `char[] toCharArray()`: Coverts a String to a character array.
+- `char[] toCharArray()`: Converts a String to a character array.
 - `boolean equals(Object string)`: Already mentioned above.
 - `boolean equalsIgnoreCase(String string)`: Checks equality with no regard to uppercase or lowercase differences.
 - `boolean regionMatches(int startIndex, String string2, int string2StartIndex, int characters)`: If the substring thus mentioned by the parameters matches the String that invokes the method, `true` is returned (I'd rather use an equality check on a substring).
@@ -101,7 +101,7 @@ Here are some methods that would come in handy very frequently. The lesser usefu
 - `String replace(char original, char replacement)`: Replaces all occurences of original character with the new character. We also have a `String replace(CharSequence original, CharSequence replacement)` that is used for sequences.
 - `String trim()`: Removes all leading or trailing *regular* whitespaces from invoking String.
 - `String strip()`: Removes all leading or trailing *Java* whitespaces from invoking String. Such whitespaces are the ones that are carriage returns, line feeds, regular whitespaces, tabs, etc. We also have `String stripTrailing()` and `String stripLeading()`.
-- `String toUpperCase()` AND `String toLowerCase()`: This does case conversions. This also has some `Locale` support that shall be dealth with later and is irrelevant to the discussion of Strings.
+- `String toUpperCase()` AND `String toLowerCase()`: This does case conversions. This also has some `Locale` support that shall be dealt with later and is irrelevant to the discussion of Strings.
 - `static String join(CharSequence delimeter, CharSequence ...strings)`: This concatenates two or more `CharSequences` (`String`s, `StringBuffer`s and `StringBuilder`s) as parameterized with `strings` and separates them with the `delimeter`.
 
 
@@ -119,7 +119,7 @@ Here are some methods that would come in handy very frequently. The lesser usefu
 
 ## The StringBuilder Class
 
-Similar to `StringBuffer` with one key difference - it's not thread-safe or synchronized. The pro is faster performance. Apparently, this should be the go-to option in cases where multithreading is not being used. The methods seem to be similar as well. For immediate problem solving that does not pertain to any huge projects, use this.
+Similar to `StringBuffer` with one key difference - it's not thread-safe or synchronized. The pro is faster performance. Apparently, this should be the go-to option in cases where multithreading is not being used. The methods seem to be similar as well. For immediate problem solving that does not pertain to any huge projects, use this. For applications using multithreading, stick to `StringBuffer`.
 
 
 ## The StringBuffer Class Methods

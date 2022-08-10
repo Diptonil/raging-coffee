@@ -74,7 +74,7 @@ There is only one superior, special class - Object. This is the class that *ever
 - void notify()
 - void notifyAll()
 - Class<?> getClass(): Obtains class of an object at runtime. Similar to type() in Python.
-- String toString(): Returns a String that describes an object. this method is automatically called when print functions are being used. This method is overriden by most classes on whose objects it is called.
+- String toString(): Returns a String that describes an object. this method is automatically called when print functions are being used. This method is overriden by most classes on whose objects it is invoked.
 - int hashCode(): returns the hashcode of the invoking object.
 
 

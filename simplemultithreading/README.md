@@ -30,15 +30,10 @@ For two/ more threads seeking the same shared CPU resource, there needs to be a 
 - Synchronized statements
 
 
-## Uses
-
--
-
-
 ## Thread Class Methods
 
 - start(): Starts a thread.
-- join(): Makes the currently running thread wait for the completion of the thread that calls this method.
+- join(): Makes the currently running thread wait for the completion of the thread that invokes this method.
 - isAlive(): Returns true if a certain thread is active and running.
 - getPriority(): Returns the priority of the thread. Higher it is, the more is its preference of execution with respect to the CPU.
 - setPriority(): Allows us to give a priority to a thread from 1 to 10.
@@ -53,7 +48,7 @@ For two/ more threads seeking the same shared CPU resource, there needs to be a 
 
 ## The State Enumeration
 
-Within the Thread class, there is the State enumeration that has certain constants that give information about the supposed state of the thread on which the method getState() is called:
+Within the Thread class, there is the State enumeration that has certain constants that give information about the supposed state of the thread on which the method getState() is invoked:
 - Thread.State.BLOCKED: Thread that has suspended execution because it is waiting to acquire a lock.
 - Thread.State.NEW: Thread just created and not started.
 - Thread.State.RUNNABLE: Thread that is currently executing/ will execute upon gaining access to CPU.

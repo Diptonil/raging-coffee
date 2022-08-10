@@ -20,7 +20,7 @@ Suppose class `Class` implements `Interface`. We can, in another class (or the s
     Interface object = new Class(int anyParameters);
     object.methodImplemented()
     ```
-**NOTE**: The `methodImplemented()` needs to compulsorily be the method that is implemented from the interface. Any other classs methods not implemented are not allowed. Create a regular class object for those in need be. This also means that since the class is abstract, it cannot be instantiated. Hence the interface methods need to be static, if such a use case is required.
+**NOTE**: The `methodImplemented()` needs to compulsorily be the method that is implemented from the interface. Any other classs methods not implemented are not allowed. Create a regular class object for those if need be. This also means that since the class is abstract, it cannot be instantiated. Hence the interface methods need to be static, if such a use case is required.
 
 
 ## Incomplete Use of an Interface

@@ -21,7 +21,7 @@ It is found in java.util package. It is an abstract class. It has certain helpfu
 
 It is found in the java.util package. It's not abstract and as simple and limited as the Arrays class. It contains certain standard methods that make the problems easily solvable for us. It is not bound to the initial size that we specify to it, unlike regular Arrays.
 To make it: `ArrayList<String> array = new ArrayList<>(10);`
-The generic inside can be written for the constructor as well. The parameter corresponds to the initial ArrayList size (that may be increased later and left empty as well). The generic has the Wrapper class datatype of whose array we are creating. These generics ensure that we do not have multiple data types within an ArrayList. It doesn't require toString() to be called on it. It can easily be printed out. Some methods:
+The generic inside can be written for the constructor as well. The parameter corresponds to the initial ArrayList size (that may be increased later and left empty as well). The generic has the Wrapper class datatype of whose array we are creating. These generics ensure that we do not have multiple data types within an ArrayList. It doesn't require toString() to be called on it. It can easily be printed out. Some methods that need to be invoked:
 - add(...): Adds the element to the array from back.
 - contains(...): Returns true if element is there. False, otherwise.
 - get(int index): Returns the value at the index.
