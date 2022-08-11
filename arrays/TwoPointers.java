@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public final class TwoPointers {
+    
     private static final int BOUND = 100;
 
     public static void main(String[] args) {

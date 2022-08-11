@@ -3,6 +3,7 @@ package divideandconquer;
 import java.util.Scanner;
 
 public final class NumberFactor {
+    
     public static void main(String[] args) {
         int number;
 

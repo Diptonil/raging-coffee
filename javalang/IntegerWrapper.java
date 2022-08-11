@@ -1,6 +1,6 @@
 package javalang;
 
-public class IntegerWrapper {
+public final class IntegerWrapper {
     
     public static void main(String[] args) {
         Integer autoboxingInteger = 69;

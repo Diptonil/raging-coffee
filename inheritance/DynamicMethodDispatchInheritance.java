@@ -1,6 +1,7 @@
 package inheritance;
 
 public final class DynamicMethodDispatchInheritance {
+
     static final int DIMENSION1 = 12;
     static final int DIMENSION2 = 13;
 
@@ -23,6 +24,7 @@ public final class DynamicMethodDispatchInheritance {
 }
 
 class Figure {
+
     int dimension1;
     int dimension2;
     float area;
@@ -39,6 +41,7 @@ class Figure {
 }
 
 class Rectangle extends Figure {
+
     Rectangle(int length, int breadth) {
         super(length, breadth);
     }
@@ -50,6 +53,7 @@ class Rectangle extends Figure {
 }
 
 class Triangle extends Figure {
+    
     Triangle(int base, int height) {
         super(base, height);
     }

@@ -1,6 +1,7 @@
 package simplemultithreading;
 
 public final class JoiningThreads {
+    
     public static void main(String args[]) {
         ExampleThread thread1 = new ExampleThread("Thread One");
         ExampleThread thread2 = new ExampleThread("Thread Two");
@@ -30,6 +31,7 @@ public final class JoiningThreads {
 }
 
 final class ExampleThread implements Runnable {
+
     public Thread thread;
     private String threadName;
 

@@ -12,6 +12,7 @@ interface DecisionMakerConstants {
 }
 
 public final class ConstantInterfacingApplication implements DecisionMakerConstants{
+    
     public static void main(String[] args) {
         Random random = new Random();
         int probability = (int) (100 * random.nextDouble());

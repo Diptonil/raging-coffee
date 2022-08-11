@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Arrays;
 
 public final class JumpSearch {
+    
     private static final int SIZE = 10;
     private static Random random = new Random();
 

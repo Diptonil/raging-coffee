@@ -3,6 +3,7 @@ package greedyalgorithms;
 import java.util.Scanner;
 
 public final class FractionalKnapsack {
+    
     private static int capacity;
     private static int items;
     private static int weight[];

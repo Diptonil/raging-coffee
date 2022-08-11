@@ -3,6 +3,7 @@ package strings;
 import java.util.Scanner;
 
 public final class StringSplit {
+    
     public static void main(String args[]) {
         try (Scanner scan = new Scanner(System.in)) {
             System.out.print("Enter personal details in format <name, dd/mm/yyyy>: ");

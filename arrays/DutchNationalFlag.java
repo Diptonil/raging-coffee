@@ -3,6 +3,7 @@ package arrays;
 import java.util.Random;
 
 public final class DutchNationalFlag {
+    
     private static final int SIZE = 10;
 
     public static void main(String[] args) {

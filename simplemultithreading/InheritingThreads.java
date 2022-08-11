@@ -1,6 +1,7 @@
 package simplemultithreading;
 
 public final class InheritingThreads {
+    
     public static void main(String[] args) {
         ExampleThread childThread = new ExampleThread("Child Thread");
         childThread.start();

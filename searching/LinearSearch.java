@@ -3,6 +3,7 @@ package searching;
 import java.util.Random;
 
 public final class LinearSearch {
+    
     private static final int SIZE = 10;
     private static Random random = new Random();
 

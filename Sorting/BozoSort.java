@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public final class BozoSort {
+    
     private static void bozoSort(int array[]) {
         Random random = new Random();
         int copy;

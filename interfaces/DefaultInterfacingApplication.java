@@ -3,18 +3,23 @@ package interfaces;
 import java.util.Random;
 
 interface SimpleInterface {
+
     void simpleTaskOne(int parameter);
     void simpleTaskTwo(int parameter);
+
     default void simpleTaskThree(int parameter) {
         System.out.println("Task two is to print the value of parameter's cube: " + parameter * parameter * parameter);
     }
+
     default void simpleTaskFour(int parameter) {
         System.out.println("We'll leave this method not used by the implementing class.");
     }
+
     default void simpleTaskFive(int parameter) {}
 }
 
 public final class DefaultInterfacingApplication implements SimpleInterface{
+    
     private static final int BOUND = 100;
 
     public static void main(String[] args) {

@@ -20,6 +20,7 @@ The current project structure is not standard at all. The focus is more towards 
 
 ## Topics
 
+- [ ] Annotations
 - [ ] Well-known array algorithms and problem-solving techniques.
 - [ ] The Collections Framework
 - [ ] Divide and Conquer Technique
@@ -56,7 +57,7 @@ The current project structure is not standard at all. The focus is more towards 
 - Document everything.
 - Correct grammar of *its* and *it's*.
 - Apply backticks for every Java proper noun.
-- A line after every class declaration.
+- Complete Prime Numbers and Insertion Sort.
 
 
 ## Resources

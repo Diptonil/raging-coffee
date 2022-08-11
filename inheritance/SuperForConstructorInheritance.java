@@ -1,6 +1,7 @@
 package inheritance;
 
 public final class SuperForConstructorInheritance {
+
     static final int SIDE = 9;
     static final int LENGTH = 3;
     static final int BREADTH = 4;
@@ -19,6 +20,7 @@ public final class SuperForConstructorInheritance {
 }
 
 class Box {
+
     public int length;
     public int breadth;
     public int height;
@@ -53,6 +55,7 @@ class Box {
 }
 
 class WeightedBox extends Box {
+    
     private int weight;
 
     WeightedBox(int length, int breadth, int height, int weight) {

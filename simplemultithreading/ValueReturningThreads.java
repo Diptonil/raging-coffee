@@ -3,6 +3,7 @@ package simplemultithreading;
 import java.util.Random;
 
 public final class ValueReturningThreads {
+    
     public static void main(String[] args) {
         Generator thread1 = new Generator();
         for(int iterator = 0; iterator < 5; iterator ++) {
@@ -22,6 +23,7 @@ public final class ValueReturningThreads {
 }
 
 final class Square implements Runnable {
+
     public Thread thread;
     private int number;
 
@@ -36,6 +38,7 @@ final class Square implements Runnable {
 }
 
 final class Cube implements Runnable {
+
     public Thread thread;
     private int number;
 
@@ -50,6 +53,7 @@ final class Cube implements Runnable {
 }
 
 final class Generator implements Runnable {
+
     public Thread thread;
     private int number;
 

@@ -3,6 +3,7 @@ package dynamicprogramming;
 import java.util.Scanner;
 
 public final class ZeroOneKnapsack {
+    
     private static int capacity, items, weight[], gain[];
 
     public static void main(String args[]) {

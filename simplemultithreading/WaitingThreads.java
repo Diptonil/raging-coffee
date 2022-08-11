@@ -1,6 +1,7 @@
 package simplemultithreading;
 
-public class WaitingThreads {
+public final class WaitingThreads {
+
     public static void main(String[] args) {
         ThreadContent threadContent = new ThreadContent();
         ProducerThread producerThread = new ProducerThread(threadContent);
@@ -11,7 +12,8 @@ public class WaitingThreads {
     }
 }
 
-class ProducerThread implements Runnable {
+final class ProducerThread implements Runnable {
+
     public Thread thread;
     private String threadName;
     private ThreadContent threadContent;
@@ -34,7 +36,8 @@ class ProducerThread implements Runnable {
     }
 }
 
-class ConsumerThread implements Runnable {
+final class ConsumerThread implements Runnable {
+
     public Thread thread;
     private String threadName;
     private ThreadContent threadContent;
@@ -57,7 +60,8 @@ class ConsumerThread implements Runnable {
     }
 }
 
-class ThreadContent {
+final class ThreadContent {
+
     private int number;
     private boolean flag = false;
 

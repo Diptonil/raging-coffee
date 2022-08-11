@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public final class QuickSort {
+    
     private static int partition(int arr[], int lowerIndex, int higherIndex) {
         int lowerPointer = lowerIndex, higherPointer = higherIndex;
         int pivot = arr[higherIndex];

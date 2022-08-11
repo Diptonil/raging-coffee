@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public final class BubbleSort {
+    
     private static void bubbleSort(int arr[]) {
         int inner_iterator, outer_iterator, size = arr.length, copy;
         for(outer_iterator = 0; outer_iterator < size; outer_iterator ++) {

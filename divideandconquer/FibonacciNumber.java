@@ -3,6 +3,7 @@ package divideandconquer;
 import java.util.Scanner;
 
 public final class FibonacciNumber {
+    
     public static void main(String[] args) {
         int number;
 

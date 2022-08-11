@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public final class MergeSort {
+    
     private static void merge(int arr[], int arr1[], int arr2[]) {
         int arr_index = 0, arr1_index = 0, arr2_index = 0;
         int arr1_size = arr1.length, arr2_size = arr2.length;

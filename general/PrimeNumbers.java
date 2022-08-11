@@ -3,6 +3,7 @@ package general;
 import java.util.Scanner;
 
 public final class PrimeNumbers {
+    
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter number whose to be checked: ");

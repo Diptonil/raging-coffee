@@ -9,6 +9,7 @@ interface SimpleInterface {
 }
 
 public abstract class IncompleteInterfacingApplication implements SimpleInterface{
+    
     private static final int BOUND = 100;
 
     public static void main(String[] args) {

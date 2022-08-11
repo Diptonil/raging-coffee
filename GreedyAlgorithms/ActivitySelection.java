@@ -3,6 +3,7 @@ package greedyalgorithms;
 import java.util.Scanner;
 
 public final class ActivitySelection {
+    
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter types of possible tasks: ");

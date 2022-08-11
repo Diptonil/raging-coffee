@@ -1,6 +1,7 @@
 package inheritance;
 
 public final class SuperclassSubclassReferenceInheritance {
+
     static final int LENGTH = 3;
     static final int BREADTH = 4;
     static final int HEIGHT = 5;
@@ -25,6 +26,7 @@ public final class SuperclassSubclassReferenceInheritance {
 }
 
 class Box {
+
     public int length;
     public int breadth;
     public int height;
@@ -43,6 +45,7 @@ class Box {
 }
 
 class WeightedBox extends Box {
+    
     private int weight;
 
     WeightedBox(int length, int breadth, int height, int weight) {

@@ -14,7 +14,7 @@ enum Color {
     }
 }
 
-public class UpgradedEnumeration {
+public final class UpgradedEnumeration {
     
     public static void main(String[] args) {
         Color color = Color.Blue;

@@ -3,6 +3,7 @@ package greedyalgorithms;
 import java.util.Scanner;
 
 public final class CoinChange {
+    
     public static void main(String[] args) {
         int iterator;
         int currency = 0;

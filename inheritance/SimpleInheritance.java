@@ -1,6 +1,7 @@
 package inheritance;
 
 class Superclass {
+    
     public final int DATA_SUPERCLASS = 2;
 
     public void showSuperclass() {
@@ -13,6 +14,7 @@ class Superclass {
 }
 
 class Subclass extends Superclass {
+
     public final int DATA_SUBCLASS = 3;
 
     public void showSubclass() {
@@ -23,6 +25,7 @@ class Subclass extends Superclass {
 }
 
 public final class SimpleInheritance {
+
     public static void main(String[] args) {
         Subclass subclassObject = new Subclass();
 

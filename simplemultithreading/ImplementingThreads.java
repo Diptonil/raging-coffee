@@ -1,6 +1,7 @@
 package simplemultithreading;
 
 public final class ImplementingThreads {
+
     public static void main(String[] args) {
         ExampleThread childThread = new ExampleThread("Child Thread");
         childThread.thread.start();
@@ -18,6 +19,7 @@ public final class ImplementingThreads {
 }
 
 final class ExampleThread implements Runnable {
+    
     public Thread thread;
 
     ExampleThread(String threadName) {

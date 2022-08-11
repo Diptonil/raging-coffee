@@ -10,6 +10,7 @@ interface InterfaceTwo extends InterfaceOne {
 }
 
 public final class ExtendedInterfacingApplication implements InterfaceTwo {
+    
     public static void main(String[] args) {
         ExtendedInterfacingApplication extendedInterfacingApplication = new ExtendedInterfacingApplication();
         extendedInterfacingApplication.methodOne();

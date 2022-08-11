@@ -16,6 +16,7 @@ interface Dimensions {
 }
 
 public final class NestedInterfacingApplication implements Dimensions.Triangle, Dimensions.Circle{
+    
     private float radius;
     private float height;
     private float base;
