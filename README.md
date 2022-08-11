@@ -29,13 +29,14 @@ The current project structure is not standard at all. The focus is more towards 
 - [ ] Greedy Algorithms
 - [x] Inheritance
 - [x] Interfaces
+- [x] Enumerations
 - [x] Multithreading
 - [ ] Problem Solving
 - [ ] Recursion
 - [ ] Searching Techniques
 - [ ] Sorting Techniques
 - [ ] String Operations
-- [ ] The System Class
+- [ ] The `java.lang` Package
 
 
 ## Further Reading
@@ -56,6 +57,13 @@ The current project structure is not standard at all. The focus is more towards 
 - Correct grammar of *its* and *it's*.
 - Apply backticks for every Java proper noun.
 - A line after every class declaration.
+
+
+## Resources
+
+For this project, the books referred are:
+- **Java: The Complete Reference** by *Herbert Schildt*.
+- **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
 
 
 ## Contributions

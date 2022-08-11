@@ -1,8 +1,9 @@
-package system;
+package javalang;
 
 import java.util.Random;
 
 public final class CopyingArray {
+    
     private static final int SIZE = 10;
     private static final int BOUND = 100;
 

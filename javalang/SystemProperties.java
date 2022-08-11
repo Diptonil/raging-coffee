@@ -1,6 +1,7 @@
-package system;
+package javalang;
 
 public final class SystemProperties {
+    
     public static void main(String args[]) {
         String alreadyKnownProperty = System.getProperty("user.home", "Property value not found.");
         String unknownProperty = System.getProperty("user.someKey", "Property value not found.");

@@ -1,8 +1,9 @@
-package system;
+package javalang;
 
 import java.io.Console;
 
 public final class ConsoleInput {
+    
     public static void main(String args[]) {
         Console console = System.console();
 
