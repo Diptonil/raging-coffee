@@ -31,9 +31,16 @@
 - `valueOf(String string)`: When invoked on the enumeration, this returns the enum value that is defined that matches the `string`.
 
 
+## `java.lang.Enum`
+
+All enumerations by default inherit `java.lang.Enum`. It is actually a class and not an enum itself. It has several methods available for use by all enumerations. It has many methods but two of them warrant discussion. Look at the fourth program for their use:
+- `final int ordinal()`: It is used to obtain a value that indicates the position of an enumeration constant in the list.
+- `final int compareTo(enum-type e)`: It compares the ordinal values of two enum constants. The invoking constant as well as the parameterized constant must belong to the same enum. Returns negative if invoking constant has lower ordinality as compared to the parameter. In case of equality, 0 is returned. Equality may also be tested using `==` or `equals()`.
+
+
 ## Programs
 
 1. `SimpleEnumeration.java`: Simple use of an enum along with the difference of implementation in normal if-else and switch statements.
 1. `ArrayedEnumeration.java`: Creating an array of enum.
 1. `UpgradedEnumeration.java`: An enum is used as a class type to the best of its abilities.
-1. ``
+1. `OrdinalEnumeration.java`: Illustrates the application of `ordinal()` and `compareTo()`.
