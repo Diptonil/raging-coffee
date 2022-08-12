@@ -58,6 +58,7 @@ The current project structure is not standard at all. The focus is more towards 
 - Correct grammar of *its* and *it's*.
 - Apply backticks for every Java proper noun.
 - Complete Prime Numbers and Insertion Sort.
+- Space after every `catch`.
 
 
 ## Resources

@@ -4,6 +4,7 @@
 - It can be said as a tag representing metadat in different sophesticated ways.
 - It does not change the actions or semantics of a program. This information that we have can be used for development or deployment. It might be processed using a source-code generator.
 - Annotations cannot have an `extends` clause when being defined. They extend the `Annotation` super-interface within `java.lang.annotations`.
+- Most of the important annotation methods that have been discussed ahead is contained in `AnnotatedElement` interface.
 - To define an annotation:
   ```java
   @interface MyAnnotation {
@@ -44,6 +45,7 @@ The default policy that implicitly gets used everytime an annotation is defines 
 - `getAnnotation()` is the method used to get the data of the invoking object (may be `Class` or `Method`). We use the `toString()` on the `Annotation` object to get the data as a String finally. However, if we use a known annotation, we can refer to the data simply by using `invokingAnnotationObject.memberMethod()` for as many number of methods it has.
 - The form of `getMethod()` gets somewhat warped with certain unconventional and unencountered elements such as `datatype.'class'` which is a form that is not too often encountered in mainstream programming. Those are basically the `Class` objects of the respective datatypes. This is dealt more comprehensively under Generics. 
 - The programs below prove the case that the use of `Annotation` class is much more convenient than the annotation reference.
+- A major application of Reflection technique is Checker Class.
 
 
 ## Default Values in Annotations
@@ -53,7 +55,9 @@ At times we want to define annotations that have default values. In such cases, 
 
 ## Marker Annotations
 
-- 
+- Marker Annotations are special annotations that exist just to *mark* an item. It has no members. Its presence as an annotation is sufficient.
+- The annotations, when used on any unit, are left without any braces or just with `()`. Both are acceptable (the former more conventional).
+- These annotations can be checked by a Checker Class using the `isAnnotationPresent()`.
 
 
 ## Programs
@@ -62,4 +66,5 @@ At times we want to define annotations that have default values. In such cases, 
 1. `ReflectiveAnnotation.java`: To illustate the simple use of obtaining the annotated data by a class at runtime. This process exclusively is done using the `Annotation` class under the assumption that we do not know anything about the annotation being used for any of the methods or classes or whatever. We just know the target class and its methods. This program draws annotation data of methods without any parameters passed.
 1. `ReflectiveKnownAnnotation.java`: To illustate the simple use of obtaining the annotated data by a class at runtime. This process exclusively is done using the annotation class under the assumption that we know everything about the annotation being used for the methods or classes or whatever. We also know the target class and its methods. This program draws annotation data of methods with multiple parameters passed.
 1. `AllAnnotation.java`: To illustrate extraction of all annotated data of class and methods separately at runtime. The `getAnnotations()` (note the plural form) method returns an array of `Annotations` of all the respective annotations that have been applied to the method or class.
-1. `DefaultAnnotation.java`: To illustrate default annotations.
+1. `DefaultAnnotation.java`: To illustrate effectiveness of default annotations.
+1. `MarkerAnnotation.java`: To illustrate effectiveness of marker annotations.
