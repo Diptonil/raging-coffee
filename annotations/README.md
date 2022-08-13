@@ -60,6 +60,72 @@ At times we want to define annotations that have default values. In such cases, 
 - These annotations can be checked by a Checker Class using the `isAnnotationPresent()`.
 
 
+## Single-Member Annotations
+
+- Some annotations may have only one field. Or else only one normal field and other fields would all be default. They're called Single Member Annotations.
+- The single field should compulsorily be names as `value()`. While using the annotation, instead of mentioning the field name, we may reduce verbosity and simply write:
+  ```java
+  @SomeAnnotation(69)
+  class SomeJazz {
+    ...
+  }
+  ```
+- The purpose behind these annotations is that their names should be sufficient for users to know the kind of values that would go in. If names aren't that clear, it is best to stick to normal forms.
+
+
+## Built-In Annotations
+
+- There are many but almost all are very specific. There are ten that are general. Five of them are from `java.lang`: `@Override`, `@Deprecated`, `@FunctionalInterface`, `@SafeVarargs`, `@SuppressWarnings`. Five are from `java.lang.annotations`: `@Retention`, `@Documented`, `@Target`, `@Repeatable` and `@Inherited`. It is important to understand that the use of these annotations are purely informational and is not to be considered as binding. They are just special because they issue compile-time warnings if something that they go against happens.
+- `@Retention`: Used to denote the retention policy for another annotation. Used only as an annotation to other annotations.
+- `@Documented`: Used as a marker annotation to tell a tool that an annotation is yet to be documented. Used only as an annotation to other annotations.
+- `@Target`: Used on an annotation to specify the targets that the annotation is meant to be used on. This takes only one parameter - ann array of `ElementType` constants. An annotation can be used on anything as long as it is not annotated by `@Target`. It is often good to explicitly specify the scope for which an annotation is to be used. Used only as an annotation to other annotations.
+- `@Repeatable`: Used for repeating annotations. Used only as an annotation to other annotations.
+- `@Inherited`: This causes the annotations applied on a superclass be inherited by the subclasses. So we do not need to specify the same annotations that we use for the superclass for the subclass as well. Used only as an annotation to other annotations. 
+- `@Override`: Used to make sure that a method from the superclass is actually overriden (like a special marker annotation). It also helps to specify at one glance to a reviewer or programmer that a certain method is actually overriding the superclass method. Compile-time errors are generated if a labelled method doesn't actually override. Used on subclass methods.
+- `@Deprecated`: States that the labelled declaration is obsolete and not recommended for use. Can be used to segregate legacy code from a modern implementation of a given API.
+- `@FunctionalInterface`: States that an interface is *functional*. Compile-time error is generated is it is not. Functional interfaces are discussed in the Lambda section. Used only on interfaces.
+- `@SafeVarargs`: States that no unsafe actions related to a varargs parameter occur. The methods must be static, final or private. Used for methods and constructors.
+- `@SuppressWarnings`: States that any compiler-warnings for a certain section is to be silenced. The name of the warnings should be parameterized as Strings.
+
+
+## The `ElementType` Constants
+
+- `ANNOTATION_TYPE`: To apply to another annotation.
+- `CONSTRUCTOR`: To apply to a constructor.
+- `FIELD`: To apply to a field.
+- `LOCAL_VARIABLE`: To apply to a local variable.
+- `METHOD`: To apply to a method.
+- `MODULE`: To apply to a module.
+- `PACKAGE`: To apply to a package.
+- `PARAMETER`: To apply to a parameter.
+- `TYPE`: To apply to a class, interface or enum.
+- `TYPE_USE`: To apply for type annotations (comes next).
+- `TYPE_PARAMETER`: To apply for type paramter.
+
+
+## Type Annotations
+
+- Originally annotations were allowed only for declarations. From JDK 8, the scape has been expanded. Annotations can also be used in cases where a type is being used. They're called Type Annotations.
+- We can now annotate this within a method, a cast, array levels, `throws`, etc.
+- A Type Annotation must have ElementType.TYPE_USE as a target.
+- Most marker annotations of such types can be effectively used.
+- This feature seems very useless (probably the worst feature I have come across that seems to be just plain spamming of code). 
+
+
+## Repeating Annotations
+
+JDK 8 allowed annotations to be repeated on a same element. It must have the `@Repeatable` flag to it. This again seems very weird and a rather unpleasant addition. The use cases are yet to be explored. It has a container annotation and a repeatable annotation. The repeatable annotation, everytime used, can be kept track of by means of the container annotation that shall have an array of the repeatable annotations.
+
+
+## Some Restrictions
+
+- Annotations cannot inherit each other.
+- Their member methods must accept no parameters.
+- The methods must return either primitives, Strings, Classes, enums, legal arrays or some other annotation.
+- Annotations cannot be generic.
+- They cannot specify a `throws` clause.
+
+
 ## Programs
 
 1. `SimpleAnnotation.java`: To show how basic annotations are created and used.
@@ -68,3 +134,6 @@ At times we want to define annotations that have default values. In such cases, 
 1. `AllAnnotation.java`: To illustrate extraction of all annotated data of class and methods separately at runtime. The `getAnnotations()` (note the plural form) method returns an array of `Annotations` of all the respective annotations that have been applied to the method or class.
 1. `DefaultAnnotation.java`: To illustrate effectiveness of default annotations.
 1. `MarkerAnnotation.java`: To illustrate effectiveness of marker annotations.
+1. `SingleMemberAnnotation.java`: To illustrate effectiveness of single-member annotations using the normal as well as the form involving `default`s. The `Important` annotation is a good example of a well-written single-member annotation while `ScaleOfUsefulness` is not because it does not make sense to have a `comment` field and the value of the scale is unintuitive to the user. Moreover, the name is not too clear as well.
+1. `TypeAnnotations.java`: Examplifying Type Annotations in a weird way.
+1. `RepeatableAnnotation.java`: Examplifying Repeatable Annotations in a weird way.
