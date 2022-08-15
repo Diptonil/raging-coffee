@@ -109,7 +109,7 @@ Certain build tools and applications have been discussed here within the scope o
 
 ## Resources
 
-For this project, the books referred are:
+For this project, the books referred to are:
 - **Java: The Complete Reference** by *Herbert Schildt*.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
 
