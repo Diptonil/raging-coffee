@@ -20,6 +20,7 @@ This section would be an exploratory part with respect to the `java.lang` packag
 - This can be observed while passing values to methods that expect references (Wrapper class parameters, basically).
 - Auto-unboxing also happens in expression evaluation. We do not need to worry if an algebraic expression having `Float` objects would be incorrectly evaluated using the regular operators. Even type conversion happens the same way as it does with primitives. Switch statements are also fair game.
 - Boolean objects get auto-unboxed in conditionals.
+- Classic array objects of Wrapper classes and the primitives **cannot** be autoboxed/ unboxed.
 - While it adds way too much of convenience, it must be remembered that it shouldn't be interchangibly used with the primitives. That is bad practice because overhead is added with Wrappers. It will never replace primitives.
 
 
