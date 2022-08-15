@@ -1,52 +1,92 @@
 # Raging Coffee
 
+<div id="top"></div>
+<span>
+  <img src="https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java&logoColor=orange" />
+  <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
+</span>
+
+
+## Table of Contents
+
+- [Description](#description)
+- [Running the Programs](#running-the-programs)
+- [Extra Dependencies](#extra-dependencies)
+- [Roadmap](#roadmap)
+- [Further Reading](#further-reading)
+- [Known Issues](#known-issues)
+- [Resources](#resources)
+- [Contributions](#contributions)
+
+
+## Description
+
 This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.
 This also deals with certain general problem solving and algorithmic programs that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.
 <a href="https://github.com/TheAlgorithms/Java">Here</a> is the link for the repository containing Java programs on algorithms.
+The project has NO dependencies.
+
+<p align="right">(<a href="#top">Top</a>)</p>
 
 
 ## Running the Programs
 
 Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.
 The required dependencies (JDK 17) have firstly been installed.
-To run the programs from the terminal:
+Methods to run programs from Docker coming shortly. To run the programs from the terminal:
 - From the directory in which the source file is stored:
   `javac fileName.java`
 - From the root directory (exactly from within the `\src\main\java` directory):
   `java com.ragingcoffee.directoryName.fileName`
 
-The current project follows the Maven standards.
+<p align="right">(<a href="#top">Top</a>)</p>
 
 
-## Topics
+## Extra Dependencies
+
+None of the dependencies mentioned below are a must for the project (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
+- **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
+- **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
+
+<p align="right">(<a href="#top">Top</a>)</p>
+
+
+## Roadmap
 
 - [x] Annotations
-- [ ] Well-known array algorithms and problem-solving techniques.
-- [ ] The Collections Framework
-- [ ] Divide and Conquer Technique
-- [ ] Dynamic Programming Technique
-- [ ] File Operations
-- [ ] General problems with multiple approaches
-- [ ] Greedy Algorithms
 - [x] Inheritance
 - [x] Interfaces
 - [x] Enumerations
 - [x] Multithreading
-- [ ] Problem Solving
+- [ ] Well-known array algorithms and problem-solving techniques.
 - [ ] Recursion
+- [ ] Divide and Conquer Technique
+- [ ] Dynamic Programming Technique
+- [ ] Greedy Technique
 - [ ] Searching Techniques
 - [ ] Sorting Techniques
-- [ ] String Operations
+- [ ] General problems with multiple approaches
+- [ ] Problem Solving
+- [x] String Operations
+- [ ] File Operations
 - [ ] The `java.lang` Package
+- [ ] The `java.util` Package
+
+<p align="right">(<a href="#top">Top</a>)</p>
 
 
 ## Further Reading
 
-These can be found under the `furtherreading` directory.
+Certain build tools and applications have been discussed here within the scope of their use in Java development. They may serve as a guide to understand how these tools integrate with Java, along with how they are used for development (this project is an example as well). These can be found under the `furtherreading` directory.
 - [x] Apache Maven
+- [ ] Docker
+- [ ] Gradle
 - [x] Java Access Modifiers
 - [x] Java Conventions
 - [ ] Java Keywords with Multiple Uses
+
+<p align="right">(<a href="#top">Top</a>)</p>
 
 
 ## Known Issues
@@ -62,6 +102,9 @@ These can be found under the `furtherreading` directory.
 - Complete Prime Numbers and Insertion Sort.
 - Space after every `catch`.
 - Fix `TypeAnnotations.java`.
+- Work on the Dockerfile.
+
+<p align="right">(<a href="#top">Top</a>)</p>
 
 
 ## Resources
@@ -70,8 +113,12 @@ For this project, the books referred are:
 - **Java: The Complete Reference** by *Herbert Schildt*.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
 
+<p align="right">(<a href="#top">Top</a>)</p>
+
 
 ## Contributions
 
 - In case any anomalies are found either in the wording or grammar of the README.md files or in any logic of any of the programs that might prompt missing of edge-cases, reports in form of issues would be greatly appreciated.
 - Comments in the programs are sparingly used because, as Uncle Robert would say, comments are just an excuse to pass on poorly-written code. Sufficiently comprehensive variable names have been taken in most cases and thus comments should never be an issue.
+
+<p align="right">(<a href="#top">Top</a>)</p>
