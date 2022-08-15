@@ -7,20 +7,20 @@ This also deals with certain general problem solving and algorithmic programs th
 
 ## Running the Programs
 
-Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. I would not know the procedure for executing the files in environments like IntelliJ or Eclipse. Sections for those shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.
-The required dependencies have firstly been installed.
-To run the programs:
+Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.
+The required dependencies (JDK 17) have firstly been installed.
+To run the programs from the terminal:
 - From the directory in which the source file is stored:
   `javac fileName.java`
-- From the root directory:
-  `java packageName.fileName`
+- From the root directory (exactly from within the `\src\main\java` directory):
+  `java com.ragingcoffee.directoryName.fileName`
 
-The current project structure is not standard at all. The focus is more towards the programs and concepts as of now rather than the overall structure.
+The current project follows the Maven standards.
 
 
 ## Topics
 
-- [ ] Annotations
+- [x] Annotations
 - [ ] Well-known array algorithms and problem-solving techniques.
 - [ ] The Collections Framework
 - [ ] Divide and Conquer Technique
@@ -43,7 +43,7 @@ The current project structure is not standard at all. The focus is more towards 
 ## Further Reading
 
 These can be found under the `furtherreading` directory.
-- [ ] Apache Maven
+- [x] Apache Maven
 - [x] Java Access Modifiers
 - [x] Java Conventions
 - [ ] Java Keywords with Multiple Uses

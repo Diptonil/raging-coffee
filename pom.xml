@@ -11,6 +11,16 @@
   <name>ragingcoffee</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+  <description></description>
+  <inceptionYear>2022</inceptionYear>
+
+  <developers>
+    <developer>
+      <id></id>
+      <name>Diptonil Roy</name>
+      <email>diptonil.roy.work@gmail.com</email>
+    </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
