@@ -28,4 +28,18 @@ Go to the folder where a new project is to be created. Now in the shell:
 - The `groupId` uniquely identifies your project across all projects. A group ID should follow Java's package name rules. Ex: `com.example.maven`, `edu.java`, etc. This isn't too strict a rule according to Maven standards since a lot of projects have been known to exist that have one-worded names. Yet, this is the Java-recommended way.
 - The `artifactId` is the name of the jar without version. If you created it, then you can choose whatever name you want with lowercase letters and no strange symbols. If it's a third party jar, you have to take the name of the jar as it's distributed. Ex: `maven`, `commons-math`, etc.
 - The `version` is exactly what it sounds like. If it's a third party artifact, you have to use their version number whatever it is, and as strange as it can look. Ex: `1.0.7`, `4.2.0`, etc. If the project you work on isn't yet complete, use the SNAPSHOT feature.
-- The `package` option takes in the actual directory within which everything (class files, test files, etc.) would be contained.
+- The `package` option takes in the a directory within which everything files would be contained.
+
+
+## Generating the First Maven Project
+
+Here are the essential steps:
+- Start with `mvn archetype:generate`.
+- Choose the Maven archetype plugin.
+- Choose the IDs, versions and package names.
+- Confirm.
+For this project:
+- The `groupId` was `com.ragingcoffee`.
+- The `artifactId` was `ragingcoffee`.
+- The `version` was `1.0-SNAPSHOT`.
+- The `package` was `com.ragingcoffee.deletethis` (subsequently, the `deletethis` directory was deleted).

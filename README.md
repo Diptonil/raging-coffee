@@ -61,6 +61,7 @@ These can be found under the `furtherreading` directory.
 - Apply backticks for every Java proper noun.
 - Complete Prime Numbers and Insertion Sort.
 - Space after every `catch`.
+- Fix `TypeAnnotations.java`.
 
 
 ## Resources
