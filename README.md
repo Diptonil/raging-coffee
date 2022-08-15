@@ -1,4 +1,4 @@
-# I Had Too Much of Java
+# Raging Coffee
 
 This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.
 This also deals with certain general problem solving and algorithmic programs that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.
