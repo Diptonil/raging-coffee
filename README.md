@@ -42,6 +42,8 @@ The current project structure is not standard at all. The focus is more towards 
 
 ## Further Reading
 
+These can be found under the `furtherreading` directory.
+- [ ] Apache Maven
 - [x] Java Access Modifiers
 - [x] Java Conventions
 - [ ] Java Keywords with Multiple Uses
