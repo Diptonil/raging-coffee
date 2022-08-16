@@ -43,7 +43,7 @@ Only one class implements `Collection` interface first-hand: `AbstractCollection
     - `HashSet`: Extends `AbstractSet` for use with a hashtable.
       - `LinkedHashSet`: Extends `HashSet` and allows insertion order iterations.
   - `AbstractSequentialList`: Extends `AbstractList` and is made for collections that provide sequential access to elements rather than random access.
-    - `LinkedList`: Extends `AbstractSequentialList` and makes a sequentially accessible linked list.
+    - `LinkedList`: Extends `AbstractSequentialList` and makes a sequentially accessible linked list, implements `List`, `Queue` and `Deque`.
   - `AbstractList`: Extends `AbstractCollection` and implements most of `List`.
     - `ArrayList`: Extends `AbstractList` and creates a dynamic array.
     
@@ -60,12 +60,14 @@ Only one class implements `Collection` interface first-hand: `AbstractCollection
 
 ## The `LinkedList` Class
 
-- 
+- It is the linked list data structure representation. The reason of it's popularity is because of the vast set of methods that it implements from three interfaces. That makes it capable of doing almost anything with data.
+- The constructors are `LinkedList()` and `LinkedList(Collection<? extends E> collection)`.
+- These data structures, even in theory, have no size limits. So there is no scope of reallocation and clearing of object space.
 
 
 ## Programs
 
 For this section, exclusively, methods aren't separately discussed. Their uses may be inferred just by a glance at the code.
-1. `ArrayListCollection.java`: Complete use of `ArrayList`s.
+1. `ArrayListCollection.java`: Complete use of `ArrayList`s. We must note that only classes implementing the `Iterator` interface have the ability to use the for-each loop throughout Java.
 1. `LinkedListCollection.java`: Complete use of `LinkedList`s.
 1. 

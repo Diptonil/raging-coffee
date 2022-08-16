@@ -36,9 +36,13 @@ Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat
 The required dependencies (JDK 17) have firstly been installed.
 Methods to run programs from Docker coming shortly. To run the programs from the terminal:
 - From the directory in which the source file is stored:
-  `javac fileName.java`
+  ```sh
+  javac fileName.java
+  ```
 - From the root directory (exactly from within the `\src\main\java` directory):
-  `java com.ragingcoffee.directoryName.fileName`
+  ```sh
+  java com.ragingcoffee.directoryName.fileName
+  ```
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
@@ -82,6 +86,7 @@ Certain build tools and applications have been discussed here within the scope o
 - [x] Apache Maven
 - [ ] Docker
 - [ ] Gradle
+- [ ] JUnit5
 - [x] Java Access Modifiers
 - [x] Java Conventions
 - [ ] Java Keywords with Multiple Uses
