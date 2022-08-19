@@ -1,19 +1,18 @@
 package com.ragingcoffee.cachingalgorithms;
 
 import java.util.ArrayList;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.Queue;
+import java.util.LinkedList;
 import java.util.Random;
 
-public final class FirstInFirstOutCache implements CacheMechanism {
+public final class LeastRecentlyUsedCache implements CacheMechanism {
 
-    private Queue<Integer> cache;
+    private LinkedList<Integer> cache;
     private ArrayList<Integer> memory;
     private final int CACHE_SIZE = 5;
     private final int MEMORY_SIZE = 20;
 
-    FirstInFirstOutCache () {
-        cache = new LinkedBlockingQueue<Integer>(CACHE_SIZE);
+    LeastRecentlyUsedCache() {
+        cache = new LinkedList<Integer>();
         memory = new ArrayList<Integer>(MEMORY_SIZE);
         for (int iterator = 0; iterator < MEMORY_SIZE; iterator ++) {
             memory.add(iterator + 1);
@@ -31,6 +30,8 @@ public final class FirstInFirstOutCache implements CacheMechanism {
     public boolean get(int value) {
         if (cache.contains(value)) {
             System.out.println("Cache hit: " + value);
+            cache.removeFirstOccurrence(value);
+            cache.add(value);
             return true;
         } else if (memory.contains(value)) {
             try {
@@ -40,7 +41,7 @@ public final class FirstInFirstOutCache implements CacheMechanism {
                 System.exit(0);
             }
             System.out.println("Cache miss: " + value);
-            cache.poll();
+            cache.pollFirst();
             cache.add(value);
             return true;
         }

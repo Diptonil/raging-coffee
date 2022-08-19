@@ -21,6 +21,12 @@ public final class ImplementCache {
             case 2:
                 lastInFirstOutCache();
                 break;
+            case 3:
+                leastFrequentlyUsedCache();
+                break;
+            case 4:
+                leastRecentlyUsedCache();
+                break;
             default:
                 System.out.print("Invalid choice.");
         }
@@ -52,6 +58,31 @@ public final class ImplementCache {
     }
 
     private static void lastInFirstOutCache() {
-        FirstInFirstOutCache lifoCaching = new FirstInFirstOutCache();
+        LastInFirstOutCache lifoCaching = new LastInFirstOutCache();
+
+        System.out.println("Initial state of main memory: " + lifoCaching.getMemory());
+        System.out.println("Initial state of cache is empty. So we load some random elements into the cache.");
+        System.out.println("State of cache after loading it up is: " + lifoCaching.loadCache());
+        System.out.println();
+
+        for (int iterator = 0; iterator < 5; iterator ++) {
+            operate(lifoCaching);
+        }
+    }
+
+    private static void leastFrequentlyUsedCache() {
+        LeastFrequentlyUsedCache leastFrequentlyUsedCache = new LeastFrequentlyUsedCache();
+
+        System.out.println("Initial state of main memory: " + leastFrequentlyUsedCache.getMemory());
+        System.out.println("Initial state of cache is empty. So we load some random elements into the cache.");
+        System.out.println("State of cache after loading it up is: " + leastFrequentlyUsedCache.loadCache());
+        System.out.println();
+
+        for (int iterator = 0; iterator < 20; iterator ++) {
+            operate(leastFrequentlyUsedCache);
+        }
+    }
+
+    private static void leastRecentlyUsedCache() {
     }
 }
