@@ -34,7 +34,7 @@ The project has NO dependencies.
 
 Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.
 The required dependencies (JDK 17) have firstly been installed.
-Methods to run programs from Docker coming shortly. To run the programs from the terminal:
+Methods to run programs directly from Docker coming shortly. To run the programs from the terminal:
 - From the directory in which the source file is stored:
   ```sh
   javac fileName.java
@@ -70,6 +70,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - [ ] Greedy Technique
 - [ ] Searching Techniques
 - [ ] Sorting Techniques
+- [ ] Caching Algorithms
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
 - [x] String Operations
@@ -114,7 +115,7 @@ Certain build tools and applications have been discussed here within the scope o
 
 ## Resources
 
-For this project, the books referred to are:
+For this project, the resources referred to are:
 - **Java: The Complete Reference** by *Herbert Schildt*.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
 
