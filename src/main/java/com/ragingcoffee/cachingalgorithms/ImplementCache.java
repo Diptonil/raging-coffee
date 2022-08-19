@@ -27,6 +27,9 @@ public final class ImplementCache {
             case 4:
                 leastRecentlyUsedCache();
                 break;
+            case 5:
+                mostRecentlyUsedCache();
+                break;
             default:
                 System.out.print("Invalid choice.");
         }
@@ -84,5 +87,28 @@ public final class ImplementCache {
     }
 
     private static void leastRecentlyUsedCache() {
+        LeastRecentlyUsedCache leastRecentlyUsedCache = new LeastRecentlyUsedCache();
+
+        System.out.println("Initial state of main memory: " + leastRecentlyUsedCache.getMemory());
+        System.out.println("Initial state of cache is empty. So we load some random elements into the cache.");
+        System.out.println("State of cache after loading it up is: " + leastRecentlyUsedCache.loadCache());
+        System.out.println();
+
+        for (int iterator = 0; iterator < 10; iterator ++) {
+            operate(leastRecentlyUsedCache);
+        }
+    }
+
+    private static void mostRecentlyUsedCache() {
+        MostRecentlyUsedCache mostRecentlyUsedCache = new MostRecentlyUsedCache();
+
+        System.out.println("Initial state of main memory: " + mostRecentlyUsedCache.getMemory());
+        System.out.println("Initial state of cache is empty. So we load some random elements into the cache.");
+        System.out.println("State of cache after loading it up is: " + mostRecentlyUsedCache.loadCache());
+        System.out.println();
+
+        for (int iterator = 0; iterator < 10; iterator ++) {
+            operate(mostRecentlyUsedCache);
+        }
     }
 }

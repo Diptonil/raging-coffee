@@ -9,11 +9,26 @@
 
 ## Least Recently Used Algorithm
 
+- This algorithm works on the idea that *cache elements that have not been much used, at any given time, should be evicted*. This algorithm appears to be pretty helpful if the data store has been working for a long time and there are set records for certain types of data being used more at a given time.
+- In case of a cache miss, the data is fetched and added to the end of the data structure that houses recent elements and evicts data items that are at the other end of the data structure (not recently used). In case of a cache hit, the data retrieved is put to the recently used end.
+- The linked list data structure has been used.
+- `LeastRecentlyUsedCache.java` examines this method.
+
 
 ## Most Recently Used Algorithm
 
+- This algorithm works on the idea that *cache elements that have been much used, at any given time, should be evicted*. A MRU algorithm is good in situations in which the older an item is, the more likely it is to be accessed.
+- In case of a cache miss, the data is fetched and added to the end of the data structure that houses recent elements and evicts data items that are at that very end of the data structure. In case of a cache hit, the data retrieved is put to the recently used end.
+- The linked list data structure has been used.
+- `MostRecentlyUsedCache.java` examines this method.
+
 
 ## Least Frequently Used Algorithm
+
+- This algorithm works on the idea that *cache elements that have not been used to a very large degree as compared to the rest, at any given time, should be evicted*. This algorithm appears to be pretty helpful if the data store has been working for a long time and there are set records for certain types of data being used more, overall, throughout the history.
+- In case of a cache miss, the data is fetched from the main memory and put in place of the element that has had the least hits in the cache. In case of a hit, the counter associated to an element increases.
+- The double dimensional array data structure has been used (somewhat like a lower-level hashtable implementation).
+- `LeastFrequentlyUsedCache.java` examines this method.
 
 
 ## First-In First-Out Algorithm
