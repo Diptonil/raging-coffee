@@ -11,7 +11,7 @@ public final class ImplementCache {
 
         System.out.println("Which implementation would you like to witness?");
         System.out.println("1. First In First Out Cache\n2. Last In First Out Cache\n3. Least Frequently Used Cache");
-        System.out.println("4. Least Recently Used Cache\n5. Most Recently Used Cache\nEnter your choice: ");
+        System.out.println("4. Least Recently Used Cache\n5. Most Recently Used Cache\n6. Random Replacement Cache\nEnter your choice: ");
         int choice = scanner.nextInt();
 
         switch (choice) {
@@ -29,6 +29,9 @@ public final class ImplementCache {
                 break;
             case 5:
                 mostRecentlyUsedCache();
+                break;
+            case 6:
+                randomReplacementCache();
                 break;
             default:
                 System.out.print("Invalid choice.");
@@ -109,6 +112,19 @@ public final class ImplementCache {
 
         for (int iterator = 0; iterator < 10; iterator ++) {
             operate(mostRecentlyUsedCache);
+        }
+    }
+
+    private static void randomReplacementCache() {
+        RandomReplacementCache randomReplacementCache = new RandomReplacementCache();
+
+        System.out.println("Initial state of main memory: " + randomReplacementCache.getMemory());
+        System.out.println("Initial state of cache is empty. So we load some random elements into the cache.");
+        System.out.println("State of cache after loading it up is: " + randomReplacementCache.loadCache());
+        System.out.println();
+
+        for (int iterator = 0; iterator < 10; iterator ++) {
+            operate(randomReplacementCache);
         }
     }
 }

@@ -5,6 +5,8 @@
 - No matter what service is being used for caching (each have their own design principles and use-case recommendations), certain things are shared. The logic behind how the cache would operate and how data would get replaced when it fills up is dictated by caching algorithms.
 - There are multiple caching algorithms out there. The ones that seemed to make the most sense without much research are given below.
 - All algorithms here are implemented with the cache size set to 5 elements and the main memory/ database size to 20 elements, to ensure brevity.
+- A `CacheMechanism.java` file exists to define an interface that dictates behaviour as well as helps in data types of similar classes implementing it get evaluated in a certain way in a method in `ImplementCache.java` class.
+- The `ImplementCache.java` class is used to run all the simulations of the algorithms.
 
 
 ## Least Recently Used Algorithm
@@ -47,7 +49,15 @@
 - `LastInFirstOutCache.java` examines this method.
 
 
+## Random Replacement Algorithm
+
+- This algorithm uses the idea of *replacing elements randomly with no associated logic*. This may at times provide for a more uniform spread in data eviction from cache. This may not be an ideal method to go for as far as caching is concerned in most cases.
+- This certainly should not be chosen at moments when there is uncertainty as to the adoption of a technique. Use LFU or LRU in such situations.
+- The linked list data structure has been used to realize the cache.
+- `RandomReplacementCache.java` examines this method.
+
+
 ## Issues
 
 - None of the programs run without having the `Scanner` object open, which issues a linter error that the `Scanner` is not being closed. `NoSuchElementException` is issued in all cases. The fix has not yet been found.
-- Due to random element addition from a set of 20 elements into the cache, replication of an element may occur. This violates a fundamental principle of cache that a particular element would (obviously) only occupy just one element.
+- Due to random element addition from a set of 20 elements into the cache, replication of an element may occur. This violates a fundamental principle of cache that a particular element would (obviously) only occupy just one element. The fix has not yet been found.

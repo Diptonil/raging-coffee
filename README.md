@@ -70,7 +70,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - [ ] Greedy Technique
 - [ ] Searching Techniques
 - [ ] Sorting Techniques
-- [ ] Caching Algorithms
+- [x] Caching Algorithms
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
 - [x] String Operations
@@ -124,7 +124,7 @@ For this project, the resources referred to are:
 
 ## Contributions
 
-- In case any anomalies are found either in the wording or grammar of the README.md files or in any logic of any of the programs that might prompt missing of edge-cases, reports in form of issues would be greatly appreciated.
+- Refer to `Contributing.md` first.
 - Comments in the programs are sparingly used because, as Uncle Robert would say, comments are just an excuse to pass on poorly-written code. Sufficiently comprehensive variable names have been taken in most cases and thus comments should never be an issue.
 
 <p align="right">(<a href="#top">Top</a>)</p>
