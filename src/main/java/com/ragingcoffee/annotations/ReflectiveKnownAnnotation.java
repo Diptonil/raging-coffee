@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
     int degree();
 }
 
-final class RunningClass {
+final class RunningClassFour {
 
     @MethodAnnotation(information = "Information about the first method.", degree = 1)
     public void methodOne(int integer) {
@@ -26,7 +26,7 @@ final class RunningClass {
 public final class ReflectiveKnownAnnotation {
     
     public static void main(String[] args) {
-        RunningClass runningClass = new RunningClass();
+        RunningClassFour runningClass = new RunningClassFour();
 
         Class<?> classToQuery = runningClass.getClass();
         try {

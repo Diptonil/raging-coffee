@@ -74,3 +74,4 @@ It is worth knowing that the way we program a thread with an intent might be per
 1. `SynchronizedStatementThreads.java`: We use a synchronized keyword to sync threads.
 1. `ValueReturningThreads.java`: We use a thread to return a value on which other threads are dependent.
 1. `WaitingThreads.java`: We use the wait() function to achieve concurrent synchronization correctly.
+1. `ExampleThreads.java`: The class that creates a simple thread that has repeatedly been used in all the other programs for illustrations.

@@ -85,3 +85,4 @@ There is only one superior, special class - Object. This is the class that *ever
 1. `SuperForConstructorInheritance.java`: This shows the behaviour of the super keyword by calling the superclass constructors from the subclass.
 1. `DynamicMethodDispatchInheritance.java`: This illustrates method overriding and dynamic method dispatch.
 1. `AbstractInheritance.java`: This shows abstract and concrete methods within abstract classes. Basically an improvement on the design of the previous program.
+1. `Box.java`: Common helper class to illustrate inheritance.

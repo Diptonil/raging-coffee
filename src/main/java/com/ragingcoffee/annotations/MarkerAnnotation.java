@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 @Retention(RetentionPolicy.RUNTIME)
 @interface Marker {}
 
-final class RunningClass {
+final class RunningClassTwo {
 
     @Marker()
     public void methodOne() {
@@ -35,7 +35,7 @@ final class RunningClass {
 public final class MarkerAnnotation {
     
     public static void main(String[] args) {
-        RunningClass runningClass = new RunningClass();
+        RunningClassTwo runningClass = new RunningClassTwo();
         Class<?> classToQuery = runningClass.getClass();
         String[] methodNames = {"methodOne", "methodTwo", "methodThree", "methodFour", "methodFive"};
         try {

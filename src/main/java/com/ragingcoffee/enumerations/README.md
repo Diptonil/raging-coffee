@@ -44,3 +44,4 @@ All enumerations by default inherit `java.lang.Enum`. It is actually a class and
 1. `ArrayedEnumeration.java`: Creating an array of enum.
 1. `UpgradedEnumeration.java`: An enum is used as a class type to the best of its abilities.
 1. `OrdinalEnumeration.java`: Illustrates the application of `ordinal()` and `compareTo()`.
+1. `Color.java`: Common helper enum to illustrate the concepts.

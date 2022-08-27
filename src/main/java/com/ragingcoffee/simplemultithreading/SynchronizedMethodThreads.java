@@ -3,10 +3,10 @@ package com.ragingcoffee.simplemultithreading;
 public final class SynchronizedMethodThreads {
     
     public static void main(String[] args) {
-        ThreadContent threadContent = new ThreadContent();
-        ExampleThread thread1 = new ExampleThread(threadContent, "Thread One");
-        ExampleThread thread2 = new ExampleThread(threadContent, "Thread Two");
-        ExampleThread thread3 = new ExampleThread(threadContent, "Thread Three");
+        ThreadContentSynced threadContent = new ThreadContentSynced();
+        ExampleThreadSynced thread1 = new ExampleThreadSynced(threadContent, "Thread One");
+        ExampleThreadSynced thread2 = new ExampleThreadSynced(threadContent, "Thread Two");
+        ExampleThreadSynced thread3 = new ExampleThreadSynced(threadContent, "Thread Three");
 
         thread1.thread.start();
         thread2.thread.start();
@@ -14,13 +14,13 @@ public final class SynchronizedMethodThreads {
     }
 }
 
-final class ExampleThread implements Runnable {
+final class ExampleThreadSynced implements Runnable {
 
     public Thread thread;
     private String threadName;
-    private ThreadContent threadContent;
+    private ThreadContentSynced threadContent;
 
-    ExampleThread(ThreadContent threadContent, String threadName) {
+    ExampleThreadSynced(ThreadContentSynced threadContent, String threadName) {
         this.threadContent = threadContent;
         thread = new Thread(this, threadName);
         this.threadName = threadName;
@@ -31,7 +31,7 @@ final class ExampleThread implements Runnable {
     }
 }
 
-final class ThreadContent {
+final class ThreadContentSynced {
 
     synchronized public void call(String message) {
         System.out.print("[" + message);

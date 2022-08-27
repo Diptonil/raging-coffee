@@ -2,7 +2,7 @@ package com.ragingcoffee.interfaces;
 
 import java.util.Random;
 
-interface SimpleInterface {
+interface SimpleInterfaceTwo {
 
     void simpleTaskOne(int parameter);
     void simpleTaskTwo(int parameter);
@@ -18,7 +18,7 @@ interface SimpleInterface {
     default void simpleTaskFive(int parameter) {}
 }
 
-public final class DefaultInterfacingApplication implements SimpleInterface{
+public final class DefaultInterfacingApplication implements SimpleInterfaceTwo {
     
     private static final int BOUND = 100;
 

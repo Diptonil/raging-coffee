@@ -29,26 +29,3 @@ public final class JoiningThreads {
         }
     }
 }
-
-final class ExampleThread implements Runnable {
-
-    public Thread thread;
-    private String threadName;
-
-    ExampleThread(String threadName) {
-        this.threadName = threadName;
-        thread = new Thread(this, threadName);
-    }
-
-    public void run() {
-        for(int iterator = 0; iterator < 5; iterator ++) {
-            try {
-                System.out.println(threadName + ": " + iterator);
-                Thread.sleep(1000);
-            } catch(InterruptedException exception) {
-                System.out.println(threadName + " interrupted.");
-            }
-        }
-        System.out.println(threadName + " exiting.");
-    }
-}

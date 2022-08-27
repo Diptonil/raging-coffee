@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
 
 @InformationAnnotation(information = "The class.")
 @DegreeAnnotation(degree = 0)
-final class RunningClass {
+final class RunningClassZero {
 
     @InformationAnnotation(information = "The first method.")
     @DegreeAnnotation(degree = 1)
@@ -35,7 +35,7 @@ final class RunningClass {
 public final class AllAnnotation {
     
     public static void main(String[] args) {
-        RunningClass runningClass = new RunningClass();
+        RunningClassZero runningClass = new RunningClassZero();
         Class<?> classToQuery = runningClass.getClass();
 
         try {

@@ -25,25 +25,6 @@ public final class SuperclassSubclassReferenceInheritance {
     }
 }
 
-class Box {
-
-    public int length;
-    public int breadth;
-    public int height;
-
-    Box(int length, int breadth, int height) {
-        this.length = length;
-        this.breadth = breadth;
-        this.height = height;
-    }
-
-    Box() {}
-
-    public int volume() {
-        return length * breadth * height;
-    }
-}
-
 class WeightedBox extends Box {
     
     private int weight;

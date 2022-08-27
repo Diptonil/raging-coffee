@@ -2,13 +2,13 @@ package com.ragingcoffee.interfaces;
 
 import java.util.Random;
 
-interface SimpleInterface {
+interface SimpleInterfaceThree {
     static void simpleTaskOne(int parameter) {}
     static void simpleTaskTwo(int parameter) {}
     static void simpleTaskThree(int parameter) {}
 }
 
-public abstract class IncompleteInterfacingApplication implements SimpleInterface{
+public abstract class IncompleteInterfacingApplication implements SimpleInterfaceThree {
     
     private static final int BOUND = 100;
 

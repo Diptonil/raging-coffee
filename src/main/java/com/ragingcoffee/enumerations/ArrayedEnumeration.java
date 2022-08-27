@@ -1,9 +1,5 @@
 package com.ragingcoffee.enumerations;
 
-enum Color {
-    Red, Blue, Green, Black, White
-}
-
 public final class ArrayedEnumeration {
     
     public static void main(String[] args) {

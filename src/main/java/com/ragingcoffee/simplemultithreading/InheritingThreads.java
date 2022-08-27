@@ -3,7 +3,7 @@ package com.ragingcoffee.simplemultithreading;
 public final class InheritingThreads {
     
     public static void main(String[] args) {
-        ExampleThread childThread = new ExampleThread("Child Thread");
+        ExampleThreadExtendable childThread = new ExampleThreadExtendable("Child Thread");
         childThread.start();
         try {
             for(int iterator = 0; iterator <= 5; iterator ++) {
@@ -18,9 +18,9 @@ public final class InheritingThreads {
     }
 }
 
-final class ExampleThread extends Thread {
+final class ExampleThreadExtendable extends Thread {
 
-    ExampleThread(String threadName) {
+    ExampleThreadExtendable(String threadName) {
         super(threadName);
         System.out.println(threadName + " thread has been created!");
     }

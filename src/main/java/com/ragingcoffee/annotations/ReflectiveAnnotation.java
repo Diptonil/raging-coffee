@@ -6,19 +6,19 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Method;
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface MethodAnnotation {
+@interface MethodAnnotationWithFields {
     String information();
     int degree();
 }
 
-final class RunningClass {
+final class RunningClassThree {
 
-    @MethodAnnotation(information = "Information about the first method.", degree = 1)
+    @MethodAnnotationWithFields(information = "Information about the first method.", degree = 1)
     public void methodOne() {
         System.out.print("The first method.");
     }
 
-    @MethodAnnotation(information = "Information about the second method.", degree = 2)
+    @MethodAnnotationWithFields(information = "Information about the second method.", degree = 2)
     public void methodTwo() {
         System.out.print("The second method.");
     }
@@ -27,7 +27,7 @@ final class RunningClass {
 public final class ReflectiveAnnotation {
     
     public static void main(String[] args) {
-        RunningClass runningClass = new RunningClass();
+        RunningClassThree runningClass = new RunningClassThree();
         Class<?> classToQuery = runningClass.getClass();
         
         try {

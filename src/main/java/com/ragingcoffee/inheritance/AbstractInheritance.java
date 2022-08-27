@@ -6,10 +6,10 @@ public final class AbstractInheritance {
     static final int DIMENSION2 = 13;
 
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(DIMENSION1, DIMENSION2);
-        Triangle triangle = new Triangle(DIMENSION1, DIMENSION2);
+        AbstractRectangle rectangle = new AbstractRectangle(DIMENSION1, DIMENSION2);
+        AbstractTriangle triangle = new AbstractTriangle(DIMENSION1, DIMENSION2);
 
-        Figure dispatcher;
+        AbstractFigure dispatcher;
 
         dispatcher = rectangle;
         dispatcher.getArea();
@@ -21,13 +21,13 @@ public final class AbstractInheritance {
     }
 }
 
-abstract class Figure {
+abstract class AbstractFigure {
 
     int dimension1;
     int dimension2;
     float area;
 
-    Figure(int dimension1, int dimension2) {
+    AbstractFigure(int dimension1, int dimension2) {
         this.dimension1 = dimension1;
         this.dimension2 = dimension2;
     }
@@ -39,9 +39,9 @@ abstract class Figure {
     }
 }
 
-class Rectangle extends Figure {
+class AbstractRectangle extends AbstractFigure {
 
-    Rectangle(int length, int breadth) {
+    AbstractRectangle(int length, int breadth) {
         super(length, breadth);
     }
 
@@ -51,9 +51,9 @@ class Rectangle extends Figure {
     }
 }
 
-class Triangle extends Figure {
+class AbstractTriangle extends AbstractFigure {
     
-    Triangle(int base, int height) {
+    AbstractTriangle(int base, int height) {
         super(base, height);
     }
 

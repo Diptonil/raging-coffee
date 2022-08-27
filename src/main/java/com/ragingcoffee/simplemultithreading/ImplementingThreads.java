@@ -3,7 +3,7 @@ package com.ragingcoffee.simplemultithreading;
 public final class ImplementingThreads {
 
     public static void main(String[] args) {
-        ExampleThread childThread = new ExampleThread("Child Thread");
+        ExampleThreadRunnable childThread = new ExampleThreadRunnable("Child Thread");
         childThread.thread.start();
         try {
             for(int iterator = 0; iterator <= 5; iterator ++) {
@@ -18,11 +18,11 @@ public final class ImplementingThreads {
     }
 }
 
-final class ExampleThread implements Runnable {
+final class ExampleThreadRunnable implements Runnable {
     
     public Thread thread;
 
-    ExampleThread(String threadName) {
+    ExampleThreadRunnable(String threadName) {
         thread = new Thread(this, threadName);
         System.out.println(threadName + " thread has been created!");
     }

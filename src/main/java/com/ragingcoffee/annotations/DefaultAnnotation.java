@@ -6,25 +6,25 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Method;
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface MethodAnnotation {
+@interface MethodDefaultAnnotation {
     String information() default "Default value of information field.";
     int degree() default 420;
 }
 
 @MethodAnnotation(information = "This is not a method.", degree = -1)
-final class RunningClass {
+final class RunningClassOne {
 
-    @MethodAnnotation(information = "Information about the first method.")
+    @MethodDefaultAnnotation(information = "Information about the first method.")
     public void methodOne() {
         System.out.print("The first method.");
     }
 
-    @MethodAnnotation()
+    @MethodDefaultAnnotation()
     public void methodTwo() {
         System.out.print("The second method.");
     }
 
-    @MethodAnnotation(degree = 1)
+    @MethodDefaultAnnotation(degree = 1)
     public void methodThree() {
         System.out.print("The third method.");
     }
@@ -33,7 +33,7 @@ final class RunningClass {
 public final class DefaultAnnotation {
     
     public static void main(String[] args) {
-        RunningClass runningClass = new RunningClass();
+        RunningClassOne runningClass = new RunningClassOne();
         Class<?> classToQuery = runningClass.getClass();
 
         try {

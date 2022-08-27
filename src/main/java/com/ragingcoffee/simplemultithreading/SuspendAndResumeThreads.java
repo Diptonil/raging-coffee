@@ -3,8 +3,8 @@ package com.ragingcoffee.simplemultithreading;
 public final class SuspendAndResumeThreads {
 
     public static void main(String[] args) {
-        ExampleThread thread1 = new ExampleThread("Thread One");
-        ExampleThread thread2 = new ExampleThread("Thread Two");
+        ExampleThreadSuspend thread1 = new ExampleThreadSuspend("Thread One");
+        ExampleThreadSuspend thread2 = new ExampleThreadSuspend("Thread Two");
         int threadValue;
 
         thread1.thread.start();
@@ -33,14 +33,14 @@ public final class SuspendAndResumeThreads {
     }
 }
 
-final class ExampleThread implements Runnable {
+final class ExampleThreadSuspend implements Runnable {
     
     public Thread thread;
     private String threadName;
     private boolean isSuspended;
     private int iterator;
 
-    ExampleThread(String threadName) {
+    ExampleThreadSuspend(String threadName) {
         thread = new Thread(this, threadName);
         this.threadName = threadName;
     }
