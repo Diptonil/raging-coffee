@@ -105,5 +105,3 @@ With every command, all the previous commands also get hierarchically executed.
     ```
 The project may not work due to absence of dependencies.
 - We may write for every dependency their scope inside `<scope>` tags. That allows Maven to know where the dependency is being used. The available options are: `test`, `compile` (the default), `runtime` (dependency only active at runtime), `provided` (lets Maven know that the scope is available just for the runtime).
-
-

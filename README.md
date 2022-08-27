@@ -87,6 +87,7 @@ Certain build tools and applications have been discussed here within the scope o
 - [x] Apache Maven
 - [ ] Docker
 - [ ] Gradle
+- [ ] Jenkins
 - [ ] JUnit5
 - [x] Java Access Modifiers
 - [x] Java Conventions
