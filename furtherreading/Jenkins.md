@@ -32,8 +32,10 @@ The guide walks through setting up an appropriate Jenkins jobs for the following
 1. Chaining a Jenkins job to build, run and display a success message for a Java file.
 1. Build files from a Git repository periodically.
 1. Build files from a Git repository upon every new push.
-1. Set Up a Maven Project.
-1. Build a Project and Send Email Alerts.<br />
+1. Set Up a Maven project.
+1. Build a project and send email alerts.
+1. Build a pipeline using pipeline script to package a Maven project.
+1. Build a pipeline using pipeline script from SCM to package a Maven project.<br />
 **NOTE**: Every topic subheading from hence having a number in parenthesis would mean that the topic deals with the corresponding project.
 
 
@@ -211,3 +213,106 @@ Of course, if we would want the repository to be cloned some place else, we just
 - Choose any random project to build. In the configuration page of the job, go to `Post-build actions`. Select `Email notifications` from the dropdown.
 - We select the recipients to send the mail to when the build fails.
 - In case we want to use the plugin, in the configuration page of the job, go to `Post-build actions`. Select `Extended email notifications` from the dropdown. We can add in a bunch of additional settings here.
+
+
+## Jenkins Pipeline
+
+- It is a mechanism that allows us to leverage Continuous Delivery using Jenkins by having our code pushed to the target repository from which Jenkins would build, test and automatically deploy the new version of the code to the server (if any) reliably in an error-prone manner.
+- A Pipeline is a series of tasks that happens consecutively upon successive completion of tasks that aim to achieve a larger goal than something as simple as just a build.
+- The definition of a pipeline requires a `Jenkinsfile`. That can be done by using a declarative or a scripted syntax. The declarative approach is favoured because it makes the Jenkins code more readable and easier to write. It also provides richer syntax over the scripted approach.
+- Instead of creating a `Freestyle Projects`, we create a `Pipeline`.
+
+
+## The Declarative Syntax
+
+- Every script begins with a `pipeline` keyword.
+- We then specify the `agent`s (with the same keyword). The agent is the entity on which the pipeline would get executed.
+- We then would define the `stages`. Inside that woud define individual `stage`s of (say) building, testing, deploying, etc. The stage as such doesn't really need to be a specific keyword. It can be something that describes what exactly is happening there. Consult the example below.
+- Then within that we would define the `steps` that we need to take. Within this, we use the term `sh` if we are working on Linux or `bat` if we are working on Windows.
+
+
+## Simple Pipeline (8)
+
+- We create a simple Jenkins job with a GitHub repository first using some previously mentioned configuration. The only difference is that we do not go for `Freestyle Project` anymore. We go for `Pipeline`s.
+- In `Advanced Project Options`, we have the `Pipeline`. This use-case involves building a pipeline from `Pipeline script`.
+- Assume that we have a pipeline that clones a Maven project in a Linux machine and builds it up successively. We need to have Maven installed, of course. The pipeline script that we would put is:
+```
+pipeline {
+  agent all
+  stages {
+    stage('initialize') {
+      steps {
+        sh 'git clone https://github.com/Diptonil/raging-coffee.git'
+        sh 'mvn clean -f raging-coffee'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'mvn test -f raging-coffee'
+      }
+    }
+    stage('deploy') {
+      steps {
+        sh 'mvn package -f raging-coffee'
+      }
+    }
+  }
+}
+```
+- It is worth noting that such a simple task doesn't need a pipeline but it has been shown here in such a way for all purposes of brevity.
+- When we build the job, we can see in green boxes the stages of our build. Upon hovering, we can see the build stages. Red boxes would mean failure. Upon hovering we can also access the logs.
+- If we try to run the pipeline once again, however, the `git clone` command would produce errors because the directory would already be existing. To rectify that behaviour, we use this line before running the clone command: `rm -rf raging-coffee`.
+
+
+## Simple Pipeline with SCM (9)
+
+- We repeat the same outcome as previously obtained but using a `Jenkinsfile` that has already been committed in our Git repo.
+- Copy and paste the entire script made previously into a `Jenkinsfile` located at the root of the directory. There are certain changes that needs to be made.
+- This offers a much more sophesticated approach for creating pieplines.
+- The script here would look like:
+```
+pipeline {
+  agent all
+  stages {
+    stage('clean') {
+      steps {
+        sh 'mvn clean'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'mvn test'
+      }
+    }
+    stage('deploy') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+  }
+}
+```
+- We do not need to make any mention of directory changes since everything that gets executed is within the root folder of the project that gets built in the system at the root of the repo.
+- No need for cloning or any other Git commands because that process would happen by default.
+- Now select `Pipeline script from SCM` and select Git. Fill up the details and save. Keep script path set to `Jenkinsfile` if the same is at the root of the directory. If not, the path should be mentioned.
+- Now we can build and see the results.
+- This is the configuration that is used by this project as well because all that is required for this repository is to check if all programs are getting compiled without errors. Tests would be included soon as well. The Jenkinsfile for this repo can be checked out for more details.
+
+
+## Slaves & Masters
+
+- At times, having just a single machine locally to run builds or deployments is not enough for all purposes (majority of purposes, in fact). If we are building a large project, one server may not be sufficient to handle the load of the entire project. We would want to go for using Slave nodes in such cases.
+- We would need a separate system to be the node. The launch method would depend on the type of system chosen. The slave instance must have Java 8 or more installed for success.
+- Under `Manage Jenkins`, we have `Manage Nodes`. We already have a master node.
+- For a slave node, go for SSH from the master node to the slave node. Add a new node. Provide all the configurational details. The fields are pretty much explanatory and have been discussed before as well.
+- Labels are to group the nodes together into an unit for classification purposes.<br />
+**For Linux**
+- Select the `Launch Method`. For Linux machines, select `via SSH`. Set the IP of the Host (the slave) and add credentials and verification strategies.
+- Leave `Require manual verification` as unchecked.
+- As such, upon creation, the node is expected to be offline. To start, we go for the `Launch Node` option. We should see a success message if the connection is done. We must be sure to have connection settings set as such the SSH connection can be succesful between the machines.
+- We can test our connection to the new node as well by making a Jenkins job that does that. In configurations we can choose the node to run the job in. This is often ideal for very big projects.<br />
+**For Windows**
+- Firstly, go to `Manage Jenkins` and then `Configure System`. Replace `localhost` with the current IP address.
+- Repeat similar instructions as the previous method, except in `Launch Method`, use `Launch agent via Java web start` (if the option is unavailable, configure Agents in the Global Security settings to `Random`).
+- We save the configurations and see the Windows agent be created. Follow the steps already given in Jenkins to connect to the agent (save agents.jar file inside the Jenkins folder before proceeding with the cmd command).
+- Upon establishment of connectionn, we see a `Connected` prompt.

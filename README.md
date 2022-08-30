@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java&logoColor=orange" />
   <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white" />
 </span>
 
 
@@ -51,6 +52,7 @@ Methods to run programs directly from Docker coming shortly. To run the programs
 
 None of the dependencies mentioned below are a must for the project (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
 - **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
+- **Jenkins**: Pipeline used to automatically build and test the code locally upon every push.
 - **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
 
 <p align="right">(<a href="#top">Top</a>)</p>
@@ -87,7 +89,7 @@ Certain build tools and applications have been discussed here within the scope o
 - [x] Apache Maven
 - [ ] Docker
 - [ ] Gradle
-- [ ] Jenkins
+- [x] Jenkins
 - [ ] JUnit5
 - [x] Java Access Modifiers
 - [x] Java Conventions
