@@ -16,8 +16,9 @@ The problem is to construct a design that represents ducks. There are various ty
 ## Patterns Covered
 
 - Gand of Four Patterns
-  - Class Patterns
+  - Creational Patterns
     - [ ] Singleton
-  - Object Patterns
+  - Structural Patterns
+  - Behavioral Patterns
     - 
 - 

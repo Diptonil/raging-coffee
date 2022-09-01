@@ -115,6 +115,7 @@ Certain build tools and applications have been discussed here within the scope o
 - Space after every `catch`.
 - Fix `TypeAnnotations.java`.
 - Work on the Dockerfile.
+- 0 to 19 for caching in main memory.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
