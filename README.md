@@ -23,10 +23,12 @@
 
 ## Description
 
-This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.
-This also deals with certain general problem solving and algorithmic programs that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.
-<a href="https://github.com/TheAlgorithms/Java">Here</a> is the link for the repository containing Java programs on algorithms.
-The project has NO dependencies.
+This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.<br />
+This also deals with certain general problem solving and algorithmic programs as well as design patterns that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.<br />
+The project has NO dependencies.<br />
+<a href="https://github.com/TheAlgorithms/Java">Here</a> is the link of the repository containing Java programs on algorithms.<br />
+<a href="https://github.com/iluwatar/java-design-patterns">Here</a> is the link of the repository containing design patterns elucidated in an intuitive and resourceful manner by experienced and passionate engineers and experts.
+
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
@@ -52,7 +54,7 @@ Methods to run programs directly from Docker coming shortly. To run the programs
 
 None of the dependencies mentioned below are a must for the project (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
 - **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
-- **Jenkins**: Pipeline used to automatically build and test the code locally upon every push.
+- **Jenkins**: Pipeline used to automatically build and test the code on a local server upon every push.
 - **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
 
 <p align="right">(<a href="#top">Top</a>)</p>
@@ -75,6 +77,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - [x] Caching Algorithms
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
+- [ ] Design Patterns
 - [x] String Operations
 - [ ] File Operations
 - [ ] The `java.lang` Package
@@ -121,6 +124,7 @@ Certain build tools and applications have been discussed here within the scope o
 For this project, the resources referred to are:
 - **Java: The Complete Reference** by *Herbert Schildt*.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
+- **Head First Design Patterns** by *Bates Bert*, *Freeman Eric*, *Robinson Elisabeth* and *Sierra Kathy*.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
