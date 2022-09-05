@@ -1,6 +1,7 @@
 # Leetcode Problems
 
-The link of the corresponding problem is commented for all programs. In most cases, I think I have come up with fairly acceptable solutions that passes 100% of the test cases.
+- The link of the corresponding problem is commented for all programs. In most cases, fairly acceptable solutions that passes 100% of the test cases have been formulated.
+- The programs lack a main method for execution. Only the function body that solved the problem has been given.
 
 
 ## Peaks in Array Mountains
