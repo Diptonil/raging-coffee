@@ -35,8 +35,8 @@ The project has NO dependencies.<br />
 
 ## Running the Programs
 
-Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.
-The required dependencies (JDK 17) have firstly been installed.
+Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.<br />
+The required dependencies (JDK 17) have firstly been installed.<br />
 Methods to run programs directly from Docker coming shortly. To run the programs from the terminal:
 - From the directory in which the source file is stored:
   ```sh
@@ -80,6 +80,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - [ ] Design Patterns
 - [x] String Operations
 - [ ] File Operations
+- [x] The Reflection API
 - [ ] The `java.lang` Package
 - [ ] The `java.util` Package
 
