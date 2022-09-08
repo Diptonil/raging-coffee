@@ -10,3 +10,14 @@ Every class must have only one job so that the behaviour of objects can be restr
 - **FLAWS**: In some cases, however, it is logically desirable to define a similar behaviour under a same class (if a certain class seems to be a certain data structure or some similar use-case). In such cases, SRP is not the way to go.
 - **CONCLUSION**: It is just a design technique that can yield good results in MOST cases by making code succinct but it might not always be a good choice.
 - **VIOLATIONS**: The Singleton pattern lies in a clear conflict to this rule.
+
+
+## Coupling
+
+- **DEFINITION**: Coupling refers to the degree of direct knowledge that one element has of another. In other words, how often do changes in class A force related changes in class B. 
+- **TIGHT COUPLING**: Tight coupling means the two classes often change together. In other words, if A knows more than it should about the way in which B was implemented, then A and B are tightly coupled. This concept is used in Remote Method Invocation.
+- **LOOSE COUPLING**: Loose coupling means they are mostly independent. If the only knowledge that class A has about class B, is what class B has exposed through its interface, then class A and class B are said to be loosely coupled.
+- Both are good in their own ways. Tight Coupling is more easy, readable in case of client side coding and API use. Loose coupling is a better design strategy if used for development of services and APIs for programmers to use.
+
+
+## Remote Method Invokation

@@ -4,6 +4,11 @@ This directory deals with the general and most commonly used patterns used in so
 The topic might seem redundant at first but there are certain policies and processes of thoughts that help us program more efficiently. We might be able to understand the significance of proper software design if we take a classic example that has been shown below.
 
 
+## Design Principles
+
+The `design-principles.md` file is concerned with exploring all the principles in Object Oriented Programming that mae the model more elegant and all it's feature easily usable with respect to designs and real-life problem solving.
+
+
 ## The Classic Introductory Design Problem
 
 The problem is to construct a design that represents ducks. There are various types of ducks: Mallards, Redheads (even plastic and wooden ducks! Despite the silliness, the nuance to the problem is brought in to this problem by this example itself). We need to represent them as components in a program or application with the promise of most succinct and reusable code that is optimally written. We assume that we are not assigning any sort of magnitude or type to the behaviour of quacking or flying, as of now (no dependent attributes).<br />
@@ -17,7 +22,9 @@ The problem is to construct a design that represents ducks. There are various ty
 
 - Gand of Four Patterns
   - Creational Patterns
-    - [ ] Singleton
+    - [x] Singleton
+    - [x] Prototype
+    - [x] Factory
   - Structural Patterns
   - Behavioral Patterns
     - 
