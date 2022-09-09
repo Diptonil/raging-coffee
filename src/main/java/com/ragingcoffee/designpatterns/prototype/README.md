@@ -1,4 +1,4 @@
-# Prototype Pattern
+# The Prototype Pattern
 
 This is a Creational GoF pattern that *allows us to use a copy of an object distinctively by making a few alterations to it to support our use-case*. This is useful at times when the creation of objects from scratch would be a costly affair in terms of time. The philosophy of object cloning is used in this case.<br />
 It must be remembered that this pattern can be applied to very specific instances or cases to actually enjoy certain optimizations and benefits.

@@ -12,6 +12,9 @@ Every class must have only one job so that the behaviour of objects can be restr
 - **VIOLATIONS**: The Singleton pattern lies in a clear conflict to this rule.
 
 
+## Remote Method Invokation
+
+
 ## Coupling
 
 - **DEFINITION**: Coupling refers to the degree of direct knowledge that one element has of another. In other words, how often do changes in class A force related changes in class B. 
@@ -20,4 +23,7 @@ Every class must have only one job so that the behaviour of objects can be restr
 - Both are good in their own ways. Tight Coupling is more easy, readable in case of client side coding and API use. Loose coupling is a better design strategy if used for development of services and APIs for programmers to use.
 
 
-## Remote Method Invokation
+## Constructor Telescoping Anti-Pattern
+
+- **DEFINITION**: The case in a program when while designing a constructor, the number of parameters inadvertently increase into more than three, or worse, more than the line of the screen can hold. Such instances should be avoided at all times at all costs.
+- **SOLUTION**: The Builder Creational pattern is a simple and elegant solution that prevents overcrowding of parameters for a constructor by replacing it completely with a builder object with public fields.

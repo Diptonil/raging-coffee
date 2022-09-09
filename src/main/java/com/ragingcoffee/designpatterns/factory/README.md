@@ -1,4 +1,4 @@
-# Factory
+# The Factory Pattern
 
 This is a Creational GoF pattern that *provides a static method encapsulated in a class to keep track of objects in the factory class*. This hides the implementation logic and makes the client code focus on usage rather than initializing new objects.
 

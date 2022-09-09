@@ -1,4 +1,4 @@
-# Singleton Pattern
+# The Singleton Pattern
 
 This is a Creational GoF pattern that *restricts the instantiation of objects of a particular class to just one*. This can be advantageous in situations where a same object is required to do multiple tasks but the overhead of creating multiple objects throughout the program and allocating heap space for it would be too high.
 

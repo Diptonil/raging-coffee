@@ -18,7 +18,7 @@ public final class Consumer {
 
     private static void generalPattern() {
         Coin silverCoin = new SilverCoin();
-        Coin goldCoin =new GoldCoin();
+        Coin goldCoin = new GoldCoin();
         Coin copperCoin = new CopperCoin();
         printer(silverCoin, goldCoin, copperCoin);
     }
