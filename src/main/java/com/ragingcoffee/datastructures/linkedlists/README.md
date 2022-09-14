@@ -34,8 +34,38 @@ In our case, we assume that the first valued element itself is the head.
 - Most problems have a varying implementation of linked list out there.
 
 
+## Singly Linked Lists
+
+It is a data structure having a node containing a value and a link that connects to the next node. The linked list that we have implemented contains a tail as well, which makes the representation simpler in many ways.
+- Traversal to any node would take O(n) time complexity.
+- Insertions at the front and rear take O(1) time complexity due to presence of head and tail.
+- Deletions at the front take O(1) and rear take O(n) time complexity.
+- Insertions & deletions in between take O(n) time complexity.
+- Reversal takes O(n) time complexity.
+
+
+## Doubly Linked Lists
+
+It is a data structure having a node containing a value and a link that connects to the next node and another link that connects to the previous node. The linked list that we have implemented contains a tail as well, which makes the representation simpler in many ways.
+- Traversal to any node would take O(n) time complexity. Backward traversal becomes easier as well.
+- Insertions at the front and rear take O(1) time complexity due to presence of head and tail.
+- Deletions at the front take O(1) and rear take O(n) time complexity.
+- Insertions & deletions in between take O(n) time complexity.
+- Reversal takes O(n) time complexity. We can just do backward traversal for it to work.
+
+
+## Circular Linked Lists
+
+It is a data structure having a node containing a value and a link that connects to the next node such that the final node, instead of pointing to null, points back to the first node. The linked list that we have implemented contains a tail as well, which makes the representation simpler in many ways.
+- Since list has no origin or end, there is no concept of insertion or deletion after an index. Neither is there a front or rear.
+- Hence, there is only inertion and deletion. Insertion operation takes O(1) time complexity. Deletion operation takes O(n) time complexity as it can only happen if we are given a particular node's value to delete since ther is no fixed origin here.
+- It makes no sense to reverse a circular linked list.
+
+
 ## Programs
 
 1. `Node.java`: Representation of a simple single and circular linked list node.
 1. `DoubleLinkNode.java`: Representation of a simple doubly linked list node.
 1. `SinglyLinkedList.java`: Representation of a singly linked list.
+1. `DoublyLinkedList.java`: Representation of a doubly linked list.
+1. `CircularLinkedList.java`: Representation of a circular linked list.

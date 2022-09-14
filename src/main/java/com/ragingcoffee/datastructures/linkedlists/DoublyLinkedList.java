@@ -1,13 +1,16 @@
 package com.ragingcoffee.datastructures.linkedlists;
 
-public final class SinglyLinkedList {
+public final class DoublyLinkedList {
 
-    private static Node head;
-    private static Node tail;
+    private static DoubleLinkNode head;
+    private static DoubleLinkNode tail;
     private static int size;
-    
+
     private static void insertFront(int value) {
-        Node node = new Node(value, head);
+        DoubleLinkNode node = new DoubleLinkNode(value, null, head);
+        if (head != null) {
+            head.previous = node;
+        }
         head = node;
 
         if(tail == null) {
@@ -22,14 +25,16 @@ public final class SinglyLinkedList {
             return;
         }
 
-        Node node = new Node(value);
+        DoubleLinkNode node = new DoubleLinkNode(value, tail, null);
         tail.next = node;
         tail = node;
+        tail.next = null;
+        tail.previous = node.previous;
         size ++;
     }
 
     private static void insertAfter(int value, int index) {
-        Node traversingNode = head;
+        DoubleLinkNode traversingNode = head;
         int count = 0;
 
         if (index > size - 1) {
@@ -39,7 +44,7 @@ public final class SinglyLinkedList {
 
         while (count < size) {
             if (count == index) {
-                Node node = new Node(value, traversingNode.next);
+                DoubleLinkNode node = new DoubleLinkNode(value, traversingNode, traversingNode.next);
                 if (index == size - 1) {
                     tail = node;
                 }
@@ -52,6 +57,17 @@ public final class SinglyLinkedList {
         size ++;
     }
 
+    private static void show(DoubleLinkNode head) {
+        DoubleLinkNode traversingNode = head;
+
+        System.out.print("The doubly linked list looks like: ");
+        while (traversingNode != null) {
+            System.out.print(traversingNode.value + " ");
+            traversingNode = traversingNode.next;
+        }
+        System.out.println();
+    }
+
     private static int deleteFirst() {
         int deletedValue = head.value;
 
@@ -59,6 +75,7 @@ public final class SinglyLinkedList {
             return Integer.MIN_VALUE;
         }
         head = head.next;
+        head.previous = null;
 
         if (head == null) {
             tail = null;
@@ -80,7 +97,7 @@ public final class SinglyLinkedList {
             return head.value;
         }
 
-        Node traversingNode = head;
+        DoubleLinkNode traversingNode = head;
 
         while (traversingNode.next.next != null) {
             traversingNode = traversingNode.next;
@@ -101,7 +118,7 @@ public final class SinglyLinkedList {
         } else if (index == size - 1) {
             deleteRear();
         } else {
-            Node traversingNode = head;
+            DoubleLinkNode traversingNode = head;
             int count = 0;
             while (count < size) {
                 if (count == index) {
@@ -116,42 +133,29 @@ public final class SinglyLinkedList {
         return deletedValue;
     }
 
-    private static void show(Node head) {
-        Node traversingNode = head;
+    private static void reverse() {
+        DoubleLinkNode traversingNode = tail;
 
-        System.out.print("The singly linked list looks like: ");
-        while (traversingNode != null) {
+        System.out.print("The doubly linked list looks like: ");
+        while (traversingNode.previous != null) {
             System.out.print(traversingNode.value + " ");
-            traversingNode = traversingNode.next;
+            traversingNode = traversingNode.previous;
         }
         System.out.println();
     }
-
-    private static Node reverse() {
-        Node reverse = null;
-        Node nextNode = null;
-        Node traversingNode = head;
-        while (traversingNode != null) {
-            nextNode = traversingNode.next;
-            traversingNode.next = reverse;
-            reverse = traversingNode;
-            traversingNode = nextNode;
-        }
-        return reverse;
-    }
-
+    
     public static void main(String[] args) {
         insertFront(10);
         insertFront(0);
         insertRear(20);
         insertRear(30);
+        show(head);
         insertAfter(420, 2);
         show(head);
+        reverse();
         deleteAfter(3);
         deleteFirst();
         deleteRear();
         show(head);
-        Node reverse = reverse();
-        show(reverse);
     }
 }
