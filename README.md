@@ -79,6 +79,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - [ ] Problem Solving
 - [ ] Design Patterns
 - [x] String Operations
+- [ ] Data Structure Implementations
 - [ ] File Operations
 - [x] The Reflection API
 - [ ] The `java.lang` Package
