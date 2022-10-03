@@ -6,10 +6,8 @@
   <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white" />
-  <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" />
+  <img src="https://img.shields.io/badge/Gitpod-000000?style=for-the-badge&logo=gitpod&logoColor=#FFAE33" />
 </span>
-
-You can now run and edit the programs, or contribute to the project using Gitpod.io (a free online development environment) with a single click.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Diptonil/raging-coffee)
 
@@ -61,6 +59,7 @@ None of the dependencies mentioned below are a must for the project (since it is
 - **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
 - **Jenkins**: Pipeline used to automatically build and test the code on a local server upon every push.
 - **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
+- **Gitpod**: Running, editing and contributing to the projects are now simpler with Gitpod, an online, collaborative development platform. This allows users to run and test programs without using the project locally.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
