@@ -39,6 +39,7 @@ public final class ImplementCache {
         scanner.close();
     }
 
+    @SuppressWarnings("resource")
     private static void operate(CacheMechanism cacheMechanism) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter an element to look up: ");

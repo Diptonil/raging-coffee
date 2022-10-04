@@ -9,6 +9,16 @@
   <img src="https://img.shields.io/badge/Gitpod-000000?style=for-the-badge&logo=gitpod&logoColor=#FFAE33" />
 </span>
 
+<br />
+
+<span>
+
+  [![codeql java][codeql java img]][codeql java]
+
+</span>
+
+<br />
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Diptonil/raging-coffee)
 
 
@@ -59,13 +69,15 @@ None of the dependencies mentioned below are a must for the project (since it is
 - **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
 - **Jenkins**: Pipeline used to automatically build and test the code on a local server upon every push.
 - **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
-- **Gitpod**: Running, editing and contributing to the projects are now simpler with Gitpod, an online, collaborative development platform. This allows users to run and test programs without using the project locally.
+- **Gitpod**: Running, editing and contributing to the projects are now simpler with Gitpod - an online, collaborative development platform. This allows users to run and test programs without using the project locally.
+- **GitHub Actions**: Running automated workflows such as sending out greeting mails for contributions, standard CodeQL checks, etc. 
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
 
-## Roadmap
+## Checklist
 
+The list below is not to be followed in any particular order but is more of a record of what has been done and what is yet to be done.
 - [x] Annotations
 - [x] Inheritance
 - [x] Interfaces
