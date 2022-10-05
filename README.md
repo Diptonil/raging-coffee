@@ -13,8 +13,8 @@
 
 <span>
 
-  [![codeql java][codeql java img]][codeql java]
-
+  ![CodeQL](https://github.com/github/docs/actions/workflows/codeql.yml/badge.svg)
+  ![Test](https://github.com/github/docs/actions/workflows/maven.yml/badge.svg)
 </span>
 
 <br />
