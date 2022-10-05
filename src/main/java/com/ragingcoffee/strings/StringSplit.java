@@ -5,10 +5,14 @@ import java.util.Scanner;
 public final class StringSplit {
     
     public static String split(String input) {
-        String details[] = input.split(",");
-        String name = details[0];
-        String dob[] = details[1].split("/");
-        return "Name: " + name + "\nYear born: " + dob[2] + "\nMonth: " + dob[1] + "\nDay:" + dob[0];
+        try {
+            String details[] = input.split(",");
+            String name = details[0];
+            String dob[] = details[1].split("/");
+            return "Name: " + name + "\nYear born: " + dob[2] + "\nMonth: " + dob[1] + "\nDay:" + dob[0];
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            return "Commas or backslashes absent from the input string.";
+        }
     }
 
     public static void main(String args[]) {

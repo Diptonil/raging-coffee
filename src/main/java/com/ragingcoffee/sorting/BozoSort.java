@@ -5,7 +5,7 @@ import java.util.Random;
 
 public final class BozoSort {
     
-    private static void bozoSort(int array[]) {
+    public static void bozoSort(int array[]) {
         Random random = new Random();
         int copy;
         int randomIndex1;
@@ -20,7 +20,7 @@ public final class BozoSort {
         }
     }
 
-    private static boolean isSorted(int[] array) {
+    public static boolean isSorted(int[] array) {
         int previous = array[0];
 
         for (int element : array) {

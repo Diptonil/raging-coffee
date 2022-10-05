@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white" />
+  <img src="https://img.shields.io/badge/Junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
   <img src="https://img.shields.io/badge/Gitpod-000000?style=for-the-badge&logo=gitpod&logoColor=#FFAE33" />
 </span>
 
@@ -28,6 +29,7 @@
 - [Running the Programs](#running-the-programs)
 - [Extra Dependencies](#extra-dependencies)
 - [Roadmap](#roadmap)
+- [Tests](#tests)
 - [Further Reading](#further-reading)
 - [Known Issues](#known-issues)
 - [Resources](#resources)
@@ -104,6 +106,14 @@ The list below is not to be followed in any particular order but is more of a re
 <p align="right">(<a href="#top">Top</a>)</p>
 
 
+## Tests
+
+Incorporating tests in this repository for every program is a work in progress. Since this repo is more educational and exemplary, there are many classes that exist just to show the behaviour of certain in-built methods provided by the Java API. According to the rules of testing (as well as common sense), it is meaningless to test the use of the built-in API and is adviced against. This is why there would exist certain source files without any test files. For example, testing a program that uses the built-in sort that Java offers (`Arrays.sort()`) is meaningless and is not done. <br />
+JUnit5 has been used to write tests for this project. 
+
+<p align="right">(<a href="#top">Top</a>)</p>
+
+
 ## Further Reading
 
 Certain build tools and applications have been discussed here within the scope of their use in Java development. They may serve as a guide to understand how these tools integrate with Java, along with how they are used for development (this project is an example as well). These can be found under the `furtherreading` directory.
@@ -140,17 +150,28 @@ Certain build tools and applications have been discussed here within the scope o
 
 ## Resources
 
-For this project, the resources referred to are:
-- **Java: The Complete Reference** by *Herbert Schildt*.
-- **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*.
-- **Head First Design Patterns** by *Bates Bert*, *Freeman Eric*, *Robinson Elisabeth* and *Sierra Kathy*.
+For this project, the amalgamation of the following resources are used:
+- **Java: The Complete Reference** by *Herbert Schildt*: Core content of the project and the explanations.
+- **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*: Guide to write disciplined, maintainable and production-friendly code.
+- **Head First Design Patterns** by *Bates Bert*, *Freeman Eric*, *Robinson Elisabeth* and *Sierra Kathy*: Intuitive methodology of programmatic design patterns for low-level design.
+- **Test-Driven Development with Python: Obey the Testing Goat** by *Harry J.W. Percival*: A book written in Python elucidating the importance and guidelines to get started with Test-Driven Development as well as to learn to test code.
+
+<p align="right">(<a href="#top">Top</a>)</p>
+
+
+## Recommended Resources
+
+- <a href="https://google.github.io/styleguide/javaguide.html"><b>The Google Java Style-Guide</b></a>: Go through the documentation to understand the the correct way to write Java code.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
 
 ## Contributions
 
-- Refer to `Contributing.md` first.
-- Comments in the programs are sparingly used because, as Uncle Robert would say, comments are just an excuse to pass on poorly-written code. Sufficiently comprehensive variable names have been taken in most cases and thus comments should never be an issue.
+- Refer to `CONTRIBUTING.md` first.
+- Contribution rules are stringent to ensure community and project standards never regress. There may be multiple reviews and changes that get suggested to PRs. Contributors are expected to view this as a challenge rather than to turn away from it.
+- No matter what, a PR must have a mapping to an issue. Otherwise, it would not be evaluated.
+- A response to an Issue or a PR is guaranteed from the side of the maintainer, even if the same may not follow the proper format of contributing. This is a platform of learning accessible to everyone, after all.
+
 
 <p align="right">(<a href="#top">Top</a>)</p>
