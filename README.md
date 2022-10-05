@@ -14,8 +14,8 @@
 
 <span>
 
-  [![codeql java][codeql java img]][codeql java]
-
+  ![GitHub CI](https://github.com/Diptonil/raging-coffee/actions/workflows/maven.yml/badge.svg)
+  ![CodeQL](https://github.com/Diptonil/raging-coffee/actions/workflows/codeql.yml/badge.svg)
 </span>
 
 <br />
@@ -28,7 +28,7 @@
 - [Description](#description)
 - [Running the Programs](#running-the-programs)
 - [Extra Dependencies](#extra-dependencies)
-- [Roadmap](#roadmap)
+- [Checklist](#checklist)
 - [Tests](#tests)
 - [Further Reading](#further-reading)
 - [Known Issues](#known-issues)
@@ -172,6 +172,5 @@ For this project, the amalgamation of the following resources are used:
 - Contribution rules are stringent to ensure community and project standards never regress. There may be multiple reviews and changes that get suggested to PRs. Contributors are expected to view this as a challenge rather than to turn away from it.
 - No matter what, a PR must have a mapping to an issue. Otherwise, it would not be evaluated.
 - A response to an Issue or a PR is guaranteed from the side of the maintainer, even if the same may not follow the proper format of contributing. This is a platform of learning accessible to everyone, after all.
-
 
 <p align="right">(<a href="#top">Top</a>)</p>
