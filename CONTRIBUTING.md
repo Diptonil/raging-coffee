@@ -14,12 +14,14 @@ Please take heed to the suggestions below **very carefully** because no addition
 - Make PRs with respect to starting off a new topic/ sub-topic (such as Bucket Sort, Radix Sort, etc. that has not been done but will be done later). Issues regarding that are welcome but such PRs won't be accepted at all.
 - Make PRs/ Issues with respect to new design patterns that haven't been covered. The existing ones, albeit scanty, may be improved with more examples or documentations, if needed.
 - Make PRs already if the tests written do not pass. Tests should, moreoever, cover edge-cases that are *possible* (we need not test a function against alphanumeric inputs if the method itself only ever accepts numeric inputs via a Scanner in the main method at all times). Tests should be extensive but not unnecessary.
+- Change pre-written code by swapping larger variable names for shorter and more convenient-to-type ones.
 - Expect PRs to be merged when they do not pass the workflow checks.
 
 
 ## DOs
 
 - Request to be assigned to an Issue to make a PR to solve the problem.
+- While coding, use verbose and clear variable names no matter how long it is.
 - Learn to take feedback and contribute in ways that the maintainer wants the work to be.
 - Have patience to open an Issue, be assigned before beginning work on a PR.
 - Make suggestions to parts of the documentations under the README files.

@@ -67,8 +67,8 @@ Methods to run programs directly from Docker coming shortly. To run the programs
 
 ## Extra Dependencies
 
-None of the dependencies mentioned below are a must for the project (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
-- **Apache Maven**: Project Management and build tool used to define a standard structure for the project.
+None of the dependencies mentioned below are a must for the project, except Maven to test (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
+- **Apache Maven**: Project Management and build tool used to define a standard structure for the project. If code needs to be tested, however, Maven is to be used for convenience.
 - **Jenkins**: Pipeline used to automatically build and test the code on a local server upon every push.
 - **Docker**: Containerization application used to run the programs directly by running a container of an image without any worries about any dependencies.
 - **Gitpod**: Running, editing and contributing to the projects are now simpler with Gitpod - an online, collaborative development platform. This allows users to run and test programs without using the project locally.
@@ -109,6 +109,10 @@ The list below is not to be followed in any particular order but is more of a re
 ## Tests
 
 Incorporating tests in this repository for every program is a work in progress. Since this repo is more educational and exemplary, there are many classes that exist just to show the behaviour of certain in-built methods provided by the Java API. According to the rules of testing (as well as common sense), it is meaningless to test the use of the built-in API and is adviced against. This is why there would exist certain source files without any test files. For example, testing a program that uses the built-in sort that Java offers (`Arrays.sort()`) is meaningless and is not done. <br />
+To run tests Maven is required is this command is to be used:
+```sh
+mvn test
+```
 JUnit5 has been used to write tests for this project. 
 
 <p align="right">(<a href="#top">Top</a>)</p>

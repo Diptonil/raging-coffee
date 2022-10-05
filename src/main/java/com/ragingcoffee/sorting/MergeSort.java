@@ -6,15 +6,6 @@ import java.util.Random;
 public final class MergeSort {
     
     public static void merge(int arr[], int arr1[], int arr2[]) {
-        int arr_index = 0, arr1_index = 0, arr2_index = 0;
-        int arr1_size = arr1.length, arr2_size = arr2.length;
-        for (; arr1_index < arr1_size && arr2_index < arr2_size; arr_index ++) {
-            if (arr1[arr1_index] < arr2[arr2_index]) {
-                arr[arr_index] = arr1[arr1_index ++];
-            } else {
-                arr[arr_index] = arr2[arr2_index ++];
-            }
-        }
     }
 
     public static void mergeSort(int arr[]) {
