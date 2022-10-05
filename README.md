@@ -10,7 +10,11 @@
   <img src="https://img.shields.io/badge/Gitpod-000000?style=for-the-badge&logo=gitpod&logoColor=#FFAE33" />
 </span>
 
-<br /><br />
+<br />
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Diptonil/raging-coffee)
+
+<br />
 
 <span>
 
@@ -19,8 +23,6 @@
 </span>
 
 <br />
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Diptonil/raging-coffee)
 
 
 ## Table of Contents
