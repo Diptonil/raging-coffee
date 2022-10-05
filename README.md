@@ -13,8 +13,8 @@
 
 <span>
 
-  ![CodeQL](https://github.com/github/docs/actions/workflows/codeql.yml/badge.svg)
-  ![Test](https://github.com/github/docs/actions/workflows/maven.yml/badge.svg)
+  ![GitHub CI](https://github.com/Diptonil/raging-coffee/actions/workflows/maven.yml/badge.svg)
+  ![CodeQL](https://github.com/Diptonil/raging-coffee/actions/workflows/codeql.yml/badge.svg)
 </span>
 
 <br />
@@ -27,7 +27,7 @@
 - [Description](#description)
 - [Running the Programs](#running-the-programs)
 - [Extra Dependencies](#extra-dependencies)
-- [Roadmap](#roadmap)
+- [Checklist](#checklist)
 - [Further Reading](#further-reading)
 - [Known Issues](#known-issues)
 - [Resources](#resources)
