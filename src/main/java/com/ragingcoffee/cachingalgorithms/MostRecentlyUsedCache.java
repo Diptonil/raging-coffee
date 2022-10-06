@@ -3,6 +3,7 @@ package com.ragingcoffee.cachingalgorithms;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public final class MostRecentlyUsedCache implements CacheMechanism {
 
@@ -21,9 +22,7 @@ public final class MostRecentlyUsedCache implements CacheMechanism {
 
     public String loadCache() {
         Random random = new Random();
-        for (int iterator = 0; iterator < CACHE_SIZE; iterator ++) {
-            cache.add(random.nextInt(MEMORY_SIZE + 1));
-        }
+        random.ints(0, MEMORY_SIZE).distinct().limit(CACHE_SIZE).boxed().collect(Collectors.toList()).forEach(cache::add);
         return cache.toString();
     }
 

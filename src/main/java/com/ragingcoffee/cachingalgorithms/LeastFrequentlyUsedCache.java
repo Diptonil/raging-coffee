@@ -2,7 +2,9 @@ package com.ragingcoffee.cachingalgorithms;
 
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public final class LeastFrequentlyUsedCache implements CacheMechanism {
 
@@ -21,8 +23,9 @@ public final class LeastFrequentlyUsedCache implements CacheMechanism {
 
     public String loadCache() {
         Random random = new Random();
+        List<Integer> randomValues = random.ints(0, MEMORY_SIZE).distinct().limit(CACHE_SIZE).boxed().collect(Collectors.toList());
         for (int iterator = 0; iterator < CACHE_SIZE; iterator ++) {
-            cache[0][iterator] = random.nextInt(MEMORY_SIZE + 1);
+            cache[0][iterator] = randomValues.get(iterator);
             cache[1][iterator] = 0;
         }
         return Arrays.toString(cache[0]);
