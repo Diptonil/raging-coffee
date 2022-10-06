@@ -39,7 +39,7 @@ public final class RandomReplacementCache implements CacheMechanism {
                 System.exit(0);
             }
             System.out.println("Cache miss: " + value);
-            cache.remove(random.nextInt(CACHE_SIZE + 1));
+            cache.remove(random.nextInt(CACHE_SIZE));
             cache.add(value);
             return true;
         }
