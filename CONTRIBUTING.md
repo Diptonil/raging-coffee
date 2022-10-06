@@ -32,7 +32,7 @@ Please take heed to the suggestions below **very carefully** because no addition
 ## General Guidelines for Hacktoberfest
 
 - Be polite to all and don't clash over Issues to solve.
-- Only work towards the resolution of the issues that are labelled with `hacktoberfest`.
+- Only work towards the resolution of the issues that are labelled with `hacktoberfest`. Others won't be awarded with the `hacktoberfest-accepted` badge upon resolution.
 - Issues would get assigned on the basis of first-come-first-serve, despite the assignees level of knowledge. Only if the assignee is unable to solve the issue will it be reassigned to the next person in queue who may ave requested.
 - Please have patience as to the process of merging of branches.
 - An in-depth discussion over a certain issue will always be welcome! That said, civility is the key to that.

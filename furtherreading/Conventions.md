@@ -1,5 +1,7 @@
 # Conventions
 
+The general structure of a Java file should, according to the Google Style Guide, follow certain rules so as to conform to standards of enterprise-level Java projects as well as Open-Source projects. The whole manifest can be summed up into this following list of guidelines as stated below.
+
 
 ## Source file structure
 
@@ -40,7 +42,6 @@
 ## Line Wrapping
 
 - Upon a line-wrap, the indent space is compulsorily 4 spaces in the next line.
-- 
 
 
 ## Comments

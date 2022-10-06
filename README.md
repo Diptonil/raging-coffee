@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Gitpod-000000?style=for-the-badge&logo=gitpod&logoColor=#FFAE33" />
 </span>
 
-<br />
+<br /><br />
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Diptonil/raging-coffee)
 
@@ -129,27 +129,8 @@ Certain build tools and applications have been discussed here within the scope o
 - [x] Jenkins
 - [ ] JUnit5
 - [x] Java Access Modifiers
-- [x] Java Conventions
+- [ ] Java Conventions
 - [ ] Java Keywords with Multiple Uses
-
-<p align="right">(<a href="#top">Top</a>)</p>
-
-
-## Known Issues
-
-- Refactor on the basis on keyword and brackets separation.
-- Refactor on the basis of Java array [] convention.
-- Order imports.
-- Apply join() for every multithreading program.
-- Folder renaming.
-- Document everything.
-- Correct grammar of *its* and *it's*.
-- Apply backticks for every Java proper noun.
-- Complete Prime Numbers and Insertion Sort.
-- Space after every `catch`.
-- Fix `TypeAnnotations.java`.
-- Work on the Dockerfile.
-- 0 to 19 for caching in main memory.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
