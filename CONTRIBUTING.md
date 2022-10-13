@@ -33,7 +33,8 @@ Please take heed to the suggestions below **very carefully** because no addition
 
 - Be polite to all and don't clash over Issues to solve.
 - Only work towards the resolution of the issues that are labelled with `hacktoberfest`. Others won't be awarded with the `hacktoberfest-accepted` badge upon resolution.
-- Issues would get assigned on the basis of first-come-first-serve, despite the assignees level of knowledge. Only if the assignee is unable to solve the issue will it be reassigned to the next person in queue who may ave requested.
+- Issues would get assigned on the basis of first-come-first-serve, despite the assignees' level of knowledge. Only if the assignee is unable to solve the issue will it be reassigned to the next person in queue who may have requested.
 - Please have patience as to the process of merging of branches.
-- An in-depth discussion over a certain issue will always be welcome! That said, civility is the key to that.
+- An in-depth discussion over a certain issue will always be welcome! That said, civility is the key to it.
 - Issues asking for clarification of certain parts of code (source or tests) are always welcome in the community.
+- If any claimed issue is not worked towards by any assignee, they would be unassigned the claimed issue, which shall be left available for the taking of others.

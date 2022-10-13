@@ -98,6 +98,7 @@ The list below is not to be followed in any particular order but is more of a re
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
 - [ ] Design Patterns
+- [ ] Functional Style Programming
 - [x] String Operations
 - [ ] Data Structure Implementations
 - [ ] File Operations
@@ -141,7 +142,7 @@ For this project, the amalgamation of the following resources are used:
 - **Java: The Complete Reference** by *Herbert Schildt*: Core content of the project and the explanations.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*: Guide to write disciplined, maintainable and production-friendly code.
 - **Head First Design Patterns** by *Bates Bert*, *Freeman Eric*, *Robinson Elisabeth* and *Sierra Kathy*: Intuitive methodology of programmatic design patterns for low-level design.
-- **Test-Driven Development with Python: Obey the Testing Goat** by *Harry J.W. Percival*: A book written in Python elucidating the importance and guidelines to get started with Test-Driven Development as well as to learn to test code.
+- **Test-Driven Development with Python: Obey the Testing Goat** by *Harry J.W. Percival*: A book written in Python elucidating the importance and guidelines to get started with Test-Driven Development as well as to learn to test code. Despite the language, the core concepts of testing have been covered appropriately.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 

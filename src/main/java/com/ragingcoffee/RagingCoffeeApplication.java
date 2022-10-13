@@ -5,6 +5,7 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
+@SuppressWarnings("deprecated")
 public class RagingCoffeeApplication {
 
     public static void main(String[] args) throws IOException {

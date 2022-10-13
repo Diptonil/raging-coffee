@@ -1,5 +1,7 @@
 *.class
 .vscode
 target
+javasql
 scribbles.txt
 .dccache
+functionalprogramming
