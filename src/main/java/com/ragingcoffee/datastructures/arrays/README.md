@@ -14,7 +14,6 @@ Here we describe various different algorithms or methods that may be employed to
 It is found in java.util package. It is an abstract class. It has certain helpful methods that operate on the standard Java array like:
 - toString(array): Provides better formatting and printing out of arrays with ease. Overrides the `toString()` method.
 - sort(array): Dual-Pivot Quicksort is used to sort.
-- 
 
 
 ## The ArrayList Class
@@ -68,6 +67,13 @@ for (int iterator = 0; iterator < 5; iterator ++) {
 
 ## Ceil & Floor
 
-- ABSTRACT: Searches for an element in a sorted arry which is less that the target element for floor and greater than the target element for ceil.
+- ABSTRACT: Searches for an element in a sorted array which is less that the target element for floor and greater than the target element for ceil.
 - PROBLEMS: Find floor and ceil and make it wrap for any values towards the end of the array (basically use a `pointer % size`)
 - ADVANTAGES: Instead of O(n), we have O(log(n)).
+
+
+## Boyer Moore Algorithm
+
+- ABSTRACT: Technique to find the maximum occurring element in a given array by setting a 'vote' count that counts up for each continuous occurence of an element and counts down for every non-occurence, and switches element (compared to candidate in an election) if the non-recurrence count equals the recurrence count (vote goes down to a 0).
+- PROBLEMS: Given above.
+- ADVANTAGES: More coherent and handier than fancy space-hogging structures like HashMaps.

@@ -62,6 +62,18 @@ It is a data structure having a node containing a value and a link that connects
 - It makes no sense to reverse a circular linked list.
 
 
+## Notes on Unobvious Problems
+
+There are some problems that might not seem too intuitive to get at the first glance. They may have patterns or techniques. Some such problems have been dealt with in the section of Problem Solving separately. Those problems would be summarized here:
+1. **Two Pointers**: This technique is more of a thought paradigm than a regular method. To solve any task, we use the aid of two pointers operating on a data structure rather than one. This helps us in *searching* for entities as per given conditions. As a result, this is helpful in various operations that are oriented to traversals or searches. A slight variation on the traditional approach is also used for reversals. <br />
+Examples include employing this technique to traverse two lists with a common intersection points by looping a traversal node back to the start of another list and concluding that there are no common points if the search is unsuccesful.
+1. **Slow and Fast Pointers**: A variation on the previous method in which one pointer jumps ahead by two while another jumps by one (based on limiting conditions, of course). Technique is useful to find center of lists, detect cycles (using internal loops to make slow pointers meet, if we are to find the point of intersection as well), etc.
+1. **Alternate Node Formation**: When a problem asks to create a result that is a slight alteration on an existing linked list, *without changing any component or link os the given list*, we can employ this approach (see `Leetcode138.java` for better clarity, in this repository). This involves making around three passes through a list as:
+    - New nodes are created and placed at every alternate position in a list. The chain is recreated to hold all nodes.
+    - Operation is done on the newly created nodes by traversing the long, single chain.
+    - Operation is done on the old nodes by traversing the long, single chain to segregate the results and get back the original.
+
+
 ## Programs
 
 1. `Node.java`: Representation of a simple single and circular linked list node.

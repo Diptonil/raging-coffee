@@ -1,4 +1,4 @@
-package com.ragingcoffee.problemsolving;
+package com.ragingcoffee.datastructures.arrays;
 
 import java.util.Random;
 import java.util.Arrays;

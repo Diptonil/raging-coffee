@@ -1,4 +1,4 @@
-package com.ragingcoffee.arrays;
+package com.ragingcoffee.datastructures.arrays;
 
 import java.util.Random;
 

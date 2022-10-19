@@ -16,11 +16,10 @@ public final class FibonacciNumber {
         }
     }
 
-    private static int fibonacciNumber(int number) {
+    public static int fibonacciNumber(int number) {
         if (number == 0 || number == 1) {
             return number;
         }
-        
         return fibonacciNumber(number - 1) + fibonacciNumber(number - 2);
     }
 }
