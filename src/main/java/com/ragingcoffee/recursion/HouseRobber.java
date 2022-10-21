@@ -1,4 +1,4 @@
-package com.ragingcoffee.divideandconquer;
+package com.ragingcoffee.recursion;
 
 import java.util.Scanner;
 

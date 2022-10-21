@@ -3,6 +3,13 @@
 This section would be an exploratory part with respect to the `java.lang` package that always gets implicitly imported.
 
 
+## Topics
+
+- The `System` class.
+- The Wrapper classes.
+- The Reflection API.
+
+
 ## The Wrapper Classes
 
 - The Java primitives are low-performace values that can serve just about any programmatic purpose. They do not need to inherit any fancy `Object` class or anything else. Using objects for simple arithmetic jobs would cause way too much of overhead.

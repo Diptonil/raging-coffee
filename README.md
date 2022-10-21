@@ -88,8 +88,7 @@ The list below is not to be followed in any particular order but is more of a re
 - [x] Enumerations
 - [x] Multithreading
 - [ ] Well-known array algorithms and problem-solving techniques.
-- [ ] Recursion
-- [ ] Divide and Conquer Technique
+- [ ] Recursion (and the Divide and Conquer Technique)
 - [ ] Dynamic Programming Technique
 - [ ] Greedy Technique
 - [ ] Searching Techniques
@@ -101,10 +100,21 @@ The list below is not to be followed in any particular order but is more of a re
 - [ ] Functional Style Programming
 - [x] String Operations
 - [ ] Data Structure Implementations
+  - [ ] Arrays
+  - [x] Linked Lists
+  - [ ] Stacks
+  - [ ] Queues
+  - [ ] Trees
+  - [ ] Heaps
+  - [ ] Tries
+  - [ ] Graphs
 - [ ] File Operations
-- [x] The Reflection API
 - [ ] The `java.lang` Package
+  - [x] The Reflection API
+  - [x] The Wrapper API
 - [ ] The `java.util` Package
+  - [ ] The Logging API
+  - [ ] The Collections API
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
