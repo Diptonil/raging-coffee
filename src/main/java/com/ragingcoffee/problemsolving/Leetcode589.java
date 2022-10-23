@@ -3,17 +3,18 @@ package com.ragingcoffee.problemsolving;
 import java.util.LinkedList;
 import java.util.List;
 
-class Node {
+// https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+class NAryNode {
     public int val;
-    public List<Node> children;
+    public List<NAryNode> children;
 
-    public Node() {}
+    public NAryNode() {}
 
-    public Node(int _val) {
+    public NAryNode(int _val) {
         val = _val;
     }
 
-    public Node(int _val, List<Node> _children) {
+    public NAryNode(int _val, List<NAryNode> _children) {
         val = _val;
         children = _children;
     }
@@ -21,18 +22,18 @@ class Node {
 
 public final class Leetcode589 {
     
-    public List<Integer> preorder(Node root) {
+    public List<Integer> preorder(NAryNode root) {
         List<Integer> list = new LinkedList<Integer>();
         preOrder(root, list);
         return list;
     }
     
-    public static void preOrder(Node root, List<Integer> list) {
+    public static void preOrder(NAryNode root, List<Integer> list) {
         if (root == null) {
             return;
         }
         list.add(root.val);
-        for (Node node : root.children) {
+        for (NAryNode node : root.children) {
             preOrder(node, list);
         }
     }

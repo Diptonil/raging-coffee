@@ -3,8 +3,9 @@ package com.ragingcoffee.javautil.logging;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
-public final class FileHandlerLogger {
+public final class SimpleFormattedFileLogger {
     
     private static Logger logger = Logger.getGlobal();
 
@@ -12,17 +13,17 @@ public final class FileHandlerLogger {
         logger.setLevel(Level.FINEST);
         logger.setUseParentHandlers(false);
 
+        SimpleFormatter simpleFormatter = new SimpleFormatter();
         try {
             FileHandler fileHandler = new FileHandler("logs.txt", true);
             fileHandler.setLevel(Level.FINEST);
+            fileHandler.setFormatter(simpleFormatter);
             logger.addHandler(fileHandler);
         } catch (Exception exception) {
             logger.log(Level.INFO, "There has been some issue with the file in FileHandler resource.");
         }
 
-        Level[] levels = {Level.SEVERE, Level.WARNING, Level.INFO, Level.CONFIG, Level.FINE, Level.FINER, Level.FINEST};
-        for (Level level : levels) {
-            logger.log(level, "The log corresponds to the level: " + level);
-        }
+        logger.fine("This is a fine log message. This goes in the file and not to the console.");
+        logger.severe("This is a severe log message. This goes in the file and not to the console.");
     }
 }

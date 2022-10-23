@@ -5,12 +5,13 @@ import java.util.logging.MemoryHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public final class BufferToFileHandlerLogger {
+public final class BufferToConsoleHandlerLogger {
 
     private static Logger logger = Logger.getGlobal();
     
     public static void main(String[] args) {
         logger.setLevel(Level.FINEST);
+        logger.setUseParentHandlers(false);
 
         try {
             ConsoleHandler consoleHandler = new ConsoleHandler();

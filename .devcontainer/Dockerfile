@@ -1,5 +1,9 @@
 FROM maven:3-jdk-8
-MAINTAINER Diptonil Roy <diptonil.roy.work@gmail.com>
+
+LABEL version=0.9.0
+LABEL status="unreleased"
+LABEL maintainer.primary="Diptonil Roy"
+LABEL contributor.one="jivjen"
 
 WORKDIR /usr/src/app
 

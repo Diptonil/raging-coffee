@@ -5,7 +5,8 @@ This is one of the many uses of setting up a *logging architecture* within the c
 - **Elegance in managing errors**: Logging to console is a good way to deal with errors by using sophesticated tools given in an API as opposed to the bulk usage of populating the codebase with unnecessary console print statements. Moreover, that is a sign of extreme novice programming.
 - **To know the state of running applications**: Logs can be produced continuously upon being triggered by certain events and stored in a file to be viewed separately. This gives an idea of the frequently used parts of the application as well as stress-points, if any.
 - **Categorising events**: Logs may be used to categorise events by coding them with levels of fine, info, config, error and severe situations. This can be used to class certain events that we want to keep an eye on or even may need to work on later.
-- **Tagging parts of code**: Certain parts of code might need to be tagged in their execution. We can use comments to tag certain parts of code that we need to work on *in the source*. However, to make such markers in the runtime, logging might be helpful.
+- **Tagging parts of code**: Certain parts of code might need to be tagged in their execution. We can use comments to tag certain parts of code that we need to work on *in the source*. However, to make such markers in the runtime, logging might be helpful.<br />
+To understand and apply JUL (Java Utility Logging) succinctly, the following discussion shall prove to be sufficient and complete.
 
 
 ## Significance of Singleton Design Pattern
@@ -44,6 +45,17 @@ This is one of the many uses of setting up a *logging architecture* within the c
     - Use a `Handler`. This is recommended mostly for localised use in which alteration of global logging configuration is acceptable.
 
 
+## Analyzing Log Messages
+
+- We can change the format in which the logs come out with the use of Formatters.
+- By default, we can see the following fields with the use of the `SimpleFormatter`:
+    - Date and time
+    - Source
+    - Method
+    - Log level
+    - Message
+
+
 ## Handlers
 
 We use Handlers explicitly in our programs when we want to override the global specifications (if any) to set up customised log rules for a particular source file (which may be helpful in case a particular file has a penchant for erring or has been written with uncertainties). here are some Handlers:
@@ -62,21 +74,50 @@ Since the logging architecture that we would choose to use would be general for 
 - To set the logging level to a custom amount, use `java.util.logging.ConsoleHandler.level = FINER`.
 
 
-## Analyzing Log Messages
+## Formatters
 
-- We can change the format in which the logs come out with the use of Formatters.
-- By default, we can see the following fields:
-    - Date and time
-    - Source
-    - Method
-    - Log level
-    - Message
+They are used to alter the format of the logs to be put out by the Handlers. They are attached to the Handlers itself. By default, the `SimpleFormatter` is attached to the `ConsoleHandler` and the `XMLFormatter` is attached to the `FileHandler`. We may easily change this behaviour. Examples have been given in programs.
+- The `XMLFormatter` formats in XML. The logs are displayed in manner of: date and time, sequence in which logs appeared, level, occurring class and method and error message. It can be useful at times when the logs are parsed automatically using some tool for monitoring.
+- The `SimpleFormatter` is used more often due to its readability and ease fo comprehension. 
+- We may also choose to use our self-made custom formatters in case we need our logs to be more specific and customised (in cases when a certain project convention is being followed). An example has been given as well.
+
+
+## Filters
+
+- They are used to act as a keep for permitting the logs to be passed out to the output stream that the handler manages. They are responsible to allow or reject logs that flow through. We generally make use of `Filter`s only when we need to limit the logs from spamming a particular stream (via the Handler). This is especially useful when logs get generated but get handled by different handlers and are expected to be handled in different ways. An example is shown in the programs in this directory.
+- It is an interface, not a class. It is the only interface used in this API.
+
+
+## LogRecords
+
+- `LogRecord` is each individual log entry that gets handled by the handlers, filters, etc.
+- All log operations done by overriding certain methods of the filters and formatters are done on these objects.
+- There are methods like `getMessage()`, `getLevel()`, `getParameters()`, `getMillis()`, et cetera for getting the associated values from the object.
+
+
+## Pros of the Default Logging API
+
+- We do not need to worry about any external dependencies.
+- Learning other fancier frameworks like Log4J, Logback, etc. for projects not needing such architectures is not needed.
+- Very simple & lightweight to implement and learn. gets the job done with just the right amount of tools.
+
+
+## Cons of the Default Logging API
+
+- Logging frameworks offer way too many advantages at a granular level to overlook in the development journey of a large-scale project. Whatever the Java Utility Logging API can do, the others can do as well - better, even.
+- The default Java logger is extremely outdated and does not have integrations with modern practices.
+- Formatting can only be done for XML. No support for YAML, HTML and JSON formats, which is a big problem.
+- No in-built pattern support for customising logs. Instead of having to rely on the framework to do the heavy-lifting in that regard, programmers need to resort to tradiational use of Strings or Regex to manipulate the messages.
 
 
 ## Programs
 
 1. `SimpleLogger.java`: Exhibit the simplest use case of console logging functionality using the standard and specialised log methods for severe, warning and info levels. This does not print out to any log files, of course.
 1. `ConsoleHandlerLogger.java`: Create and display logs to the console upto the finest level by using a `Handler`.
-1. `DisabledDefaultLogger.java`: In the previous example, we see that the logs of the levels SEVER, WARNING and INFO appear twice. This means that apart from the Handler that we are making, some default Handler is also running alongside. This would lead to more resource usage and unwanted cluttering. This behaviour is due to the default console Handler being attached to the parent of all loggers. We need to set this exact behaviour of using parent handlers off. This way is described here.
+1. `DisabledDefaultLogger.java`: In the previous example, we see that the logs of the levels SEVERE, WARNING and INFO appear twice. This means that apart from the Handler that we are making, some default Handler is also running alongside. This would lead to more resource usage and unwanted cluttering. This behaviour is due to the default console Handler being attached to the parent of all loggers. We need to set this exact behaviour of using parent handlers off. This way is described here.
 1. `FileHandlerLogger.java`: Create and display logs to a file (`logs.txt`) upto the finest level by using a `Handler`.
-1. `BufferToFileHandlerLogger.java`: Create and display logs to a file (`logs.txt`) in this same directory upto the finest level by using a `Handler` only when the buffer is full and thus the logs get flushed to the file only when a certain level of log occurs (as parametrized in the constructor of `MemoryHandler`), upto the number of logs to fetch that had been defined.
+1. `BufferToConsoleHandlerLogger.java`: Create and display logs to a file (`logs.txt`) in this same directory upto the finest level by using a `Handler` only when the buffer is full and thus the logs get flushed to the file only when a certain level of log occurs (as parametrized in the constructor of `MemoryHandler`), upto the number of logs to fetch that had been defined.
+1. `XMLFormattedConsoleLogger.java`: Set the console to display logs in the XML format, as opposed to the traditional way.
+1. `SimpleFormattedFileLogger.java`: Set the logfile to display logs in the traditional format, as opposed to the XML way.
+1. `CustomFormattedLogger.java`: Extend the `Formatter` class and override a certain `format()` method to customise log messages.
+1. `CustomFilteredLogger.java`: Assuming a case where a logger has two handlers attached - one to the console and another to a file. The goal is to log only to the console if the String "FILE:" is not present in the log. If it is present, logs go both ways.

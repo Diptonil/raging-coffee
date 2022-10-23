@@ -113,8 +113,9 @@ The list below is not to be followed in any particular order but is more of a re
   - [x] The Reflection API
   - [x] The Wrapper API
 - [ ] The `java.util` Package
-  - [ ] The Logging API
   - [ ] The Collections API
+  - [x] The Logging API
+  - [ ] The Regex API
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
