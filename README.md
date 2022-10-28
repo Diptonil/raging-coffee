@@ -87,12 +87,19 @@ The list below is not to be followed in any particular order but is more of a re
 - [x] Interfaces
 - [x] Enumerations
 - [x] Multithreading
-- [ ] Well-known array algorithms and problem-solving techniques.
 - [ ] Recursion (and the Divide and Conquer Technique)
 - [ ] Dynamic Programming Technique
 - [ ] Greedy Technique
 - [ ] Searching Techniques
+  - [ ] Binary Search
+  - [ ] Linear Search
+  - [ ] Jump Search
 - [ ] Sorting Techniques
+  - [ ] Bubble Sort
+  - [ ] Selection Sort
+  - [ ] Insertion Sort
+  - [ ] Merge Sort
+  - [ ] Radix Sort
 - [x] Caching Algorithms
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
@@ -108,7 +115,8 @@ The list below is not to be followed in any particular order but is more of a re
   - [ ] Heaps
   - [ ] Tries
   - [ ] Graphs
-- [ ] File Operations
+- The `java.io` Package
+  - [ ] File Operations
 - [ ] The `java.lang` Package
   - [x] The Reflection API
   - [x] The Wrapper API
@@ -123,7 +131,7 @@ The list below is not to be followed in any particular order but is more of a re
 ## Tests
 
 Incorporating tests in this repository for every program is a work in progress. Since this repo is more educational and exemplary, there are many classes that exist just to show the behaviour of certain in-built methods provided by the Java API. According to the rules of testing (as well as common sense), it is meaningless to test the use of the built-in API and is adviced against. This is why there would exist certain source files without any test files. For example, testing a program that uses the built-in sort that Java offers (`Arrays.sort()`) is meaningless and is not done. <br />
-To run tests Maven is required is this command is to be used:
+To run tests, Maven may be used. The corresponding command for Maven:
 ```sh
 mvn test
 ```
@@ -149,7 +157,7 @@ Certain build tools and applications have been discussed here within the scope o
 
 ## Resources
 
-For this project, the amalgamation of the following resources are used:
+For this project, the amalgamation of the following books are used:
 - **Java: The Complete Reference** by *Herbert Schildt*: Core content of the project and the explanations.
 - **Clean Code: A Handbook of Agile Software Craftsmanship** by *Robert Cecil Martin*: Guide to write disciplined, maintainable and production-friendly code.
 - **Head First Design Patterns** by *Bates Bert*, *Freeman Eric*, *Robinson Elisabeth* and *Sierra Kathy*: Intuitive methodology of programmatic design patterns for low-level design.

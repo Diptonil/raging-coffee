@@ -3,7 +3,7 @@
 A linked list is a linear data structure that has no bounds (ideally) and in which data is contained in a node chained to one another. The data stored may not be contiguous in the heap.
 
 
-## Terminologies
+## Terminology
 
 1. Node: The space where data gets stored.
 1. Link: The connection that a node has to any other node is established when a link of a node points to another node.
