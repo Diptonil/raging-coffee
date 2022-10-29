@@ -1,7 +1,7 @@
 package com.ragingcoffee.datastructures.arrays;
 
-import java.util.Random;
 import java.util.Arrays;
+import java.util.Random;
 
 // Complementary Binary Search technique 
 public final class CeilAndFloor {

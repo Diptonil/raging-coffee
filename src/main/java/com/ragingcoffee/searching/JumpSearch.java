@@ -1,7 +1,7 @@
 package com.ragingcoffee.searching;
 
-import java.util.Random;
 import java.util.Arrays;
+import java.util.Random;
 
 public final class JumpSearch {
     
