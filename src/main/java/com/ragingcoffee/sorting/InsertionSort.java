@@ -1,7 +1,7 @@
 package com.ragingcoffee.sorting;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public final class InsertionSort {
     

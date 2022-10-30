@@ -1,9 +1,9 @@
 package com.ragingcoffee.cachingalgorithms;
 
 import java.util.ArrayList;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Queue;
 import java.util.Random;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.stream.Collectors;
 
 public final class FirstInFirstOutCache implements CacheMechanism {

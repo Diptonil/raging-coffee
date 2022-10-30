@@ -2,8 +2,8 @@ package com.ragingcoffee.javautil.logging;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
-import java.util.logging.Logger;
 import java.util.logging.LogRecord;
+import java.util.logging.Logger;
 
 class CustomFormatter extends Formatter {
 
