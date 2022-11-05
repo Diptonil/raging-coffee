@@ -1,8 +1,8 @@
 package com.ragingcoffee.cachingalgorithms;
 
 import java.util.ArrayList;
-import java.util.Stack;
 import java.util.Random;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 public final class LastInFirstOutCache implements CacheMechanism {

@@ -1,7 +1,7 @@
 package com.ragingcoffee.datastructures.arrays;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public final class SlidingWindow {
     
