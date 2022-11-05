@@ -115,6 +115,7 @@ The list below is not to be followed in any particular order but is more of a re
   - [ ] Heaps
   - [ ] Tries
   - [ ] Graphs
+- The `java.net` Package
 - The `java.io` Package
   - [ ] File Operations
 - [ ] The `java.lang` Package
