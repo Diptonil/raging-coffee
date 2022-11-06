@@ -125,6 +125,7 @@ The list below is not to be followed in any particular order but is more of a re
   - [ ] The Collections API
   - [x] The Logging API
   - [ ] The Regex API
+- [ ] The Spring Framework
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
@@ -144,8 +145,17 @@ JUnit5 has been used to write tests for this project.
 ## Further Reading
 
 Certain build tools and applications have been discussed here within the scope of their use in Java development. They may serve as a guide to understand how these tools integrate with Java, along with how they are used for development (this project is an example as well). These can be found under the `furtherreading` directory.
+- [ ] Java Ecosystem
+  - [ ] Concept of JDK
+  - [ ] Concept of JRE
+  - [ ] Concept of JVM
+  - [ ] Hotspot JVM
+  - [ ] OpenJDK
+  - [ ] Java SE
+  - [ ] Java EE
+  - [x] Garbage Collection
+  - [ ] Java Memory Model
 - [x] Apache Maven
-- [ ] Docker
 - [ ] Gradle
 - [x] Jenkins
 - [ ] JUnit5
