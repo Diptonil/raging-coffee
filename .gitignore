@@ -1,5 +1,6 @@
 *.class
 .vscode
+.mvn
 target
 javasql
 scribbles.txt

@@ -90,10 +90,10 @@ The list below is not to be followed in any particular order but is more of a re
 - [ ] Recursion (and the Divide and Conquer Technique)
 - [ ] Dynamic Programming Technique
 - [ ] Greedy Technique
-- [ ] Searching Techniques
-  - [ ] Binary Search
-  - [ ] Linear Search
-  - [ ] Jump Search
+- [x] Searching Techniques
+  - [x] Binary Search
+  - [x] Linear Search
+  - [x] Jump Search
 - [ ] Sorting Techniques
   - [ ] Bubble Sort
   - [ ] Selection Sort
@@ -126,6 +126,7 @@ The list below is not to be followed in any particular order but is more of a re
   - [x] The Logging API
   - [ ] The Regex API
 - [ ] The Spring Framework
+  - [ ] Introduction to RESTful Services
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
