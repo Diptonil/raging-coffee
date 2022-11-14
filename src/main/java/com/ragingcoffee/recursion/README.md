@@ -19,6 +19,12 @@
 - Binary Search is NOT a divide and conquer algorithm implementation.
 
 
+## Parameterized and Functional Recursion
+
+**Parameterized recursive functions** are those that take the desired value that we ultimately need as a secondary parameter. Oftentimes, such functions can be used to simplify complex approaches. Such functions are, at times, unable to return some values and can be good for printing or calling some other function. <br />
+**Functional recursive functions** exist to strictly take an input value as a paremeter and return the output value. There is no intermediate secondary parameter that exists in its method signature. Sometimes, proceeding with this technique might be difficult or induce complexities. This works well, however, for succinct and easy problems. While solving a problem, this method should be given more preference since it leads to more standard approaches.
+
+
 ## Common Problems
 
 - **Fibonacci Sequence**
@@ -31,11 +37,18 @@
     - The number should be `number = 1x + 3y + 4z`, where we need to find all occurences of `(x, y, z)`, even with 0s.
 - **House Robber**
     - In recursive call step we get the two possibilities: if the currently considered house is being robbed, in which case the next house to be robbed can be eligible from the alternate house. If the currently considered house is not being robbed, the adjacent house may be robbed next.
+    - This solution using recursion is quite inefficient. We use dynamic programming to decrease the number of calls made to solve the same subproblem.
 
 
 ## Programs
 
+It is recommended to go through the programs sequentially for ease in learning:
 1. `Factorial.java`: The classic recursive impementation of factorial.
-1. `NumberReversal.java`: Various recursive implementations to find reverse of a number.
+1. `SumOfN.java`: Recursively calculate sum of first *n* natural numbers.
 1. `CountZeroes.java`: Recursively count the number of zeroes.
 1. `FibonacciNumber.java`: Recursively find the Fibonacci number in the sequence at a given position.
+1. `ReverseArray.java`: Recursively reverse an array.
+1. `PalindromeString.java`: Recursively check if a String is palindrome.
+1. `NumberReversal.java`: Various recursive implementations to find reverse of a number.
+1. `NumberFactor.java`: Recursively find multiples of 1, 3 and 4 that sum up to the number.
+1. `HouseRobber.java`: Recursively find the maximum profit that may be gained by a robber given the condition that he isn't allowed to rob adjacent houses.

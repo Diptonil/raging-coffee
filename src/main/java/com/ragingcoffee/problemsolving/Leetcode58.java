@@ -4,7 +4,7 @@ package com.ragingcoffee.problemsolving;
 public final class Leetcode58 {
     
     public int lengthOfLastWord(String s) {
-        s = s.strip();
+        s = s.trim();
         String[] strings = s.split(" ");
         return strings[strings.length - 1].length();
     }
