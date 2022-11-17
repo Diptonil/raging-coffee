@@ -21,8 +21,25 @@
 
 ## Parameterized and Functional Recursion
 
-**Parameterized recursive functions** are those that take the desired value that we ultimately need as a secondary parameter. Oftentimes, such functions can be used to simplify complex approaches. Such functions are, at times, unable to return some values and can be good for printing or calling some other function. <br />
-**Functional recursive functions** exist to strictly take an input value as a paremeter and return the output value. There is no intermediate secondary parameter that exists in its method signature. Sometimes, proceeding with this technique might be difficult or induce complexities. This works well, however, for succinct and easy problems. While solving a problem, this method should be given more preference since it leads to more standard approaches.
+These two techniques mentioned below are the most standard methods to solve problems using recursions. When thinking recursively, these two methods should be the go-to techniques.
+**Parameterized recursive functions** are those that take the desired value that we ultimately need as a secondary parameter. Oftentimes, such functions can be used to simplify complex approaches. Such functions are, at times, unable to return some values and can be good for printing or calling some other function. See `PalindromeString.java` as an example. <br />
+**Functional recursive functions** exist to strictly take an input value as a paremeter and return the output value. There is no intermediate secondary parameter that exists in its method signature. Sometimes, proceeding with this technique might be difficult or induce complexities. This works well, however, for succinct and easy problems. While solving a problem, this method should be given more preference since it leads to more standard approaches. See `SumOfN.java` as an example.
+
+
+## Multiple Recursion Calls
+
+Problems like `SumOfN.java` and `Factorial.java` can be easily solved by recursively calling the function just once. However, there exist problems in which the same function needs to be recursively called multiple number of times (consider `Fibonacci.java` for example). Such an instance calls for the concept of *multiple recursion calls*. It is important to realise here that:
+- Calls can never be simultaneous. Once a call is made, flow of control in a program would not go on to another call right beside it or after it until and unless that call gets resolved.
+- There is a good chance that the time complexity of such problems might go up exponentially (O(2^n)).
+
+
+## Subsequences
+
+One of the most important uses of recursion is the formation of *subsequences*. The subsequence of an iterable or a sequence can be defined as:
+- A subset of the iterable.
+- The subset may have null element as well as the superset itself.
+- The subset needs to retain the order in which the elements originally register in the iterable. <br />
+Such problems have a common structure following which they can be easily solved. The whole process can be defined as:
 
 
 ## Common Problems
@@ -50,5 +67,7 @@ It is recommended to go through the programs sequentially for ease in learning:
 1. `ReverseArray.java`: Recursively reverse an array.
 1. `PalindromeString.java`: Recursively check if a String is palindrome.
 1. `NumberReversal.java`: Various recursive implementations to find reverse of a number.
+1. `ArraySubsequence.java`: Given an array, recursively find all its subsequences (except the null subsequence).
+1. `UniquePaths.java`: Given a 2D array size at whose botton-right corner an object is placed, calculate all possible unique paths that can be taken to reach that point starting from (0, 0) position.
 1. `NumberFactor.java`: Recursively find multiples of 1, 3 and 4 that sum up to the number.
 1. `HouseRobber.java`: Recursively find the maximum profit that may be gained by a robber given the condition that he isn't allowed to rob adjacent houses.

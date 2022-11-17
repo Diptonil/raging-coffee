@@ -23,4 +23,4 @@ public final class PalindromeString {
         }
         return isPalindrome(input, marker + 1);
     }
-}
+} 
