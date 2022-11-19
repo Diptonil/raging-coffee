@@ -29,8 +29,9 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Running the Programs](#running-the-programs)
-- [Extra Dependencies](#extra-dependencies)
+- [Running Regular Programs](#running-regular-programs)
+- [Running Spring Projects](#running-spring-projects)
+- [Extra Additions](#extra-additions)
 - [Checklist](#checklist)
 - [Tests](#tests)
 - [Further Reading](#further-reading)
@@ -43,32 +44,54 @@
 
 This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.<br />
 This also deals with certain general problem solving and algorithmic programs as well as design patterns that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.<br />
-The project has NO dependencies.<br />
+The project has dependencies that are managed by Maven (Gradle is not used here at all). The primary reason for this is to enable the inclusion of dependencies such as JDBC, JPA, Spring support tools, et cetera. So the *only* dependency needed is Maven.<br />
 <a href="https://github.com/TheAlgorithms/Java">Here</a> is the link of the repository containing Java programs on algorithms.<br />
-<a href="https://github.com/iluwatar/java-design-patterns">Here</a> is the link of the repository containing design patterns elucidated in an intuitive and resourceful manner by experienced and passionate engineers and experts.
-
-
-<p align="right">(<a href="#top">Top</a>)</p>
-
-
-## Running the Programs
-
-Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used. Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.<br />
-The required dependencies (JDK 17) have firstly been installed.<br />
-Methods to run programs directly from Docker coming shortly. To run the programs from the terminal:
-- From the directory in which the source file is stored:
-  ```sh
-  javac fileName.java
-  ```
-- From the root directory (exactly from within the `\src\main\java` directory):
-  ```sh
-  java com.ragingcoffee.directoryName.fileName
-  ```
+<a href="https://github.com/iluwatar/java-design-patterns">Here</a> is the link of the repository containing design patterns elucidated in an intuitive and resourceful manner by experienced and passionate engineers and academic experts.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
 
-## Extra Dependencies
+## Running Regular Programs
+
+Visual Studio Code with the extension `Language Support for Java (TM) by Red Hat` has been used (for Java development, no other extension is compulsorily needed). Sections for other IDEs such as IntelliJ or Eclipse shall be added if those environments bear certain feasilbility that deems their adoption over the present IDE.<br />
+The required dependencies (JDK 17 & Maven) have firstly been installed (unless using Docker).<br />
+Here are all the methods that can be used to run the programs:
+1. **Visual Studio Code**: Use this to run programs locally on this IDE.
+  - From the directory in which the source file is stored:
+    ```sh
+    javac fileName.java
+    ```
+  - From exactly within the `\src\main\java` directory (the subdirectory name should be squeezed in only when it does indeed exist for any particular topic):
+    ```sh
+    java com.ragingcoffee.directoryName.<subdirectoryName>.fileName
+    ```
+2. **Gitpod**: Use this to run programs on Cloud. No local cloning needed. Cannot be heavily personalised, though. The procedure to run programs is exactly the same as the procedure for Visual Studio Code (since it runs this IDE on the web).
+3. **Docker**: For running the programs without JDK and Maven (or any other dependency, for that matter), we just need to have Docker installed. It shall take care of the management of dependencies.
+  - From the `.devcontainer` directory of this repository, run this to create an image:
+    ```sh
+    docker build -t "raging-coffee:latest" .
+    ```
+  - Now that the image has been created, we can make a container out of it (image is similar to a class, which is a template of how objects would work. Objects here can be said as the containers):
+    ```sh
+    docker container run -it test_container:latest
+    ```
+  - When the container is up and running, we can repeat the same steps to execute programs that we have been doing above.
+
+<p align="right">(<a href="#top">Top</a>)</p>
+
+
+## Running Spring projects
+
+Java follows an extremely rigid and inflexible structure of their projects. This sometimes makes it difficult to club resources for a Java project in a way that would seem appropriate and easily accessible. The directory dedicated to `spring` contains projects built under the Spring Framework as well as explanations and 'how-to's. Since every Spring project has a preordained way to be run, we cannot do it from the external root directory of the repository.
+- The projects under Spring are generated from Spring Boot and the folders have been copy-pasted. So, they do not directly have any relation to the Raging Coffee project ecosystem.
+- Hence, to run the Spring projects, we need to navigate in our IDEs to the path `src\main\java\com\ragingcoffee\spring\<project>` to go to the project. From there we need to run this command for the project to start running in an Apache Tomcat server:
+  ```sh
+  mvn spring-boot:run
+  ```
+- To learn more about why and how all of this happens, refer to the Spring section of the repository.
+
+
+## Extra Additions
 
 None of the dependencies mentioned below are a must for the project, except Maven to test (since it is purely educational and the programs are standalone, not a part of any application). Even these have been used for learning purposes (as well as making the project more accessible and standard) and their guides are in the `furtherreading` directory.
 - **Apache Maven**: Project Management and build tool used to define a standard structure for the project. If code needs to be tested, however, Maven is to be used for convenience.
@@ -102,6 +125,12 @@ The list below is not to be followed in any particular order but is more of a re
   - [ ] Merge Sort
   - [ ] Radix Sort
 - [x] Caching Algorithms
+  - [x] First-In-First-Out Cache
+  - [x] Last-In-First-Out Cache
+  - [x] Least Frequently Used Cache
+  - [x] Least Recently Used Cache
+  - [x] Most Recently Used Cache
+  - [x] Random Replacement Cache
 - [ ] General problems with multiple approaches
 - [ ] Problem Solving
 - [ ] Design Patterns
@@ -127,7 +156,7 @@ The list below is not to be followed in any particular order but is more of a re
   - [x] The Logging API
   - [ ] The Regex API
 - [ ] The Spring Framework
-  - [ ] Introduction to RESTful Services
+  - [ ] Introduction: First Basic Project
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
@@ -182,6 +211,7 @@ For this project, the amalgamation of the following books are used:
 ## Recommended Resources
 
 - <a href="https://google.github.io/styleguide/javaguide.html"><b>The Google Java Style-Guide</b></a>: Go through the documentation to understand the the correct way to write Java code.
+- <a href="https://spring.io/guides"><b>Spring Guides</b></a>: Official documentations to learn the Spring framework by choosing one of the three learning patterns: Quickly get started, learn topic-wise or learn in-depth by making cohesive projects.
 
 <p align="right">(<a href="#top">Top</a>)</p>
 
