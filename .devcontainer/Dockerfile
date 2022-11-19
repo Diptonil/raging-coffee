@@ -2,7 +2,7 @@ FROM maven:3-jdk-8
 
 LABEL version=0.9.0
 LABEL status="unreleased"
-LABEL maintainer.primary="Diptonil Roy"
+LABEL maintainer="Diptonil Roy"
 LABEL contributor.one="jivjen"
 
 WORKDIR /usr/src/app
