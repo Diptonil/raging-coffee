@@ -17,6 +17,7 @@ It is primarily used to make web app API backends as well as fullstack apps (whi
 - **Complexity**: Working with Spring is extremely complex as it requires a lot of expertise. The learning curve is difficult. It is not a good choice for someone who is new to development. Not even if that person knows core Java.
 - **Old-Fashioned**: Not all old-fashioned things go out of commission but this framework has been criticized time and again for it's absurd levels of complexity and features that are not modern. It's heavy use of XML, reliance of different components such as Spring Security, Spring Web Starter, et cetera instead of having a standalone wholesome facility in one place, application code structuring makes it a bit too classic to be embraced with ease.
 - **Security**: Less built-in security features, unlike frameworks like Django.
+- **Worst Documentation**: This framework has one of the least useful documentations one can ever notice, despite its professional use.
 
 
 ## Spring Boot
@@ -33,7 +34,10 @@ Spring Boot is a tool built atop Spring to support rapid Spring development. It 
 
 ## Popular Spring Boot Dependencies
 
+These dependencies are all shown in the `pom.xml` file of any Maven Spring project. They are explored further in the example projects in greater detail.
 1. **Spring Web**: Uses Apache Tomcat as the default web server. This is used to spin up servers for RESTful purposes.
+1. **Spring Developer Tools**: Uses an auto-reload feature that eases development experiences by not making us having to continuously restart server to reflect changes.
+1. **Spring Boot Starter Actuator**: This includes features to monitor and manage our application when it's pushed to production using HTTP endpoints, SSH or Telnet, etc.
 
 
 ## Difference Between Real Projects and These Example Projects
@@ -46,7 +50,13 @@ When using Spring Boot, we get a ZIP file. Upon extraction, we notice these file
 - A `README.md` file.
 - A `pom.xml` file.
 - A `mvnw` and `mvnw.cmd`. <br />
-We shall delete the `.gitignore` file and `HELP.md` files here. This is **not** something that shall be done while the development of real-world apps. Most probably, the zipped folder contents would be the only folder that gets committed to a repository (be it monorepo or a polyrepo). So the `.gitignore` file should remain, at least.
+We shall delete the `.gitignore` file and `HELP.md` files here. This is **not** something that shall be done while the development of real-world apps. Most probably, the zipped folder contents would be the only folder that gets committed to a repository (be it monorepo or a polyrepo). <br />
+It is worth noting that every singular project has been allotted their own directories. Navigate to those directories in your IDEs to run and access those projects.
+
+
+## Bill of Materials
+
+Every `pom.xml` file in every Spring project has a parent section, which has a starter-agent version. Under the hood, Maven downloads the JARs of all the files that Spring needs to work. Every JAR has its own version and collectively, there have been observed and recorded patterns among the JARs that work well in conjunction with each other. In other words, a set of JARs that come under a given version of the starter is chosen to be most cohesive to work with each other without conflicts. Only such versions of the JARs are chosen under a parent version. This is called the Bill of Materials.
 
 
 ## Roadmap to Build Apps
