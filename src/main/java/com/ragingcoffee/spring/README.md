@@ -40,6 +40,11 @@ These dependencies are all shown in the `pom.xml` file of any Maven Spring proje
 1. **Spring Boot Starter Actuator**: This includes features to monitor and manage our application when it's pushed to production using HTTP endpoints, SSH or Telnet, etc.
 
 
+## Spring MVC
+
+This is a component of the Spring framework that facilitates the service of a response upon getting a request. When a request comes in, the MVC looks for the URI that the request wants to access. When that is found, it routes it to execute certain methods of a class that is responsible to be answerable for that URI. That class is known as a Controller. The response that is obtained is obviously in JSON format. However, it is the job of the MVC to coerce the data that is outbound to JSON. We need not code the JSON conversion logic in controllers.
+
+
 ## Difference Between Real Projects and These Example Projects
 
 When using Spring Boot, we get a ZIP file. Upon extraction, we notice these files:

@@ -3,6 +3,11 @@
 This is the first demo project built using Spring and would serve as an example as to how to build projects using this framework.
 
 
+## What is Being Built?
+
+A Course REST API is being built that primarily deals with the management of 3 types of data: topics, lessons and courses (structured similar to how Udemy courses work). The API is responsible for management of courses. Every course would have a certain number of lessons within them. Those lessons would be subdivided into topics. The model chosen is deliberately simple from the perspective of a starter.
+
+
 ## Starting Up a Project
 
 Ensure that you are at the directory that has the files: `pom.xml`, `mvnw`, `mvnw.cmd`, et cetera (if we are using Maven, otherwise it would be Gradle files). 
@@ -36,13 +41,3 @@ The Spring Framework is annotation-heavy. These annotations carry a special mean
 1. `@RestController`: Tells the compiler that the marked class is a controller with some logic accessible by a defined URL.
 1. `@RequestMapping()`: Tells the compiler that upon recieving a request earmarked for an URL whose path is specified in the arguments, the contents of the marked method must be executed (the method may be named anything sensible).
 1. 
-
-
-## The Four Packages
-
-We create 4 packages right at the beginning before beginning development. This is in the same directory where we have `FirstApplication.java` located. The packages are:
-- `api`:
-- `dao`:
-- `model`: This is used for database model definitions. We shall store the database tables here. A single class for a single table is the norm if we are going for a relational data model.
-- `service`:
-- `controller`:

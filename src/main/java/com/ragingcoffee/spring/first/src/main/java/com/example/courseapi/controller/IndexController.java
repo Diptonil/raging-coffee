@@ -1,4 +1,4 @@
-package com.example.first.controller;
+package com.example.courseapi.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
-    private static final String PATH = "/";
+    private final String PATH = "/";
     
     @RequestMapping(PATH)
     public String respond() {

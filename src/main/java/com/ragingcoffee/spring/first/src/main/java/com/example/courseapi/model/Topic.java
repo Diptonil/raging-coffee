@@ -1,14 +1,14 @@
-package com.example.first.model;
+package com.example.courseapi.model;
 
-public class Task {
+public class Topic {
 
     private int id;
     private String title;
     private String description;
     
-    Task() {}
+    Topic() {}
 
-    public Task(int id, String title, String description) {
+    public Topic(int id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;
