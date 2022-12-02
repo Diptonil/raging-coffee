@@ -1,14 +1,25 @@
-package com.example.courseapi.model;
+package com.example.courseapi.models;
 
-public class Topic {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="topic")
+public class TopicModel {
+
+    @Id
+    @Column(name="id")
     private int id;
+    @Column(name="title", length=32, nullable=false, unique=false)
     private String title;
+    @Column(name="description", length=128, nullable=true, unique=false)
     private String description;
-    
-    Topic() {}
 
-    public Topic(int id, String title, String description) {
+    TopicModel() {}
+
+    public TopicModel(int id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;

@@ -35,7 +35,6 @@
 - [Checklist](#checklist)
 - [Tests](#tests)
 - [Further Reading](#further-reading)
-- [Known Issues](#known-issues)
 - [Resources](#resources)
 - [Contributions](#contributions)
 
@@ -43,8 +42,8 @@
 ## Description
 
 This project is geared towards the practical as well as theoretical exploration of the Java language in depth. Primarily, this is to serve as a checklist of my own knowledge in Java but since the best way to learn is to make something that others may learn from as well, this repository has been made public.<br />
-This also deals with certain general problem solving and algorithmic programs as well as design patterns that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.<br />
 The project has dependencies that are managed by Maven (Gradle is not used here at all). The primary reason for this is to enable the inclusion of dependencies such as JDBC, JPA, Spring support tools, et cetera. So the *only* dependency needed is Maven.<br />
+This also deals with certain general problem solving and algorithmic programs as well as design patterns that is just for my own reference. Others are welcome to check those out as well, in any case. There are already more complete and better repositories out there that are more famous for the various implementations of algorithms using Java. This repository is more geared to focus on the nuances of the language in general, rather than recreate the same work.<br />
 <a href="https://github.com/TheAlgorithms/Java">Here</a> is the link of the repository containing Java programs on algorithms.<br />
 <a href="https://github.com/iluwatar/java-design-patterns">Here</a> is the link of the repository containing design patterns elucidated in an intuitive and resourceful manner by experienced and passionate engineers and academic experts.
 
@@ -156,7 +155,7 @@ The list below is not to be followed in any particular order but is more of a re
   - [x] The Logging API
   - [ ] The Regex API
 - [ ] The Spring Framework
-  - [ ] Introduction: First Basic Project
+  - [ ] Introduction: First Basic Todo Project
 
 <p align="right">(<a href="#top">Top</a>)</p>
 

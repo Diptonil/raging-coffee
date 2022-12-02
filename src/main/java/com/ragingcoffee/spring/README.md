@@ -70,3 +70,13 @@ Theere is no agreed-upon predefined framework to define the way we proceed to bu
 - First, build the Data Access Layer (the database).
 - Second, build the Service Layer (the business logic).
 - Third, build the API Layer that takes in requests and throws out responses.
+
+
+## Projects
+
+The contents of this section is mostly small-sized projects taking and picking apart one component of the framework at a time:
+1. **To-Do App**:
+    - Controllers
+    - Services
+    - JPA
+1. **Java Persistence API**: Explanation of what JPA is about.

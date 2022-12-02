@@ -1,4 +1,4 @@
-package com.example.courseapi.controller;
+package com.example.courseapi.controllers;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
